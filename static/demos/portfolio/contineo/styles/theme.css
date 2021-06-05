@@ -1,0 +1,641 @@
+/* FONTS */
+
+@import url("https://use.typekit.net/yvg2jkl.css");
+@font-face {
+    font-family: FelixTitling;
+    src: url(../fonts/FELIXTI.TTF);
+}
+
+
+/* MEDIA QUERIES   */
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .heroH1 {
+        color: #eee5bd;
+        font-size: 30pt;
+        text-align: center;
+    }
+    .hero img {
+        height: 150px;
+        width: auto;
+    }
+    /* Style the links inside the navigation bar */
+    nav a {
+        float: left;
+        color: #5c0c51;
+        text-align: center;
+        padding: 14px 6px;
+        text-decoration: none;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+    }
+    #logo {
+        height: 30px;
+    }
+    .hero {
+        /* display: block; */
+        /* background-color: #5c0c51; */
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        overflow: hidden;
+    }
+    .serviceshighlight {
+        width: 100%;
+    }
+    .serviceshighlight td {
+        text-align: center;
+        width: 33%;
+    }
+    .serviceshighlightImgThumb {
+        width: 75%;
+        height: auto;
+        border-radius: 10px;
+    }
+    main#contact {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        /* border: 5px turquoise dashed; */
+        /* display: grid; */
+        /* grid-column-gap: 50px; */
+        /* grid-template-columns: 200px 200px 200px; */
+        /* grid-template-columns: auto auto; */
+    }
+    .form-control {
+        width: 100%;
+    }
+    .form-group {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    span.title,
+    label {
+        font-family: FelixTitling;
+        font-size: 22pt;
+        padding: 0;
+        margin: 0;
+    }
+    .contact_SocialIcon {
+        font-size: 50px;
+        padding-right: 25px;
+    }
+    .btnservice {
+        background: #eee5bd;
+        color: #5c0c51;
+        font-size: 1.25em;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        overflow: auto;
+        width: 30%;
+    }
+    .serviceCost {
+        float: right;
+        font-family: FelixTitling;
+        font-size: 20pt;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .heroH1 {
+        color: #eee5bd;
+        font-size: 55pt;
+        text-align: center;
+    }
+    .hero img {
+        height: 250px;
+        width: auto;
+    }
+    /* Style the links inside the navigation bar */
+    nav a {
+        float: left;
+        color: #5c0c51;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+    }
+    #logo {
+        height: 30px;
+    }
+    .hero {
+        /* display: block; */
+        /* background-color: #5c0c51; */
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        overflow: hidden;
+    }
+    .serviceshighlight {
+        width: 100%;
+    }
+    .serviceshighlight td {
+        text-align: center;
+        width: 33%;
+    }
+    .serviceshighlightImgThumb {
+        width: 75%;
+        height: auto;
+        border-radius: 10px;
+    }
+    main#contact {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        /* border: 5px turquoise dashed; */
+        display: grid;
+        grid-column-gap: 50px;
+        /* grid-template-columns: 200px 200px 200px; */
+        grid-template-columns: auto auto;
+    }
+    .form-control {
+        width: 100%;
+    }
+    .form-group {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    span.title,
+    label {
+        font-family: FelixTitling;
+        font-size: 22pt;
+        padding: 0;
+        margin: 0;
+    }
+    .contact_SocialIcon {
+        font-size: 70px;
+        padding-right: 25px;
+    }
+    .btnservice {
+        background: #eee5bd;
+        color: #5c0c51;
+        font-size: 1.25em;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        width: 20%;
+    }
+    .serviceCost {
+        float: right;
+        font-family: FelixTitling;
+        font-size: 20pt;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .heroH1 {
+        color: #eee5bd;
+        font-size: 75pt;
+    }
+    .hero img {
+        height: 250px;
+        width: auto;
+    }
+    /* Style the links inside the navigation bar */
+    nav a {
+        float: left;
+        color: #5c0c51;
+        text-align: center;
+        padding: 14px 4px;
+        text-decoration: none;
+        font-size: 23px;
+        display: flex;
+        align-items: center;
+    }
+    #logo {
+        height: 30px;
+    }
+    .hero {
+        /* display: block; */
+        /* background-color: #5c0c51; */
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        overflow: hidden;
+    }
+    .serviceshighlight {
+        width: 100%;
+    }
+    .serviceshighlight td {
+        text-align: center;
+        width: 33%;
+    }
+    .serviceshighlightImgThumb {
+        width: 75%;
+        height: auto;
+        border-radius: 10px;
+    }
+    main#contact {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        /* border: 5px turquoise dashed; */
+        display: grid;
+        grid-column-gap: 50px;
+        /* grid-template-columns: 200px 200px 200px; */
+        grid-template-columns: auto auto;
+    }
+    .form-control {
+        width: 100%;
+    }
+    .form-group {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    span.title,
+    label {
+        font-family: FelixTitling;
+        font-size: 22pt;
+        padding: 0;
+        margin: 0;
+    }
+    .contact_SocialIcon {
+        font-size: 70px;
+        padding-right: 25px;
+    }
+    .btnservice {
+        background: #eee5bd;
+        color: #5c0c51;
+        font-size: 1.25em;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        width: 20%;
+    }
+    .serviceCost {
+        float: right;
+        font-family: FelixTitling;
+        font-size: 20pt;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .heroH1 {
+        color: #eee5bd;
+        font-size: 75pt;
+    }
+    .hero img {
+        height: 350px;
+        width: auto;
+    }
+    /* Style the links inside the navigation bar */
+    nav a {
+        float: left;
+        color: #5c0c51;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+    }
+    #logo {
+        height: 30px;
+    }
+    .hero {
+        /* display: block; */
+        /* background-color: #5c0c51; */
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        overflow: hidden;
+    }
+    .serviceshighlight {
+        width: 100%;
+    }
+    .serviceshighlight td {
+        text-align: center;
+        width: 33%;
+    }
+    .serviceshighlightImgThumb {
+        width: 75%;
+        height: auto;
+        border-radius: 10px;
+    }
+    main#contact {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        /* border: 5px turquoise dashed; */
+        display: grid;
+        grid-column-gap: 50px;
+        /* grid-template-columns: 200px 200px 200px; */
+        grid-template-columns: auto auto;
+    }
+    .form-control {
+        width: 100%;
+    }
+    .form-group {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    span.title,
+    label {
+        font-family: FelixTitling;
+        font-size: 22pt;
+        padding: 0;
+        margin: 0;
+    }
+    .contact_SocialIcon {
+        font-size: 70px;
+        padding-right: 25px;
+    }
+    .btnservice {
+        background: #eee5bd;
+        color: #5c0c51;
+        font-size: 1.25em;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        width: 20%;
+    }
+    .serviceCost {
+        float: right;
+        font-family: FelixTitling;
+        font-size: 20pt;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    .heroH1 {
+        color: #eee5bd;
+        font-size: 85pt;
+    }
+    .hero img {
+        height: 350px;
+        width: auto;
+    }
+    /* Style the links inside the navigation bar */
+    nav a {
+        float: left;
+        color: #5c0c51;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+    }
+    #logo {
+        height: 30px;
+    }
+    .hero {
+        /* display: block; */
+        /* background-color: #5c0c51; */
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        overflow: hidden;
+    }
+    .serviceshighlight {
+        width: 100%;
+    }
+    .serviceshighlight td {
+        text-align: center;
+        width: 33%;
+    }
+    .serviceshighlightImgThumb {
+        width: 75%;
+        height: auto;
+        border-radius: 10px;
+    }
+    main#contact {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        /* border: 5px turquoise dashed; */
+        display: grid;
+        grid-column-gap: 50px;
+        /* grid-template-columns: 200px 200px 200px; */
+        grid-template-columns: auto auto;
+    }
+    .form-control {
+        width: 100%;
+    }
+    .form-group {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    span.title,
+    label {
+        font-family: FelixTitling;
+        font-size: 22pt;
+        padding: 0;
+        margin: 0;
+    }
+    .contact_SocialIcon {
+        font-size: 70px;
+        padding-right: 25px;
+    }
+    .btnservice {
+        background: #eee5bd;
+        color: #5c0c51;
+        font-size: 1.25em;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        width: 20%;
+    }
+    .serviceCost {
+        float: right;
+        font-family: FelixTitling;
+        font-size: 20pt;
+    }
+}
+
+
+/* GENERIC CSS */
+
+html,
+body {
+    margin: 0;
+    font-family: gibbs, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #311710;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: FelixTitling;
+    letter-spacing: 0.1em;
+}
+
+
+/* Add a black background color to the top navigation */
+
+nav {
+    background-color: #eee5bd;
+    overflow: hidden;
+}
+
+
+/* Add a color to the active/current link */
+
+nav a.active {
+    /* background-color: #5c0c51;
+    color: #eee5bd; */
+    color: #5c0c51;
+    text-decoration: underline;
+}
+
+#hero_welcome {
+    background: linear-gradient(0deg, rgba(92, 12, 81, 0.3), rgba(92, 12, 81, 0.3)), url(../media/welcome.jpg);
+    background-size: cover;
+}
+
+#hero_services {
+    background: linear-gradient(0deg, rgba(92, 12, 81, 0.3), rgba(92, 12, 81, 0.3)), url(../media/onlineservers.jpg);
+    background-size: cover;
+}
+
+#hero_jointeam {
+    background: linear-gradient(0deg, rgba(92, 12, 81, 0.3), rgba(92, 12, 81, 0.3)), url(../media/team.jpg);
+    background-size: cover;
+}
+
+#hero_faqs {
+    background: linear-gradient(0deg, rgba(92, 12, 81, 0.3), rgba(92, 12, 81, 0.3)), url(../media/faqs.jpg);
+    background-size: cover;
+}
+
+#hero_faqs {
+    background: linear-gradient(0deg, rgba(92, 12, 81, 0.3), rgba(92, 12, 81, 0.3)), url(../media/faqs.jpg);
+    background-size: cover;
+}
+
+#hero_privacy {
+    background: linear-gradient(0deg, rgba(92, 12, 81, 0.3), rgba(92, 12, 81, 0.3)), url(../media/welcome.jpg);
+    background-size: cover;
+}
+
+h2 {
+    font-size: 24pt;
+    text-align: center;
+}
+
+main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    text-align: center;
+    color: #ACA29F;
+    /* Tint of #311710 */
+    border-top: #ACA29F 1px solid;
+}
+
+a {
+    text-decoration: none;
+    color: #5c0c51;
+}
+
+nav a.manage {
+    float: right;
+    margin-right: 20px;
+}
+
+nav a.manage span {
+    padding-left: 7px;
+}
+
+span.fileDownload {
+    font-size: 48pt;
+}
+
+table.fileDownload {
+    width: 100%;
+}
+
+.fD_iconTD {
+    text-align: center;
+}
+
+#word {
+    color: royalblue;
+}
+
+#pdf {
+    color: darkred;
+}
+
+#rtf {
+    color: goldenrod;
+}
+
+#contact_SocialIcon_fb {
+    text-decoration: none;
+    color: #3b5998;
+}
+
+#contact_SocialIcon_tw {
+    text-decoration: none;
+    color: #1da1f2;
+}
+
+#contact_SocialIcon_ig {
+    text-decoration: none;
+    color: #d6249f;
+    /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); */
+}
+
+input,
+textarea {
+    border: 3px solid #eee5bd;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+textarea {
+    height: 8em;
+}
+
+button {
+    background: #eee5bd;
+    color: #5c0c51;
+    font-size: 1.25em;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+}
+
+.selectedTier {
+    background: #5c0c51;
+    color: #eee5bd;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
