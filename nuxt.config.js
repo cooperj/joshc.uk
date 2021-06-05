@@ -5,6 +5,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Josh Cooper',
+    titleTemplate: '%s | Josh Cooper',
     htmlAttrs: {
       lang: 'en'
     },
