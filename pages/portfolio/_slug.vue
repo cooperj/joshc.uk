@@ -11,13 +11,12 @@
 export default {
   async asyncData ({ $content, params }) {
     const project = await $content('portfolio', params.slug).fetch()
-
     return { project }
   },
 
   head () {
     return {
-      title: this.article.title
+      title: this.project.title
     }
   }
 }
