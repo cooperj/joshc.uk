@@ -1,4 +1,4 @@
-# DEMOS
+# DEMOS
 
 This directory contains static files served to be used as a demo.
 
