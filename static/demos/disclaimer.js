@@ -52,7 +52,7 @@ const disclaimerHTML = `
 This site has been created as a part of a portfolio project, and may not feature real or accurate information.
 </span>
 <div class="disclaimer-banner-buttons">
-<a id="disclaimer-banner-buttons-read-more" href="#">Read more</a>
+<a id="disclaimer-banner-buttons-read-more" target="_blank" href="#">Read more</a>
 <a class="disclaimer-banner-close" onclick="closeDisclaimer()">&times;</a>
 </div>
 `;
