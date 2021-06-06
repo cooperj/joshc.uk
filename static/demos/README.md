@@ -15,3 +15,15 @@ The *Contineo* project must be structured like this. With the site ad
 ```
 /static/demos/portfolio/contineo/
 ```
+
+## Disclaimer
+
+Any site/demo which could be mistaken for being a live company/site, **must** have a disclaimer included by adding the following line the **top** of the 'body'.
+
+```html
+<script
+    type="text/javascript"
+    id="disclaimer"
+    src="/demos/disclaimer.js"
+></script>
+```
