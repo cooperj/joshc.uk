@@ -2,3 +2,13 @@
   base = "/"
   publish = "dist/"
   command = "npm run generate"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/w"
+  to = "https://pbs.twimg.com/media/EYVhvZFWsAUY5gv?format=jpg&name=large"
+  status = 302
