@@ -14,8 +14,8 @@ export default {
 
   head () {
     return {
-      title: this.article.title,
-      description: this.article.description
+      title: 'this.article.title',
+      description: 'this.article.description'
     }
   }
 }
