@@ -5,9 +5,6 @@ icon: /assets/images/alarm6.png
 publishDate: 2021-06-07T23:11:28Z
 ---
 
-<div class="row">
-<div class="col-lg-6">
-
 # What is the project?
 
 I created a burglar alarm system which alerts the homeowner when there was an issue at their house.
@@ -24,8 +21,6 @@ If the alarm is sounded, either automatically, or by pressing the panic button, 
 The text message is sent through [Twilio](https://www.twilio.com), a cloud service, which allowed me to get a virtual phone number, which I could use to send messages.
 
 This allows for the Pi to not need to connect to the GSM network, as it works directly with Wi-Fi at the installed house.
-
-</div>
 
 <!-- Side image -->
 <div class="col-lg-6">

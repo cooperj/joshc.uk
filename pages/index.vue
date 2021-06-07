@@ -8,6 +8,16 @@
 
       <ul>
         <li>
+          <nuxt-link to="/about/">
+            About
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/contact/">
+            Contact
+          </nuxt-link>
+        </li>
+        <li>
           <nuxt-link to="/portfolio/">
             Portfolio
           </nuxt-link>
@@ -15,6 +25,11 @@
         <li>
           <nuxt-link to="/blog/">
             Blog
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/privacy-policy/">
+            Privacy Policy
           </nuxt-link>
         </li>
       </ul>
