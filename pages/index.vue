@@ -5,6 +5,19 @@
       <h1 class="title">
         joshc.uk
       </h1>
+
+      <ul>
+        <li>
+          <nuxt-link to="/portfolio/">
+            Portfolio
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/blog/">
+            Blog
+          </nuxt-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>

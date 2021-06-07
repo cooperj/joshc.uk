@@ -1,6 +1,8 @@
 ---
 title: Contineo
 description: I designed and created a website for the hosting company, Contineo. I was given a brief which included; colours, text, and font to use for the headers.
+icon: /assets/images/contineo1.png
+publishDate: 2021-06-06T23:11:28Z
 ---
 
 # What is the project?
@@ -11,11 +13,11 @@ They wanted a professional-looking interactive website, which allows them to con
 
 This was done from creating multiple pages;
 
--   Homepage
--   Services (Web Hosting, Online Server & Networking Solutions),
--   Contact,
--   Join our Team,
--   & Frequently Asked Questions.
+- Homepage
+- Services (Web Hosting, Online Server & Networking Solutions),
+- Contact,
+- Join our Team,
+- & Frequently Asked Questions.
 
 # What was required?
 

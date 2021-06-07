@@ -1,6 +1,6 @@
 <template>
   <article>
-    <h1> Title: article.title </h1>
+    <h1> Title: {{ this.article.title }} </h1>
     <nuxt-content :document="article" />
   </article>
 </template>
@@ -14,8 +14,8 @@ export default {
 
   head () {
     return {
-      title: 'this.article.title',
-      description: 'this.article.description'
+      title: this.article.title,
+      description: this.article.description
     }
   }
 }
