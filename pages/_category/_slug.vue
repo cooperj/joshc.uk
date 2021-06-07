@@ -16,7 +16,7 @@ export default {
 
   head () {
     return {
-      title: this.article.title
+      title: 'Article'
     }
   }
 }
