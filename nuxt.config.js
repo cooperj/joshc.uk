@@ -45,11 +45,11 @@ export default {
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
     markdown: {
-      remarkPlugins: ['remark-emoji']
+      remarkPlugins: ['remark-emoji'],
+      prism: {
+        theme: 'prism-themes/themes/prism-lucario.css'
+      }
     },
-    prism: {
-      theme: 'prism-themes/themes/prism-a11y-dark.css'
-    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
