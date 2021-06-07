@@ -1,22 +1,23 @@
 <template>
   <div>
     <h1>
-      {{ article.title }}
+      {{ page.title }}
     </h1>
-    <nuxt-content :document="article" />
+    <nuxt-content :document="page" />
   </div>
 </template>
 
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const article = await $content(`${params.category}/${params.slug}`).fetch()
-    return { article }
+    const page = await $content(`${params.category}/${params.slug}`).fetch()
+    return { page }
   },
 
   head () {
     return {
-      title: 'Article'
+      title: this.page.title,
+      description: this.page.description
     }
   }
 }

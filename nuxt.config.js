@@ -46,6 +46,9 @@ export default {
   content: {
     markdown: {
       remarkPlugins: ['remark-emoji']
+    },
+    prism: {
+      theme: 'prism-themes/themes/prism-a11y-dark.css'
     }
   },
 
