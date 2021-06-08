@@ -3,7 +3,7 @@
     <h1> Blog! </h1>
 
     <li v-for="article in articles" :key="article.slug">
-      <nuxt-link :to="`/portfolio/${article.slug}`">
+      <nuxt-link :to="`/blog/${article.slug}`">
         {{ article.title }}
       </nuxt-link>
       <p>
