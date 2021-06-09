@@ -41,7 +41,10 @@
 export default {
   head () {
     return {
-      title: 'Home'
+      title: 'Home',
+      meta: [
+        { description: 'The personal website of Josh Cooper' }
+      ]
     }
   }
 }

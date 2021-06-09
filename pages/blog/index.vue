@@ -23,7 +23,9 @@ export default {
   head () {
     return {
       title: 'Blog',
-      description: 'this.article.description'
+      meta: [
+        { description: 'this.article.description' }
+      ]
     }
   },
 

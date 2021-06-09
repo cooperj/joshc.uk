@@ -11,7 +11,10 @@
 export default {
   head () {
     return {
-      title: 'Page not found'
+      title: 'Page not found',
+      meta: [
+        { description: 'The page you tried to reach could not be found...' }
+      ]
     }
   }
 }

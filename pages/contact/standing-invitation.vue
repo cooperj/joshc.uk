@@ -9,7 +9,9 @@ export default {
   head () {
     return {
       title: 'Standing Invitation',
-      description: 'Sample Text'
+      meta: [
+        { description: 'this.article.description' }
+      ]
     }
   }
 }

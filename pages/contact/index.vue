@@ -12,7 +12,9 @@ export default {
   head () {
     return {
       title: 'Contact',
-      description: 'Sample Text'
+      meta: [
+        { description: 'this.article.description' }
+      ]
     }
   }
 }

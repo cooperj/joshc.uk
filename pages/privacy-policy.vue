@@ -84,7 +84,9 @@ export default {
   head () {
     return {
       title: 'Privacy Policy',
-      description: 'Sample Text'
+      meta: [
+        { description: 'this.article.description' }
+      ]
     }
   }
 }

@@ -15,7 +15,9 @@ export default {
   head () {
     return {
       title: this.article.title,
-      description: this.article.description
+      meta: [
+        { description: this.article.description }
+      ]
     }
   }
 }

@@ -9,7 +9,9 @@ export default {
   head () {
     return {
       title: 'About',
-      description: 'Sample Text'
+      meta: [
+        { description: 'this.article.description' }
+      ]
     }
   }
 }

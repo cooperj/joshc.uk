@@ -23,7 +23,9 @@ export default {
   head () {
     return {
       title: 'Portfolio',
-      description: 'this.project.description'
+      meta: [
+        { description: 'this.article.description' }
+      ]
     }
   },
 
