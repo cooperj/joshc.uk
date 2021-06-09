@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <h1> Title: {{ this.article.title }} </h1>
+  <main>
+    <h1> Title: {{ article.title }} </h1>
     <nuxt-content :document="article" />
-  </div>
+  </main>
 </template>
 
 <script>

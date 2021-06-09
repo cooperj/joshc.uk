@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <h1> Portfolio! </h1>
 
     <li v-for="project in projects" :key="project.slug">
@@ -10,7 +10,7 @@
         {{ project.description }} | {{ formatDate(project.publishDate) }}
       </p>
     </li>
-  </div>
+  </main>
 </template>
 
 <script>

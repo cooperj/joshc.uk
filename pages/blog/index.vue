@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <h1> Blog! </h1>
 
     <li v-for="article in articles" :key="article.slug">
@@ -10,7 +10,7 @@
         {{ article.description }} | {{ formatDate(article.publishDate) }}
       </p>
     </li>
-  </div>
+  </main>
 </template>
 
 <script>

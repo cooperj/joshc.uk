@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <main>
     <h1>404 - Page not found</h1>
     <p>
       The page could not be found.
     </p>
-  </div>
+  </main>
 </template>
 
 <script>

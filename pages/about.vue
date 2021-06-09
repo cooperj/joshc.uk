@@ -1,5 +1,16 @@
 <template>
-  <div>
+  <main>
     <h1> About </h1>
-  </div>
+  </main>
 </template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: 'About',
+      description: 'Sample Text'
+    }
+  }
+}
+</script>
