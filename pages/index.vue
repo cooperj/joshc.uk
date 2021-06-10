@@ -1,10 +1,9 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        joshc.uk
-      </h1>
+  <main>
+    <article>
+      <p>
+        This is the placeholder home page.
+      </p>
 
       <ul>
         <li>
@@ -33,8 +32,8 @@
           </nuxt-link>
         </li>
       </ul>
-    </div>
-  </div>
+    </article>
+  </main>
 </template>
 
 <script>

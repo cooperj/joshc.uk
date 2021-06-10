@@ -1,6 +1,8 @@
 <template>
   <main>
-    <h1> Privacy Policy </h1>
+    <div class="page-info">
+      <h1> Privacy Policy </h1>
+    </div>
     <p>
       Your privacy is important to us. It is Joshua Cooper's policy to respect your privacy regarding any
       information we may collect from you across our website (<a href="https://joshc.uk">joshc.uk</a>),

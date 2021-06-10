@@ -1,7 +1,18 @@
 <template>
   <main>
-    <h1> Title: {{ article.title }} </h1>
-    <nuxt-content :document="article" />
+    <summary>
+      <h1> {{ article.title }} </h1>
+      <span class="publish-label">
+        Published:
+      </span>
+      <span class="publish-date">
+        {{ formatDate(article.publishDate) }}
+      </span>
+    </summary>
+
+    <article>
+      <nuxt-content :document="article" />
+    </article>
   </main>
 </template>
 
@@ -18,6 +29,13 @@ export default {
       meta: [
         { description: this.article.description }
       ]
+    }
+  },
+
+  methods: {
+    formatDate (date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
     }
   }
 }
