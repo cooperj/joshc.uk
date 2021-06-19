@@ -22,38 +22,12 @@ The text message is sent through [Twilio](https://www.twilio.com), a cloud servi
 
 This allows for the Pi to not need to connect to the GSM network, as it works directly with Wi-Fi at the installed house.
 
-<!-- Side image -->
-<div class="col-lg-6">
-<a href="/assets/images/alarm6.png" data-toggle="lightbox">
-    <img class="sideImageForPortfolio portfolioPageImage" src="/assets/images/alarm6.png" alt="the alarm full assembled and mounted to a wall.">
-</a>
-</div>
+<img class="sideImageForPortfolio portfolioPageImage" src="/assets/images/alarm6.png" alt="the alarm full assembled and mounted to a wall.">
 
-<!-- Bottom of the page -->
-<div class="row">
-<div class="col-lg-3">
-<a href="/assets/images/alarm2.jpg" data-toggle="lightbox">
 <img class="smallPortfolioPageImage" src="/assets/images/alarm2.jpg" alt="the inside of the alarm">
-</a>
-</div>
 
-<div class="col-lg-3">
-<a href="/assets/images/alarm3.jpg" data-toggle="lightbox">
 <img class="smallPortfolioPageImage" src="/assets/images/alarm3.jpg" alt="one of the circuit boards created">
-</a>
 
-</div>
-<div class="col-lg-3">
-<a href="/assets/images/alarm4.jpg" data-toggle="lightbox">
 <img class="smallPortfolioPageImage" src="/assets/images/alarm4.jpg" alt="sample text message which could be sent">
-</a>
-</div>
 
-<div class="col-lg-3">
-<a href="/assets/images/alarm5.jpg" data-toggle="lightbox">
 <img class="smallPortfolioPageImage" src="/assets/images/alarm5.jpg" alt="remote keyfob for interacting with the alarm">
-</a>
-</div>
-</div>
-
-</div>
