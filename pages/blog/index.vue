@@ -2,14 +2,16 @@
   <main>
     <h1> Blog! </h1>
 
-    <li v-for="article in articles" :key="article.slug">
-      <nuxt-link :to="`/blog/${article.slug}`">
-        {{ article.title }}
-      </nuxt-link>
-      <p>
-        {{ article.description }} | {{ formatDate(article.publishDate) }}
-      </p>
-    </li>
+    <nav>
+      <li v-for="article in articles" :key="article.slug">
+        <nuxt-link :to="`/blog/${article.slug}`">
+          {{ article.title }}
+        </nuxt-link>
+        <p>
+          {{ article.description }} | {{ formatDate(article.publishDate) }}
+        </p>
+      </li>
+    </nav>
   </main>
 </template>
 
