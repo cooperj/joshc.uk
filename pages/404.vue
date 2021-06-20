@@ -1,9 +1,13 @@
 <template>
   <main>
-    <h1>404 - Page not found</h1>
-    <p>
-      The page could not be found.
-    </p>
+    <summary>
+      <h1>404 - Page not found</h1>
+    </summary>
+    <article>
+      <p>
+        The page could not be found.
+      </p>
+    </article>
   </main>
 </template>
 

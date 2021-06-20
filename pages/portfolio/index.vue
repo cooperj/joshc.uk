@@ -1,15 +1,19 @@
 <template>
   <main>
-    <h1> Portfolio! </h1>
+    <summary>
+      <h1> Portfolio </h1>
+    </summary>
 
-    <li v-for="project in projects" :key="project.slug">
-      <nuxt-link :to="`/portfolio/${project.slug}`">
-        {{ project.title }}
-      </nuxt-link>
-      <p>
-        {{ project.description }} | {{ formatDate(project.publishDate) }}
-      </p>
-    </li>
+    <article>
+      <li v-for="project in projects" :key="project.slug">
+        <nuxt-link :to="`/portfolio/${project.slug}`">
+          {{ project.title }}
+        </nuxt-link>
+        <p>
+          {{ project.description }} | {{ formatDate(project.publishDate) }}
+        </p>
+      </li>
+    </article>
   </main>
 </template>
 

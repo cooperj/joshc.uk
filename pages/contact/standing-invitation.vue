@@ -1,6 +1,13 @@
 <template>
   <main>
-    <h1> Standing Invitation </h1>
+    <summary>
+      <h1> Standing Invitation </h1>
+    </summary>
+    <article>
+      <p>
+        Sample Text!
+      </p>
+    </article>
   </main>
 </template>
 

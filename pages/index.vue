@@ -1,5 +1,8 @@
 <template>
   <main>
+    <summary>
+      <h1> Placeholder Homepage </h1>
+    </summary>
     <article>
       <p>
         This is the placeholder home page.
