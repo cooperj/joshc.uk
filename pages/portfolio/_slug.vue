@@ -10,9 +10,9 @@
       </span>
     </summary>
 
-    <project>
+    <article>
       <nuxt-content :document="project" />
-    </project>
+    </article>
   </main>
 </template>
 
