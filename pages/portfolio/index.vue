@@ -16,7 +16,7 @@
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const projects = await $content('projects', params.slug).sortBy('publishDate', 'desc').fetch()
+    const projects = await $content('portfolio', params.slug).only(['title', 'slug', 'publishDate', 'description']).sortBy('publishDate').fetch()
     return { projects }
   },
 
@@ -24,7 +24,7 @@ export default {
     return {
       title: 'Portfolio',
       meta: [
-        { description: 'this.article.description' }
+        { description: 'this.project.description' }
       ]
     }
   },

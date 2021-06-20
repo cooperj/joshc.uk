@@ -1,3 +1,5 @@
+import getRoutes from "./utils/getRoutes";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -41,7 +43,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -52,6 +55,20 @@ export default {
         theme: 'prism-themes/themes/prism-lucario.css'
       }
     },
+  },
+
+  generate: {
+    routes() {
+      return getRoutes();
+    }
+  },
+
+  sitemap: {
+    hostname: 'https://joshc.uk',
+    gzip: true,
+    exclude: [
+      '/404'
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

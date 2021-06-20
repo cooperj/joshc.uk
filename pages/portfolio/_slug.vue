@@ -1,33 +1,33 @@
 <template>
   <main>
     <summary>
-      <h1> {{ article.title }} </h1>
+      <h1> {{ project.title }} </h1>
       <span class="publish-label">
         Published:
       </span>
       <span class="publish-date">
-        {{ formatDate(article.publishDate) }}
+        {{ formatDate(project.publishDate) }}
       </span>
     </summary>
 
-    <article>
-      <nuxt-content :document="article" />
-    </article>
+    <project>
+      <nuxt-content :document="project" />
+    </project>
   </main>
 </template>
 
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const article = await $content('projects', params.slug).fetch()
-    return { article }
+    const project = await $content('portfolio', params.slug).fetch()
+    return { project }
   },
 
   head () {
     return {
-      title: this.article.title,
+      title: this.project.title,
       meta: [
-        { description: this.article.description }
+        { description: this.project.description }
       ]
     }
   },

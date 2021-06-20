@@ -31,6 +31,11 @@
             Privacy Policy
           </nuxt-link>
         </li>
+        <li>
+          <a href="/sitemap.xml">
+            XML Sitemap
+          </a>
+        </li>
       </ul>
     </article>
   </main>
