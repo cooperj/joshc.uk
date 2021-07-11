@@ -29,7 +29,11 @@ They wanted **content** which included a home page, a services page, a contact u
 
 The website wanted **interactive** features, such as; Fading buttons, Hidden content, Picture Slideshow, and Google Maps. These will be done using JavaScript. The site is also responsive, this means that it looks correct on a mobile device as the sizes of elements change based on the size of the screen.
 
-The website also had to be **accessible**, this included using colours which are friendly to people with colour blindness or dyslexia, this is done by using contrasting colours. The images had to include alt text, this is used by a screen reader to describe the image. The website had to work on multiple browsers, so I tested that the site worked in Google Chrome and Mozilla Firefox, this ensures that the code is correct and that there is not going to be any issues
+The website also had to be **accessible**, this included using colours which are friendly to people with colour blindness or dyslexia, this is done by using contrasting colours.
+
+The images had to include alt text, this is used by a screen reader to describe the image.
+
+The website had to work on multiple browsers, so I tested that the site worked in **Google Chrome** and **Mozilla Firefox**, this ensures that the code is correct and that there is not going to be any issues.
 
 <iframe src="/demos/portfolio/contineo" frameborder="0" width="100%" height="900"></iframe>
 

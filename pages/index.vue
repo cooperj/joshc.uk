@@ -30,7 +30,7 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/privacy-policy/">
+          <nuxt-link to="/privacy/">
             Privacy Policy
           </nuxt-link>
         </li>
