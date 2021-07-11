@@ -4,9 +4,9 @@ $primary: #17a2b8;
 $secondary: #494949;
 $background: #f5f5f5;
 $font-colour: #000;
-$font-size: 16pt;
+$font-size: 20pt;
 $nav-accent: #e3d407;
-
+$highlight-colour: #07e307;
 $footer-colour: #f1f1f1;
 
 // Styles
@@ -76,6 +76,19 @@ main {
       margin-right: auto;
       padding: 20px;
       width: 70%;
+    }
+
+    iframe {
+      border: $secondary 4px dashed;
+    }
+
+    a.btn {
+      // display: inline-flex;
+      align-items: center;
+    }
+
+    a:hover {
+      background-color: $highlight-colour;
     }
   }
 }

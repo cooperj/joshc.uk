@@ -31,6 +31,6 @@ The website wanted **interactive** features, such as; Fading buttons, Hidden con
 
 The website also had to be **accessible**, this included using colours which are friendly to people with colour blindness or dyslexia, this is done by using contrasting colours. The images had to include alt text, this is used by a screen reader to describe the image. The website had to work on multiple browsers, so I tested that the site worked in Google Chrome and Mozilla Firefox, this ensures that the code is correct and that there is not going to be any issues
 
-<a href="/demos/portfolio/contineo" class="btn btn-primary input-block-level form-control" target="_blank">View Full Screen Demo</a>
+<iframe src="/demos/portfolio/contineo" frameborder="0" width="100%" height="900"></iframe>
 
-<iframe class="demoSiteEmbed" src="/demos/portfolio/contineo" frameborder="0" width="100%" height="900"></iframe>
+<a href="/demos/portfolio/contineo" class="btn" target="_blank">View Demo in Full Screen</a>

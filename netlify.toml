@@ -5,13 +5,13 @@
   command = "npm run generate"
 
 # Short Url Redirects
-#[[redirects]]
-#  from = "/w"
-#  to = "https://pbs.twimg.com/media/EYVhvZFWsAUY5gv?format=jpg&name=large"
-#  status = 302
+[[redirects]]
+  from = "/w"
+  to = "https://pbs.twimg.com/media/EYVhvZFWsAUY5gv?format=jpg&name=large"
+  status = 302
 
 # Finally Redirect to the SPA...
-#[[redirects]]
-#  from = "/*"
-#  to = "/index.html"
-#  status = 200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
