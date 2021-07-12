@@ -4,14 +4,14 @@
   publish = "dist/"
   command = "npm run generate"
 
-# Short Url Redirects
-[[redirects]]
-  from = "/w"
-  to = "https://pbs.twimg.com/media/EYVhvZFWsAUY5gv?format=jpg&name=large"
-  status = 302
+## Short Url Redirects
+#[[redirects]]
+#  from = "/w"
+#  to = "https://pbs.twimg.com/media/EYVhvZFWsAUY5gv?format=jpg&name=large"
+#  status = 302
 
-# Finally Redirect to the SPA...
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+## Finally Redirect to the SPA...
+#[[redirects]]
+#  from = "/*"
+#  to = "/index.html"
+#  status = 200
