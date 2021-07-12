@@ -11,6 +11,7 @@
         </nuxt-link>
         <p>
           {{ project.description }} | {{ formatDate(project.publishDate) }}
+          <img :src="project.icon">
         </p>
       </li>
     </article>
@@ -20,7 +21,7 @@
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const projects = await $content('portfolio', params.slug).only(['title', 'slug', 'publishDate', 'description']).sortBy('publishDate').fetch()
+    const projects = await $content('portfolio', params.slug).only(['title', 'slug', 'publishDate', 'description', 'icon']).sortBy('publishDate', 'desc').fetch()
     return { projects }
   },
 
@@ -29,18 +30,18 @@ export default {
       title: 'Portfolio',
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: "A collection of projects I have worked on."
+          hid: 'description',
+          name: 'description',
+          content: 'A collection of projects I have worked on.'
         },
-        { 
-          property: "og:description", 
-          content: "A collection of projects I have worked on."
+        {
+          property: 'og:description',
+          content: 'A collection of projects I have worked on.'
         },
-        { 
-          property: "og:title", 
-          content: "Portfolio"
-        },
+        {
+          property: 'og:title',
+          content: 'Portfolio'
+        }
       ]
     }
   },

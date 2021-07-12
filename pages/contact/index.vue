@@ -59,7 +59,7 @@
               type="checkbox"
             >
             <label for="agreeToBeContacted">
-              I agree to be contacted following the <a href="privacy/">privacy</a> policy.
+              I agree to be contacted following the <nuxt-link to="/privacy">privacy policy.</nuxt-link>
             </label>
           </div>
           <button
@@ -85,14 +85,14 @@ export default {
           name: 'description',
           content: 'Get in touch with Josh Cooper!'
         },
-        { 
-          property: "og:description", 
-          content: "Get in touch with Josh Cooper!"
+        {
+          property: 'og:description',
+          content: 'Get in touch with Josh Cooper!'
         },
-        { 
-          property: "og:title", 
-          content: "Contact"
-        },
+        {
+          property: 'og:title',
+          content: 'Contact'
+        }
       ]
     }
   }

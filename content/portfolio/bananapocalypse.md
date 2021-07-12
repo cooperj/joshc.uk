@@ -2,7 +2,7 @@
 title: Bananapocalypse
 description: For my college, I created an Angry Birds style video game prototype within Unity to be played on a mobile phone.
 icon: /assets/images/ba1.png
-publishDate: 2021-06-07T23:11:28Z
+publishDate: 2019-05-15
 ---
 
 # What is the project?
