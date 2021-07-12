@@ -44,7 +44,14 @@ export default {
           property: "og:image", 
           content: this.project.icon
         },
-      ]
+        { 
+          property: "og:published_time", 
+          content: this.project.publishDate
+        },
+      ],
+      htmlAttrs: {
+        prefix: "https://ogp.me/ns/article#"
+      },
     }
   },
 
