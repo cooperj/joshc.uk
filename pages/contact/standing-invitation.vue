@@ -17,7 +17,19 @@ export default {
     return {
       title: 'Standing Invitation',
       meta: [
-        { description: 'this.article.description' }
+        {
+          hid: "description",
+          name: "description",
+          content: "Get in touch with Josh Cooper!"
+        },
+        { 
+          property: "og:description", 
+          content: "Get in touch with Josh Cooper!"
+        },
+        { 
+          property: "og:title", 
+          content: "Standing Invitation"
+        },
       ]
     }
   }

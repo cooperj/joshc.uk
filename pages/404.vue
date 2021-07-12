@@ -17,7 +17,19 @@ export default {
     return {
       title: 'Page not found',
       meta: [
-        { description: 'The page you tried to reach could not be found...' }
+        {
+          hid: "description",
+          name: "description",
+          content: "Could not find the page you requested"
+        },
+        { 
+          property: "og:description", 
+          content: "Could not find the page you requested"
+        },
+        { 
+          property: "og:title", 
+          content: "Page not Found"
+        },
       ]
     }
   }

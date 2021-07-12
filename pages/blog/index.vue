@@ -28,7 +28,19 @@ export default {
     return {
       title: 'Blog',
       meta: [
-        { description: 'this.article.description' }
+        {
+          hid: "description",
+          name: "description",
+          content: "Things I go and write"
+        },
+        { 
+          property: "og:description", 
+          content: "Things I go and write"
+        },
+        { 
+          property: "og:title", 
+          content: "Blog"
+        },
       ]
     }
   },

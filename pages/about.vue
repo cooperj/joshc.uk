@@ -17,7 +17,19 @@ export default {
     return {
       title: 'About',
       meta: [
-        { description: 'this.article.description' }
+        {
+          hid: "description",
+          name: "description",
+          content: "Sample Text!"
+        },
+        { 
+          property: "og:description", 
+          content: "Sample Text!"
+        },
+        { 
+          property: "og:title", 
+          content: "About Josh"
+        },
       ]
     }
   }

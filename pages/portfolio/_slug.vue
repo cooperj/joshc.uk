@@ -27,7 +27,19 @@ export default {
     return {
       title: this.project.title,
       meta: [
-        { description: this.project.description }
+        {
+          hid: "description",
+          name: "description",
+          content: this.project.description
+        },
+        { 
+          property: "og:description", 
+          content: this.project.description
+        },
+        { 
+          property: "og:title", 
+          content: this.project.title
+        },
       ]
     }
   },

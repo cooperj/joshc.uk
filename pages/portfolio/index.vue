@@ -28,7 +28,19 @@ export default {
     return {
       title: 'Portfolio',
       meta: [
-        { description: 'this.project.description' }
+        {
+          hid: "description",
+          name: "description",
+          content: "A collection of projects I have worked on."
+        },
+        { 
+          property: "og:description", 
+          content: "A collection of projects I have worked on."
+        },
+        { 
+          property: "og:title", 
+          content: "Portfolio"
+        },
       ]
     }
   },

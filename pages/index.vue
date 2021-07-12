@@ -50,7 +50,19 @@ export default {
     return {
       title: 'Home',
       meta: [
-        { description: 'The personal website of Josh Cooper' }
+        {
+          hid: "description",
+          name: "description",
+          content: "Sample Text!"
+        },
+        { 
+          property: "og:description", 
+          content: "Sample Text!"
+        },
+        { 
+          property: "og:title", 
+          content: "Josh Cooper"
+        },
       ]
     }
   }
