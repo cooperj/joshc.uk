@@ -116,7 +116,7 @@ main {
       .form-group {
         margin-bottom: 30px;
 
-        input[type]:not([type="checkbox"]),
+        input:not([type="checkbox"]),
         textarea {
           width: 100%;
           font: $font-size $font-face;
