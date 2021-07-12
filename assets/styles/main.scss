@@ -6,7 +6,7 @@ $background: #f5f5f5;
 $font-colour: #000;
 $font-face: sans-serif;
 $highlight-colour: #07e307;
-$footer-colour: #f1f1f1;
+$secondary-nav-background: lightgrey;
 
 // Styles
 html,
@@ -153,7 +153,7 @@ footer {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background: lightgray;
+  background: $secondary-nav-background;
   padding: 30px 0;
   bottom: 0;
   width: 100%;
@@ -197,4 +197,33 @@ button {
 
 button:active {
   background-color: $primary-selected;
+}
+
+.card {
+  background-color: $secondary-nav-background;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 30px;
+  width: 100%;
+
+  a {
+    border: none;
+
+    &:hover {
+      background-color: adjust-color(
+        $secondary-nav-background,
+        $lightness: -10%
+      );
+    }
+  }
+
+  img {
+    width: auto;
+    height: 200px;
+  }
+
+  div {
+    // width: 50%;
+  }
 }

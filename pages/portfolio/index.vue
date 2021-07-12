@@ -5,15 +5,25 @@
     </summary>
 
     <article>
-      <li v-for="project in projects" :key="project.slug">
+      <div
+        v-for="project in projects"
+        :key="project.slug"
+        class="card"
+      >
         <nuxt-link :to="`/portfolio/${project.slug}`">
-          {{ project.title }}
-        </nuxt-link>
-        <p>
-          {{ project.description }} | {{ formatDate(project.publishDate) }}
+          <div>
+            <h1> {{ project.title }} </h1>
+            <p>
+              {{ project.description }}
+            </p>
+            <p class="date">
+              <span class="label">Published:</span>
+              {{ formatDate(project.publishDate) }}
+            </p>
+          </div>
           <img :src="project.icon">
-        </p>
-      </li>
+        </nuxt-link>
+      </div>
     </article>
   </main>
 </template>
