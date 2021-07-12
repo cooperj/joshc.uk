@@ -40,6 +40,10 @@ export default {
           property: "og:title", 
           content: this.project.title
         },
+        { 
+          property: "og:image", 
+          content: this.project.icon
+        },
       ]
     }
   },
