@@ -5,13 +5,17 @@
     </summary>
 
     <article>
-      <div
+      <nuxt-link
         v-for="project in projects"
         :key="project.slug"
-        class="card"
+        :to="`/portfolio/${project.slug}`"
+        class="card-link"
       >
-        <nuxt-link :to="`/portfolio/${project.slug}`">
-          <div>
+        <div class="card">
+          <div class="img">
+            <img :src="project.icon">
+          </div>
+          <div class="card-body">
             <h1> {{ project.title }} </h1>
             <p>
               {{ project.description }}
@@ -21,9 +25,8 @@
               {{ formatDate(project.publishDate) }}
             </p>
           </div>
-          <img :src="project.icon">
-        </nuxt-link>
-      </div>
+        </div>
+      </nuxt-link>
     </article>
   </main>
 </template>

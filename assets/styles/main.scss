@@ -193,37 +193,36 @@ button {
   border: none;
   background-color: $primary;
   padding: 10px;
-}
 
-button:active {
-  background-color: $primary-selected;
+  &:active {
+    background-color: $primary-selected;
+  }
 }
 
 .card {
   background-color: $secondary-nav-background;
-  display: inline-flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
-  width: 100%;
 
-  a {
-    border: none;
+  .img {
+    width: 20%;
+    height: auto;
+    margin-right: 10px;
 
-    &:hover {
-      background-color: adjust-color(
-        $secondary-nav-background,
-        $lightness: -10%
-      );
+    img {
+      border-radius: 1.5rem;
+      padding: 0;
+      box-shadow: 0 0 30px
+        adjust-color($secondary-nav-background, $lightness: -20%);
     }
   }
 
-  img {
-    width: auto;
-    height: 200px;
+  .card-body {
+    width: 60%;
   }
 
-  div {
-    // width: 50%;
+  &:hover {
+    background-color: adjust-color($secondary-nav-background, $lightness: -10%);
   }
 }
