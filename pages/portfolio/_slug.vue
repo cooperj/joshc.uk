@@ -49,10 +49,6 @@ export default {
           content: this.project.icon
         },
         { 
-          property: "twitter:card", 
-          content: "summary_large_image"
-        },
-        { 
           property: "og:article:published_time", 
           content: this.project.publishDate
         },
