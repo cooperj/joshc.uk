@@ -1,5 +1,6 @@
 $font-size: 20pt;
 $primary: #e3d407;
+$primary-selected: adjust-color($primary, $lightness: -10%);
 $secondary: #494949;
 $background: #f5f5f5;
 $font-colour: #000;
@@ -124,6 +125,12 @@ main {
           border: $secondary 2px dashed;
         }
 
+        input:focus,
+        textarea:focus {
+          border: $primary-selected 2px dashed;
+          outline: none;
+        }
+
         input[type="checkbox"] {
           -ms-transform: scale(1.75); /* IE */
           -moz-transform: scale(1.75); /* FF */
@@ -189,5 +196,5 @@ button {
 }
 
 button:active {
-  background-color: adjust-color($primary, $lightness: -10%);
+  background-color: $primary-selected;
 }

@@ -84,7 +84,15 @@ export default {
           hid: 'description',
           name: 'description',
           content: 'Get in touch with Josh Cooper!'
-        }
+        },
+        { 
+          property: "og:description", 
+          content: "Get in touch with Josh Cooper!"
+        },
+        { 
+          property: "og:title", 
+          content: "Contact"
+        },
       ]
     }
   }
