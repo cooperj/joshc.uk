@@ -95,12 +95,46 @@ main {
       border: $secondary 4px dashed;
     }
 
-    a.btn {
-      align-items: center;
+    a {
+      &.btn {
+        align-items: center;
+      }
+
+      &:hover {
+        background-color: $highlight-colour;
+      }
     }
 
-    a:hover {
-      background-color: $highlight-colour;
+    // Heading Link Tags
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      // Link
+      a {
+        border: none;
+
+        // Hovered Icon
+        &:hover {
+          background: none;
+
+          .icon.icon-link::before {
+            content: "#";
+          }
+        }
+
+        // Normal State Icon
+        .icon.icon-link::before {
+          content: ""; // Not Vis
+          font-size: 1rem;
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          background-size: 20px 20px;
+        }
+      }
     }
 
     ul {
@@ -199,6 +233,7 @@ button {
   }
 }
 
+// Cards as used on the portfolio page
 .card {
   background-color: $secondary-nav-background;
   display: flex;
