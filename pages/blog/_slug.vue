@@ -13,6 +13,19 @@
     <article>
       <nuxt-content :document="article" />
     </article>
+
+    <div id="comment-box">
+      <p>
+        Thank you for reading this blog post! 👍
+      </p>
+      <p>
+        If you have any comments or questions, please
+        <a :href="commentsLink()">
+          send them to me via email.
+        </a>
+        🧙🏻‍♂️
+      </p>
+    </div>
   </main>
 </template>
 
@@ -28,18 +41,18 @@ export default {
       title: this.article.title,
       meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content: this.article.description
         },
-        { 
-          property: "og:description", 
+        {
+          property: 'og:description',
           content: this.article.description
         },
-        { 
-          property: "og:title", 
+        {
+          property: 'og:title',
           content: this.article.title
-        },
+        }
       ]
     }
   },
@@ -48,6 +61,10 @@ export default {
     formatDate (date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
+    },
+
+    commentsLink () {
+      return 'mailto:comments@joshc.uk?subject=RE: ' + this.article.title
     }
   }
 }
