@@ -266,3 +266,33 @@ button {
     background-color: adjust-color($secondary-background, $lightness: -10%);
   }
 }
+
+// Slideshow
+.gallery {
+  p {
+    padding: 0;
+  }
+  .control-buttons {
+    display: flex;
+    justify-content: space-around;
+
+    span {
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        cursor: pointer;
+        color: $font-colour;
+        user-select: none;
+        border: none;
+
+        &:hover {
+          background-color: $secondary;
+          color: $background;
+        }
+      }
+    }
+  }
+}

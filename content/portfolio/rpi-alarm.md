@@ -16,18 +16,26 @@ Using a Raspberry Pi, I wrote a program which connected the [Twilio API](https:/
 If there is motion detected, there is a short delay to see if the button to disarm the alarm is pressed, if it is there is no alarm triggered. The alarm can even be disarmed before the person even enters the building, this is because of the use of the
 RF fob.
 
-If the alarm is sounded, either automatically, or by pressing the panic button, the loud siren is activated and a message is sent to the phone number configured.
+If the alarm is sounded, either automatically, or by pressing the panic button, the loud siren is and a message is sent to the phone number configured.
 
 The text message is sent through [Twilio](https://www.twilio.com), a cloud service, which allowed me to get a virtual phone number, which I could use to send messages.
 
 This allows for the Pi to not need to connect to the GSM network, as it works directly with Wi-Fi at the installed house.
 
-<img class="sideImageForPortfolio portfolioPageImage" src="/assets/images/alarm6.png" alt="the alarm full assembled and mounted to a wall.">
+<div class="gallery">
 
-<img class="smallPortfolioPageImage" src="/assets/images/alarm2.jpg" alt="the inside of the alarm">
+<div class="control-buttons">
+    <span><a onclick="plusSlides(-1)">&#10094;</a></span>
+    <span id="slide-counter">1/5</span>
+    <span><a onclick="plusSlides(1)">&#10095;</a></span>
+</div>
 
-<img class="smallPortfolioPageImage" src="/assets/images/alarm3.jpg" alt="one of the circuit boards created">
+![the alarm full assembled and mounted to a wall](/assets/images/alarm6.png)
+![the inside of the alarm](/assets/images/alarm2.jpg)
+![one of the circuit boards created](/assets/images/alarm3.jpg)
+![sample text message which could be sent](/assets/images/alarm4.jpg)
+![remote keyfob for interacting with the alarm](/assets/images/alarm5.jpg)
 
-<img class="smallPortfolioPageImage" src="/assets/images/alarm4.jpg" alt="sample text message which could be sent">
+</div>
 
-<img class="smallPortfolioPageImage" src="/assets/images/alarm5.jpg" alt="remote keyfob for interacting with the alarm">
+<script src="/assets/scripts/slideshow.js">
