@@ -15,7 +15,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.15.2",
     "nuxt": "^2.15.7",
-    "prism-themes": "^1.7.0",
+    "prism-themes": "^1.8.0",
     "remark-emoji": "^2.2.0"
   },
   "devDependencies": {
