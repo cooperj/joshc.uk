@@ -5,7 +5,7 @@ icon: /assets/images/contineo1.png
 publishDate: 2019-07-01
 ---
 
-# What is the project?
+## What is the project?
 
 As a part of my Level 3 course, I created a pure HTML, CSS and JavaScript website for the company Contineo. They wanted a website that would be used to create a brand for Contineo.
 
@@ -19,7 +19,7 @@ This was done from creating multiple pages;
 - Join our Team,
 - & Frequently Asked Questions.
 
-# What was required?
+## What was required?
 
 The requirements can be broken down into four sections; Branding, Content, Interactivity and Accessibility.
 
@@ -37,4 +37,4 @@ The website had to work on multiple browsers, so I tested that the site worked i
 
 <iframe src="/demos/portfolio/contineo" frameborder="0" width="100%" height="900"></iframe>
 
-<a href="/demos/portfolio/contineo" class="btn" target="_blank">View Demo in Full Screen</a>
+<!-- <a href="/demos/portfolio/contineo" class="btn" target="_blank">View Demo in Full Screen</a> -->

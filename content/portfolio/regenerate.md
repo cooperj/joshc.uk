@@ -5,7 +5,7 @@ icon: /assets/images/RegnCover.png
 publishDate: 2019-07-30
 ---
 
-# What is the project?
+## What is the project?
 
 During 2019, I completed an extended work placement with [Linney](https://linney.com/) of 315 hours. In this time I created a product for the [Linney Regenerate](https://www.linney.com/regenerate/) team, they want to make the companies waste wonderful.
 
@@ -15,7 +15,7 @@ I was given access to industry standard tools which they use within the Microsof
 
 So, what I created was a form which any member of staff can refer and item with.
 
-# How does someone create a referral?
+## How does someone create a referral?
 
 This form greets the user with a message which can be easily changed from the settings area. This allows the team to change the message regularly without needing to break into the code.
 
@@ -37,7 +37,7 @@ The user can upload a maximum of two images. We have placed the limit of two ima
 
 When the form is submitted, an email is sent to the user to confirm their request and the request is recorded in the database.
 
-# How does someone login to the system?
+## How does someone login to the system?
 
 ![the application showing the login page](/assets/images/Regn3.png)
 
@@ -51,7 +51,7 @@ If the user is an administrator, they get a navigation bar which contains links 
 
 ![the application showing the drop down menu for the administrator](/assets/images/Regn5.png)
 
-# How are the users managed?
+## How are the users managed?
 
 Here is the menu to manage the users who have logged into the software this is where the user can be given different roles, currently either **User** or **Admin**.
 
@@ -71,7 +71,7 @@ From the drop-down list, the new role can be selected then save button is clicke
 
 ![the application showing the drop down list to choose a new role](/assets/images/Regn8.png)
 
-# What items have been referred?
+## What items have been referred?
 
 From here an administrator can update the status, get in contact with the person, this is done by clicking on the row.
 
@@ -109,7 +109,7 @@ The items are shown in pages, each with 20 items. At the end of the page, there 
 
 ![the application showing the pagination function](/assets/images/Regn12.png)
 
-# What settings can I change?
+## What settings can I change?
 
 The settings page also allows the user to change a lot of different settings, for example, they can add, remove and rename merchants.
 

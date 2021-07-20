@@ -5,11 +5,11 @@ icon: /assets/images/alarm6.png
 publishDate: 2018-11-11
 ---
 
-# What is the project?
+## What is the project?
 
 I created a burglar alarm system which alerts the homeowner when there was an issue at their house.
 
-# How does the product work?
+## How does the product work?
 
 Using a Raspberry Pi, I wrote a program which connected the [Twilio API](https://www.twilio.com/docs) with sensors and electronics which are connected to the [Raspberry Pi](https://www.raspberrypi.org/).
 
