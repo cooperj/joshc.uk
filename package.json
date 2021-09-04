@@ -16,7 +16,8 @@
     "core-js": "^3.16.3",
     "nuxt": "^2.15.8",
     "prism-themes": "^1.8.0",
-    "remark-emoji": "^3.0.1"
+    "remark-emoji": "^3.0.1",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

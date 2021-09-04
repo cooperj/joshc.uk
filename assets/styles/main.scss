@@ -77,7 +77,7 @@ main {
   }
 
   article {
-    width: 80%;
+    width: 70%;
 
     p {
       padding-bottom: 20px;
@@ -254,7 +254,7 @@ button {
     img {
       border-radius: 1.5rem;
       padding: 0;
-      box-shadow: 0 0 30px adjust-color($secondary-background, $lightness: -20%);
+      // box-shadow: 0 0 30px adjust-color($secondary-background, $lightness: -20%);
     }
   }
 
