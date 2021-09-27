@@ -7,6 +7,43 @@
       <p>
         Sample Text!
       </p>
+
+      <p>
+        This is the placeholder home page.
+      </p>
+
+      <ul>
+        <li>
+          <nuxt-link to="/about/">
+            About
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/contact/">
+            Contact
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/portfolio/">
+            Portfolio
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/blog/">
+            Blog
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/privacy/">
+            Privacy Policy
+          </nuxt-link>
+        </li>
+        <li>
+          <a href="/sitemap.xml">
+            XML Sitemap
+          </a>
+        </li>
+      </ul>
     </article>
   </main>
 </template>
@@ -18,18 +55,18 @@ export default {
       title: 'About',
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: "Sample Text!"
+          hid: 'description',
+          name: 'description',
+          content: 'Sample Text!'
         },
-        { 
-          property: "og:description", 
-          content: "Sample Text!"
+        {
+          property: 'og:description',
+          content: 'Sample Text!'
         },
-        { 
-          property: "og:title", 
-          content: "About Josh"
-        },
+        {
+          property: 'og:title',
+          content: 'About Josh'
+        }
       ]
     }
   }

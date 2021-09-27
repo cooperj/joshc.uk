@@ -1,46 +1,24 @@
 <template>
-  <main>
-    <summary>
-      <h1> Placeholder Homepage </h1>
-    </summary>
-    <article>
-      <p>
-        This is the placeholder home page.
-      </p>
-
-      <ul>
-        <li>
-          <nuxt-link to="/about/">
-            About
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/contact/">
-            Contact
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/portfolio/">
-            Portfolio
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/blog/">
-            Blog
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/privacy/">
-            Privacy Policy
-          </nuxt-link>
-        </li>
-        <li>
-          <a href="/sitemap.xml">
-            XML Sitemap
-          </a>
-        </li>
-      </ul>
-    </article>
+  <main class="home">
+    <div class="header">
+      <div class="hi">
+        <h1>
+          Hi! 👋🏻 My name is Josh! <em>(he/him)</em>
+        </h1>
+        <img
+          src="/assets/images/joshua.webp"
+          alt="Josh"
+        >
+      </div>
+      <div>
+        <p>
+          I'm currently a second year <strong>Games Computing 👨🏻‍🎓</strong> student.
+        </p>
+        <p>
+          My interests include a collection of <strong>user experience 👬</strong>, <strong>games 🎮</strong>, <strong>web 🌍</strong>, <strong>open source software 🥣</strong>, and cool <strong>hardware 📦</strong>.
+        </p>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -48,21 +26,21 @@
 export default {
   head () {
     return {
-      title: 'Home',
+      title: 'Hi! I\'m',
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: "Sample Text!"
+          hid: 'description',
+          name: 'description',
+          content: 'Sample Text!'
         },
-        { 
-          property: "og:description", 
-          content: "Sample Text!"
+        {
+          property: 'og:description',
+          content: 'Sample Text!'
         },
-        { 
-          property: "og:title", 
-          content: "Josh Cooper"
-        },
+        {
+          property: 'og:title',
+          content: 'Josh Cooper'
+        }
       ]
     }
   }
