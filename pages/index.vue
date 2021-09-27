@@ -26,7 +26,7 @@
 export default {
   head () {
     return {
-      title: 'Hi! I\'m',
+      title: '',
       meta: [
         {
           hid: 'description',
