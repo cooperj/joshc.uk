@@ -1,20 +1,20 @@
 <template>
   <main>
     <summary>
-      <h1> About </h1>
+      <h1> ZZ Links Page </h1>
     </summary>
     <article>
       <p>
-        Sample Text!
+        Page to help developement things
       </p>
-
-      <p>
-        This is the placeholder home page.
-      </p>
-
       <ul>
         <li>
-          <nuxt-link to="/about/">
+          <nuxt-link to="/zz/">
+            This page
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/">
             About
           </nuxt-link>
         </li>
@@ -36,6 +36,11 @@
         <li>
           <nuxt-link to="/privacy/">
             Privacy Policy
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/sitemap/">
+            Sitemap
           </nuxt-link>
         </li>
         <li>

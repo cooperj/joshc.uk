@@ -8,7 +8,7 @@
         Hey 👋🏻 Thank you for reaching out!
       </p>
       <p>
-        I would appreciate it if you could fill out the following form in as much detail as you can, so I can best deal with your issue.
+        I would appreciate it if you could fill out the following form in as much detail as you can, so I can best deal with your query.
       </p>
       <p>
         I have a

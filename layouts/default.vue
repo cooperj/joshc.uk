@@ -8,7 +8,7 @@
       </span>
       <ul>
         <li>
-          <nuxt-link to="/about/">
+          <nuxt-link to="/">
             About
           </nuxt-link>
         </li>

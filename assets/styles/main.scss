@@ -1,12 +1,25 @@
 $font-size: 20pt;
 $primary: #e3d407;
-$primary-selected: adjust-color($primary, $lightness: -10%);
 $secondary: #494949;
 $background: #f5f5f5;
 $font-colour: #000;
 $font-face: sans-serif;
 $highlight-colour: #07e307;
-$secondary-background: lightgrey;
+$secondary-background: #ececec;
+$input-background: #fff;
+
+// Dark Mode
+// @media (prefers-color-scheme: dark) {
+// $primary: #e307ac;
+// $background: #1b1b1b;
+// $secondary-background: #2c2c2c;
+// $font-colour: #fff;
+// $input-background: #585858;
+// }
+
+// Auto calculated colours/props
+$primary-selected: adjust-color($primary, $lightness: -10%);
+$header: $background;
 
 // Styles
 html,
@@ -22,7 +35,7 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  background: $primary;
+  background: $header;
   padding: 25px 25px;
   justify-content: space-between;
 
@@ -31,7 +44,7 @@ header {
     margin: 5px;
 
     &:hover {
-      color: $primary;
+      color: $header;
       background-color: $font-colour;
     }
   }
@@ -162,6 +175,7 @@ main {
           font: $font-size $font-face;
           margin: 10px 0;
           border: $secondary 2px dashed;
+          background: $input-background;
         }
 
         input:focus,
@@ -177,6 +191,8 @@ main {
           -o-transform: scale(1.75); /* Opera */
           transform: scale(1.75);
           padding: 10px;
+          background-color: $primary;
+          
         }
 
         label {
@@ -198,6 +214,15 @@ main.home {
   display: inline-flex;
   align-self: center;
   padding-top: 40px;
+
+  a {
+    border-bottom: 5px dotted $primary;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $highlight-colour;
+    }
+  }
 
   em {
     font-size: $font-size * 1.3;
@@ -262,13 +287,17 @@ footer {
     text-align: right;
     padding-right: 30px;
   }
+
+  a {
+    border-bottom: 3px dotted
+      adjust-color($font-colour, $lightness: -70%, $alpha: -0.4);
+  }
 }
 
 a {
   text-decoration: none;
   color: $font-colour;
-  border-bottom: 3px dotted
-    adjust-color($font-colour, $lightness: -70%, $alpha: -0.4);
+  border-bottom: 4px dotted $primary;
 }
 
 button {
