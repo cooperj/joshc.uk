@@ -30,7 +30,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/styles/main.scss'
+    '@/assets/styles/main.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -57,7 +57,7 @@ export default {
   content: {
     liveEdit: false,
     markdown: {
-      remarkPlugins: ['remark-emoji'],
+      remarkPlugins: [],
       prism: {
         theme: 'prism-themes/themes/prism-lucario.css'
       }
