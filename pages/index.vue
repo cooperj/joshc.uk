@@ -3,7 +3,7 @@
     <div class="header">
       <div class="hi">
         <h1>
-          Hi! 👋🏻 My name is Josh!
+          Hi! 👋🏻 <br> My name is Josh!
         </h1>
         <img
           src="/assets/images/joshua.webp"
