@@ -2,40 +2,37 @@ import getRoutes from "./utils/getRoutes";
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: "static",
   ssr: true,
 
+  loading: "~/components/Loading.vue",
+
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+    baseUrl: process.env.BASE_URL || "http://localhost:3000"
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Josh Cooper',
-    titleTemplate: '%s Josh Cooper',
+    title: "Josh Cooper",
+    titleTemplate: "Josh Cooper %s",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: "theme-color", content: "#e3d407"},
-      { property: "og:site_name", content: "Josh Cooper"},
-      { property: "og:locale", content: "en_GB"},
-      { property: "og:type", content: "website"},      
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#e3d407" },
+      { property: "og:site_name", content: "Josh Cooper" },
+      { property: "og:locale", content: "en_GB" },
+      { property: "og:type", content: "website" }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/styles/main.css'
-  ],
+  css: ["@/assets/styles/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -43,14 +40,14 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    "@nuxtjs/eslint-module"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-    '@nuxtjs/sitemap'
+    "@nuxt/content",
+    "@nuxtjs/sitemap"
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -59,9 +56,9 @@ export default {
     markdown: {
       remarkPlugins: [],
       prism: {
-        theme: 'prism-themes/themes/prism-lucario.css'
+        theme: "prism-themes/themes/prism-lucario.css"
       }
-    },
+    }
   },
 
   generate: {
@@ -71,17 +68,19 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://joshc.uk',
+    hostname: "https://joshc.uk",
     gzip: true,
-    exclude: [
-      '/404'
-    ]
+    exclude: ["/404"]
   },
+
+  router: {
+		// middleware: "delay",
+	},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     // Public Path
-    publicPath: '/nuxt/',
+    publicPath: "/nuxt/",
 
     // Minify HTML
     collapseBooleanAttributes: true,
@@ -94,4 +93,4 @@ export default {
     trimCustomFragments: true,
     useShortDoctype: true
   }
-}
+};
