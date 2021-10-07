@@ -13,7 +13,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Josh Cooper",
-    titleTemplate: "Josh Cooper %s",
+    titleTemplate: "%s | Josh Cooper",
     htmlAttrs: {
       lang: "en"
     },
@@ -29,7 +29,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/styles/main.css"],
+  css: [
+    "@/assets/styles/main.css",
+    "@/node_modules/@fortawesome/fontawesome-free/css/all.css"
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -40,7 +43,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    "@nuxtjs/eslint-module"
+    "@nuxtjs/eslint-module",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

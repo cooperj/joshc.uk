@@ -13,7 +13,7 @@
       <p>
         I have a
         <nuxt-link to="/contact/standing-invitation">
-          Standing Invitation
+          standing invitation
         </nuxt-link>
         in place, you may find it helpful to review that first...
       </p>

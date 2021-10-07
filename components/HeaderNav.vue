@@ -1,10 +1,14 @@
 <template>
-    <header>
-      <span class="title">
-        <nuxt-link to="/">
-          Josh Cooper
-        </nuxt-link>
-      </span>
+  <header>
+    <span class="title">
+      <nuxt-link to="/">
+        Josh Cooper
+      </nuxt-link>
+    </span>
+    <div id="links" class="">
+      <a href="#" class="close-btn">
+        <i class="fas fa-times" />
+      </a>
       <ul>
         <li>
           <nuxt-link to="/">
@@ -27,5 +31,9 @@
           </nuxt-link>
         </li>
       </ul>
-    </header>
+    </div>
+    <a href="#" class="open-nav-btn">
+      <i class="fas fa-bars" />
+    </a>
+  </header>
 </template>

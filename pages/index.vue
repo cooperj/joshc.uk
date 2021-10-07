@@ -39,7 +39,7 @@
 export default {
   head () {
     return {
-      title: '',
+      title: 'Home',
       meta: [
         {
           hid: 'description',

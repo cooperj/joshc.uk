@@ -90,6 +90,14 @@ body {
   header ul li {
     display: inline;
   }
+
+  header #links .close-btn {
+    display: none;
+  }
+
+  header .open-nav-btn {
+    display: none;
+  }
 }
 
 /* Small Devices */
@@ -99,7 +107,8 @@ body {
     flex-direction: row;
     background: var(--header);
     padding: 25px 25px;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
   }
 
   header a {
@@ -117,12 +126,47 @@ body {
     font-size: calc(var(--font-size) * 0.9);
   }
 
-  header ul {
+  header #links {
     display: none;
   }
 
-  header ul li {
-    display: none;
+  header .links-open {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: var(--primary);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .links-open .close-btn {
+    margin: 10px;
+    margin-right: 30px;
+    padding: 10px;
+    align-self: flex-end;
+  }
+
+  header .links-open ul {
+    margin: 10px;
+    padding: 0;
+    list-style-type: none;
+    line-height: 3;
+    width: 70%;
+  }
+
+  header .links-open ul li a {
+    display: inline-block;
+    background-color: var(--primary-selected);
+    margin: 10px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  header .links-open ul li a:hover {
+    background-color: var(--font-colour);
   }
 }
 
@@ -259,7 +303,7 @@ main article form .form-group {
 
 main article form input:not([type="checkbox"]),
 main article form textarea {
-  width: 100%;
+  width: 99%;
   font: var(--font-size) var(--font-face);
   margin: 10px 0;
   border: var(--secondary) 2px dashed;
