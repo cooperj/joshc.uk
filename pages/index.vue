@@ -5,9 +5,9 @@
         <h1>
           Hi! 👋 <br> My name is Josh!
         </h1>
-        <img
+        <img aria-hidden="true"
           src="/assets/images/joshua.webp"
-          alt="Josh"
+          alt="Profile Picture of Joshua"
         >
       </div>
       <div>
