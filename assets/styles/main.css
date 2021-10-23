@@ -1,31 +1,35 @@
+@import url("https://use.typekit.net/rtt2lre.css");
+
 :root {
   --font-size: 16pt;
-  --primary: #e3d407;
-  --primary-selected: #C9BC06;
-  --secondary: #494949;
+  --primary: #018281;
+  --primary-selected: #06997D;
+  --secondary: #156E99;
+  --secondary-selected: #065F8F;
+  --font-colour: #040D0A;
   --background: #f5f5f5;
-  --font-colour: #000;
   --secondary-background: #ececec;
   --input-background: #fff;
-  --highlight-colour: #07e307;
-  --header: var(--background);
-  --font-face: sans-serif;
+  --highlight-colour: var(--primary-selected);
   --text-header-link-normal-state-colour: #ddd;
+  --header: var(--background);
+  --font-face-std: nimbus-sans, sans-serif;
+  --font-weight-std: 400;
+  --font-style-std: normal;
+  --font-face-bld: museo-sans-rounded, sans-serif;
+  --font-weight-bld: 800;
+  --font-style-bld: normal;
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary: #e307ac;
-        --primary-selected: #C90699;
         --secondary: #cfcfcf;
         --background: #1b1b1b;
         --font-colour: #fff;
         --secondary-background: #2c2c2c;
         --input-background: #585858;
-        --highlight-colour: #07e307;
         --header: var(--background);
-        --font-face: sans-serif;
         --text-header-link-normal-state-colour: #555555;
     }
 }
@@ -52,9 +56,23 @@ body {
   padding: 0;
   background: var(--background);
   color: var(--font-colour);
-  font-size: var(--font-size);
-  font-family: var(--font-face);
   line-height: 1.5;
+  font-size: var(--font-size);
+  font-family: var(--font-face-std);
+  font-weight: var(--font-weight-std);
+  font-style: var(--font-style-std);
+}
+
+.title
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-face-bld);
+  font-weight: var(--font-weight-bld);
+  font-style: var(--font-style-bld);
 }
 
 /* Change navbar items per device */
@@ -307,7 +325,7 @@ main article form .form-group {
 main article form input:not([type="checkbox"]),
 main article form textarea {
   width: 99%;
-  font: var(--font-size) var(--font-face);
+  font: var(--font-size) var(--font-face-std);
   margin: 10px 0;
   border: var(--secondary) 2px dashed;
   background: var(--input-background);
@@ -400,7 +418,8 @@ main #comment-box {
   }
 
   main.home a {
-    border-bottom: 5px dotted var(--primary);
+    /* border-bottom: 5px dotted var(--primary); */
+    background-color: var(--primary);
     font-weight: bold;
   }
 
@@ -491,7 +510,7 @@ a {
 }
 
 button {
-  font: var(--font-size) var(--font-face);
+  font: var(--font-size) var(--font-face-std);
   width: 100%;
   border: none;
   background-color: var(--primary);

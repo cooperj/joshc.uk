@@ -18,7 +18,7 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, user-scalable=no, initial-scale=1" },
-      { name: "theme-color", content: "#e3d407" },
+      { name: "theme-color", content: "#018281" },
       { property: "og:site_name", content: "Josh Cooper" },
       { property: "og:locale", content: "en_GB" },
       { property: "og:type", content: "website" },
@@ -111,7 +111,7 @@ export default {
   },
   
   sitemap: {
-    hostname: "https://joshc.uk",
+    hostname: "https://www.joshc.uk",
     gzip: true,
     exclude: ["/404"],
     
@@ -119,7 +119,7 @@ export default {
   },
 
   router: {
-		// middleware: "delay",
+		middleware: "delay",
 	},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
