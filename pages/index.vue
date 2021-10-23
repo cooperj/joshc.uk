@@ -45,11 +45,11 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Sample Text!'
+          content: 'I\'m currently a second year Games Computing 👨‍🎓 student with interests that include a collection of user experience 👬, games 🎮, web 🌍, open source software 🥣, and cool hardware 📦.'
         },
         {
           property: 'og:description',
-          content: 'Sample Text!'
+          content: 'I\'m currently a second year Games Computing 👨‍🎓 student with interests that include a collection of user experience 👬, games 🎮, web 🌍, open source software 🥣, and cool hardware 📦.'
         },
         {
           property: 'og:title',

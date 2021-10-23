@@ -19,9 +19,7 @@ So, what I created was a form which any member of staff can refer and item with.
 
 This form greets the user with a message which can be easily changed from the settings area. This allows the team to change the message regularly without needing to break into the code.
 
-<a href="/assets/images/Regn1.png" data-toggle="lightbox">
-    <img class="portfolioPageImage" src="/assets/images/Regn1.png" alt="screenshot from the application showing the welcome page">
-</a>
+![the application showing the welcome page](/assets/images/Regn1.png)
 
 To make a referral, the user will fill in this form. This starts with "placeholder" values, this is used to give the user an idea on what needs to be entered, this is useful because it stops the user guessing.
 

@@ -119,7 +119,7 @@ export default {
   },
 
   router: {
-		middleware: "delay",
+		// middleware: "delay",
 	},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
