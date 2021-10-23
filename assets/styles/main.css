@@ -350,7 +350,8 @@ main #comment-box {
   }
 
   main.home a {
-    border-bottom: 5px dotted var(--primary);
+    /* border-bottom: 5px dotted var(--primary); */
+    background-color: var(--primary);
     font-weight: bold;
   }
 

@@ -18,13 +18,14 @@
           My interests include a collection of <strong>user experience 👬</strong>, <strong>games 🎮</strong>, <strong>web 🌍</strong>, <strong>open source software 🥣</strong>, and cool <strong>hardware 📦</strong>.
         </p>
       </div>
-      <div class="metabox">
-        <!-- <h1>meta</h1> -->
-      </div>
+      <!-- <div class="cards-container">
+        <div class="card">
+          <h1>meta</h1>
+        </div>
+      </div> -->
       <div>
         <p>
-          Thank you  for getting to the end of this page! 🙌
-          Please feel free to
+          Thank you  for getting to the end of this page! 🙌 Please feel free to
           <nuxt-link to="/contact/">
             get in contact with me!
           </nuxt-link>

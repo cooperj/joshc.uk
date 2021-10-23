@@ -1,5 +1,3 @@
-import getRoutes from "./utils/getRoutes";
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -23,7 +21,8 @@ export default {
       { name: "theme-color", content: "#e3d407" },
       { property: "og:site_name", content: "Josh Cooper" },
       { property: "og:locale", content: "en_GB" },
-      { property: "og:type", content: "website" }
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "/assets/images/joshua.webp" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -58,8 +57,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    "@nuxtjs/eslint-module",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -80,16 +77,45 @@ export default {
     }
   },
 
-  generate: {
-    routes() {
-      return getRoutes();
-    }
-  },
+  generate: {   
+    // https://jackwhiting.co.uk/posts/generating-sitemap-entries-for-nuxt-content/
+    routes: async () => {
+      console.log("sitemap routes")
+      
+      // const { $content } = require('@nuxt/content')
 
+      console.log(this.$content)
+      const blog = await this.$content('blog')
+        .only(['path'])
+        .fetch()
+
+      const portfolio = await this.$content('portfolio')
+        .only(['path'])
+        .fetch()
+
+      console.log(blog)
+      console.log(portfolio)
+
+      // Map and concatenate the routes and return the array.
+      return []
+        .concat(blog.map((b) => b.path))
+        .concat(portfolio.map((p) => p.path))
+
+
+
+      // const files = await $content({ deep: true }).only(["path"]).fetch()
+      // return files.map((file) => (file.path === "/index" ? "/" : file.path))
+    },
+
+    fallback: '404.html'
+  },
+  
   sitemap: {
     hostname: "https://joshc.uk",
     gzip: true,
-    exclude: ["/404"]
+    exclude: ["/404"],
+    
+
   },
 
   router: {

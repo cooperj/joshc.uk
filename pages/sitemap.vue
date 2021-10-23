@@ -45,7 +45,8 @@ export default {
     }
   },
   async fetch () {
-    const xmlData = await fetch(process.env.baseUrl + '/sitemap.xml')
+    const url = process.env.baseUrl + '/sitemap.xml'
+    const xmlData = await fetch(url)
       .then(res => res.text())
       .then((data) => {
         return (data.substring(38, data.length))
