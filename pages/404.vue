@@ -1,11 +1,15 @@
 <template>
   <main>
     <summary>
-      <h1>404 - Page not found</h1>
+      <h1>Page not found</h1>
     </summary>
     <article>
       <p>
-        The page could not be found.
+        The page you tried visit does not exist. You may have typed the address incorrectly or it may have been deleted. Check the address, and if it's still not working do <nuxt-link to="/contact"> get in touch </nuxt-link>.
+      </p>
+
+      <p>
+        <img src="/assets/images/spin.gif" alt="Gorilla spinning in the centre, top text: I live in spain, bottom text: without the a" />
       </p>
     </article>
   </main>

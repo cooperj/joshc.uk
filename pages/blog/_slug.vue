@@ -16,14 +16,16 @@
 
     <div id="comment-box">
       <p>
-        Thank you for reading this blog post! 👍
+        Thank you for reading this blog post! <span aria-hidden="true">👍</span>
       </p>
       <p>
         If you have any comments or questions, please
         <a :href="commentsLink()">
           send them to me via email.
         </a>
-        🧙🏻‍♂️
+        <span aria-hidden="true">
+          🧙🏻‍♂️
+        </span>
       </p>
     </div>
   </main>
