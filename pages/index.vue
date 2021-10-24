@@ -3,7 +3,7 @@
 
     <div id="hi">
       <h1>
-        Hi! 👋 <br> My name is Josh!
+        Hi! <span aria-hidden="true">👋</span> <br> My name is Josh!
       </h1>
       <img aria-hidden="true"
         class="profile"
@@ -14,43 +14,43 @@
 
     <div id="about">
       <p>
-        I'm currently a second year <strong>Games Computing 👨‍🎓</strong> student.
+        I'm currently a second year <strong>Games Computing <span aria-hidden="true">👨‍🎓</span></strong> student.
       </p>
       <p>
-        My interests include a collection of <strong>user experience 👬</strong>, <strong>games 🎮</strong>, <strong>web 🌍</strong>, <strong>open source software 🥣</strong>, and cool <strong>hardware 📦</strong>.
+        My interests include a collection of <strong>user experience <span aria-hidden="true">👬</span></strong>, <strong>games <span aria-hidden="true">🎮</span></strong>, <strong>web <span aria-hidden="true">🌍</span></strong>, <strong>open source software <span aria-hidden="true">🥣</span></strong>, and cool <strong>hardware <span aria-hidden="true">📦</span></strong>.
       </p>
     </div>
 
     <div id="projects">
       <p>
-        In the past, I have made projects 🧪 such as...
+        In the past, I have made projects <span aria-hidden="true">🧪</span> such as...
       </p>
       <div class="cards-container">
         <home-card-bananapocalypse />
       </div>
       <p>
-        ...and many more on my <nuxt-link to="/portfolio">portfolio</nuxt-link> 📚!
+        ...and many more on my <nuxt-link to="/portfolio">portfolio</nuxt-link> <span aria-hidden="true">📚</span>!
       </p>
     </div>
 
     <div id="blog">
       <p>
         You might also want to check out
-        <nuxt-link to="/blog">my blog</nuxt-link> 📝.
+        <nuxt-link to="/blog">my blog</nuxt-link> <span aria-hidden="true">📝</span>.
       </p>
       <p>
         My last post was
-        <nuxt-link :to="'/blog/' + article[0].slug">{{ article[0].title }}</nuxt-link> 📃.
+        <nuxt-link :to="'/blog/' + article[0].slug">{{ article[0].title }}</nuxt-link> <span aria-hidden="true">📃</span>.
       </p>
     </div>
 
     <div id="thank-you">
       <p>
-        Thank you 🙌 for visiting my site! Please feel free to
+        Thank you <span aria-hidden="true">🙌</span> for visiting my site! Please feel free to
         <nuxt-link to="/contact/">
           get in contact with me!
         </nuxt-link>
-        📬
+        <span aria-hidden="true">📬</span>
       </p>
     </div>
     
