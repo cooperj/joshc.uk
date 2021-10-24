@@ -39,7 +39,7 @@
         </p>
         <p>
           My last post was
-          <nuxt-link :to="article[0].path"> {{ article[0].title }} </nuxt-link> 📃.
+          <nuxt-link :to="'/blog/' + article[0].slug"> {{ article[0].title }} </nuxt-link> 📃.
         </p>
       </div>
 
@@ -78,9 +78,8 @@ export default {
       ]
     }
   },
-  async asyncData ({ $content, params }) {
-    const article = await $content('blog', params.slug).only(['title', 'publishDate']).sortBy('publishDate', 'desc').where({ draft: false }).limit(1).fetch()
-    console.log(article)
+  async asyncData ({ $content }) {
+    const article = await $content('blog').only(['title', 'slug', 'publishDate']).sortBy('publishDate', 'desc').where({ draft: false }).limit(1).fetch()
     return { article }
   },
 }
