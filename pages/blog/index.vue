@@ -20,7 +20,7 @@
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const articles = await $content('blog', params.slug).only(['title', 'slug', 'publishDate', 'description']).sortBy('publishDate').fetch()
+    const articles = await $content('blog', params.slug).only(['title', 'slug', 'publishDate', 'description']).sortBy('publishDate', 'desc').fetch()
     return { articles }
   },
 

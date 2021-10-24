@@ -34,9 +34,8 @@ const styles = `
 }
 
 .disclaimer-banner a:hover {
-  color: rgb(128, 166, 255);
   cursor: pointer;
-  border-bottom: 2px dotted white;
+  border-bottom: 2px dotted #018281;
 }
 
 .disclaimer-banner-text-bold {

@@ -215,11 +215,13 @@ main summary h1 {
   margin-bottom: 10px;
 }
 
-main summary .publish-label {
+main summary .publish-label,
+.card .date .label {
   font-weight: bold;
 }
 
-main summary .publish-date {
+main summary .publish-date,
+.card .date {
   color: var(--secondary);
 }
 
@@ -252,7 +254,7 @@ main article img {
 }
 
 main article iframe {
-  border: var(--secondary) 4px dashed;
+  outline: var(--secondary) 4px dashed;
 }
 
 main article a.btn {
@@ -327,14 +329,15 @@ main article form textarea {
   width: 99%;
   font: var(--font-size) var(--font-face-std);
   margin: 10px 0;
-  border: var(--secondary) 2px dashed;
+  outline: var(--secondary) 2px dashed;
+  border: none;
   background: var(--input-background);
 }
 
 main article form input:focus,
 main article form textarea:focus {
-  border: var(--primary-selected) 2px dashed;
-  outline: none;
+  outline: var(--primary-selected) 2px dashed;
+  border: none;
 }
 
 main article form input[type="checkbox"] {
@@ -553,22 +556,36 @@ button:active {
   .card {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     margin-bottom: 30px;
+    border-radius: 1em;
   }
 
   .card .img {
-    width: 20%;
-    height: auto;
-    margin-right: 10px;
+    margin-right: 50px;
   }
-
+  
   .card .img img {
-    border-radius: 1rem;
+    border-radius: 1em 0 0 1em;
+    height: 300px;
+    width: 300px;
     padding: 0;
+    margin: 0;
+    opacity: 0.69;
+    -webkit-mask-image: linear-gradient(to right, black 42%, transparent);
+    mask-image: linear-gradient(to right, black 42%, transparent);
   }
 
   .card .card-body {
     width: 60%;
+  }
+
+  .card .card-body p {
+    margin: 5px 0;
+  }
+  
+  .card .card-body h1 {
+    margin: 5px 0;
   }
 }
 
@@ -579,11 +596,11 @@ button:active {
     flex-direction: column;
     align-items: center;
     margin: 0 0 30px 0;
-    padding: 40px 10px 10px 10px;
+    padding: 20px 10px 10px 10px;
   }
 
   .card .img {
-    width: 90%;
+    width: 80%;
     height: auto;
     margin-right: 10px;
   }
@@ -595,6 +612,21 @@ button:active {
 
   .card .card-body {
     width: 90%;
+  }
+
+  .card .card-body p {
+    margin: 5px 0;
+  }
+
+  .card .card-body p {
+    margin: 5px 0;
+  }
+  
+  .card .card-body h1 {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
   }
 }
 

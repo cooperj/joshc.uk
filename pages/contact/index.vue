@@ -10,13 +10,6 @@
       <p>
         I would appreciate it if you could fill out the following form in as much detail as you can, so I can best deal with your query.
       </p>
-      <p>
-        I have a
-        <nuxt-link to="/contact/standing-invitation">
-          standing invitation
-        </nuxt-link>
-        in place, you may find it helpful to review that first...
-      </p>
       <div>
         <form action="/contact/submit/" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
           <div class="hidden">
