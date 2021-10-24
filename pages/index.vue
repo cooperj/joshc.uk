@@ -40,7 +40,7 @@
       </p>
       <p>
         My last post was
-        <nuxt-link :to="'/blog/' + article[0].slug"> {{ article[0].title }} </nuxt-link> 📃.
+        <nuxt-link :to="'/blog/' + article[0].slug">{{ article[0].title }}</nuxt-link> 📃.
       </p>
     </div>
 

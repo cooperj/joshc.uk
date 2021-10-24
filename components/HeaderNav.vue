@@ -6,7 +6,7 @@
       </nuxt-link>
     </span>
       <a v-on:click="openNav()" class="open-nav-btn" aria-label="open navigation">
-        <i class="fas fa-bars" />
+        <i class="fas fa-bars" aria-hidden="true" />
       </a>
     <div id="links" :class="linksStateClass">
         <header>
@@ -16,7 +16,7 @@
             </nuxt-link>
           </span>
           <a v-on:click="closeNav()" class="close-btn" aria-label="close navigation">
-            <i class="fas fa-times" />
+            <i class="fas fa-times" aria-hidden="true" />
           </a>
         </header>
       <ul>
