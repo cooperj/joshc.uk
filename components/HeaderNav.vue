@@ -5,8 +5,8 @@
         Josh Cooper
       </nuxt-link>
     </span>
-      <a v-on:click="openNav()" class="open-nav-btn">
-        <i class="fas fa-bars" aria-label="open navigation" />
+      <a v-on:click="openNav()" class="open-nav-btn" aria-label="open navigation">
+        <i class="fas fa-bars" />
       </a>
     <div id="links" :class="linksStateClass">
         <header>
@@ -15,8 +15,8 @@
               Josh Cooper
             </nuxt-link>
           </span>
-          <a v-on:click="closeNav()" class="close-btn">
-            <i class="fas fa-times" aria-label="close navigation" />
+          <a v-on:click="closeNav()" class="close-btn" aria-label="close navigation">
+            <i class="fas fa-times" />
           </a>
         </header>
       <ul>

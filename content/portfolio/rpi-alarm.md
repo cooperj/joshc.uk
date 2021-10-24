@@ -1,7 +1,7 @@
 ---
 title: Raspberry Pi Burglar Alarm
 description: Using a Raspberry Pi, I created a burglar alarm system which alerts the homeowner when there is a potential issue at their house.
-icon: /assets/images/alarm6.png
+icon: /assets/images/rpi-alarm/case.webp
 publishDate: 2018-11-11
 draft: false
 ---
@@ -31,11 +31,11 @@ This allows for the Pi to not need to connect to the GSM network, as it works di
     <span><a onclick="plusSlides(1)">&#10095;</a></span>
 </div>
 
-![the alarm full assembled and mounted to a wall](/assets/images/alarm6.png)
-![the inside of the alarm](/assets/images/alarm2.jpg)
-![one of the circuit boards created](/assets/images/alarm3.jpg)
-![sample text message which could be sent](/assets/images/alarm4.jpg)
-![remote keyfob for interacting with the alarm](/assets/images/alarm5.jpg)
+![the alarm full assembled and mounted to a wall](/assets/images/rpi-alarm/case.webp)
+![the inside of the alarm](/assets/images/rpi-alarm/inside.webp)
+![one of the circuit boards created](/assets/images/rpi-alarm/daughter-board.webp)
+![sample text message which could be sent](/assets/images/rpi-alarm/sms.webp)
+![remote keyfob for interacting with the alarm](/assets/images/rpi-alarm/remote.webp)
 
 </div>
 
