@@ -5,14 +5,27 @@
     </summary>
 
     <article>
-      <li v-for="article in articles" :key="article.slug">
-        <nuxt-link :to="`/blog/${article.slug}`">
-          {{ article.title }}
-        </nuxt-link>
-        <p>
-          {{ article.description }} | {{ formatDate(article.publishDate) }}
-        </p>
-      </li>
+      <nuxt-link
+        v-for="article in articles"
+        :key="article.slug"
+        :to="`/blog/${article.slug}`"
+        class="card-link"
+      >
+        <div class="card">
+          <!-- If Icon, use it Else use unsplash random image -->
+          <div class="img" :style="'background-image: url(' + (article.icon ? article.icon : 'https://source.unsplash.com/300x300/?nature,water,landscape') + ');'" />
+          <div class="card-body">
+            <h1> {{ article.title }} </h1>
+            <p>
+              {{ article.description }}
+            </p>
+            <p class="date">
+              <span class="label">Published:</span>
+              {{ formatDate(article.publishDate) }}
+            </p>
+          </div>
+        </div>
+      </nuxt-link>
     </article>
   </main>
 </template>

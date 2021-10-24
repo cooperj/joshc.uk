@@ -576,8 +576,8 @@ button:active {
   }
 
   .card .card-body {
-    width: 60%;
     padding-left: 26%;
+    margin: 10px;
   }
 
   .card .card-body p {
