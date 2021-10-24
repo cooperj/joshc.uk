@@ -25,6 +25,10 @@ export default {
       { property: "og:image", content: "/assets/images/joshua.webp" }
     ],
     link: [
+      // Adobe fonts
+      { rel: "preconnect", href: "https://use.typekit.net/rtt2lre.css" },
+      
+      // Favicons etc
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       { rel: "apple-touch-icon", sizes: "57x57", href: "/apple-icon-57x57.png" },
       { rel: "apple-touch-icon", sizes: "60x60", href: "/apple-icon-60x60.png" },
