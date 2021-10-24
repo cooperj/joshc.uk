@@ -1,21 +1,22 @@
 <template>
-    <nuxt-link to="/portfolio/bananapocalypse">
-        <div class="card">
-            <!-- If Icon, use it Else use unsplash random image -->
-            <div class="img" />
-            <div class="card-body">
-                <!-- <h1> Bananapocalypse </h1> -->
-                <img class="logo" src="/assets/images/ba/logo.webp" alt="banana apocalypse" />
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </div>
+    <div class="card">
+        <!-- If Icon, use it Else use unsplash random image -->
+        <div class="img" />
+        <div class="card-body">
+            <!-- <h1> Bananapocalypse </h1> -->
+            <img class="logo" src="/assets/images/ba/logo.webp" alt="banana apocalypse" />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+                <nuxt-link class="action-link" to="/portfolio/bananapocalypse">
+                    Read more
+                </nuxt-link>
+            </p>
         </div>
-    </nuxt-link>
+    </div>
 </template>
 
 <style scoped>
@@ -34,6 +35,22 @@
         background-image: url('/assets/images/ba/home.webp');
         width: 30%;
 
+    }
+
+    .card:hover {
+        outline: none;
+    }
+
+    a.action-link {
+        background: none;
+        border-bottom: 4px solid #23951a;
+        color: #23951a;
+        -webkit-text-stroke-width: 0;
+    }
+
+    a.action-link:hover {
+        background: none;
+        border-bottom: none
     }
 
     /* Large Devices */

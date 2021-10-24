@@ -35,26 +35,26 @@ export default {
 
 .loading {
   background: #018281;
-  opacity: 1;
+  opacity: 0;
   width: 100%;
-  height: 100%;
+  height: 20px;
   display: grid;
   place-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
-  animation: move-in-steps 1s alternate ease-in-out;
+  animation: loading 2s infinite alternate linear;
 }
 
-@keyframes move-in-steps {
+@keyframes loading {
   0% {
-    left: 0;
-    background: var(--primary);
+    opacity: 0.3;
+    height: 10px;
   }
   100% {
-    left: 100%;
-    background: var(--background);
+    opacity: 0.9;
+    height: 35px;
   }
 }
 </style>
