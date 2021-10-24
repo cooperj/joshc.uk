@@ -28,7 +28,7 @@
           <home-card-bananapocalypse />
         </div>
         <p>
-          ...and many more on my <nuxt-link to="portfolio">portfolio</nuxt-link> 📚!
+          ...and many more on my <nuxt-link to="/portfolio">portfolio</nuxt-link> 📚!
         </p>
       </div>
 

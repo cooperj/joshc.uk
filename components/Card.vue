@@ -1,6 +1,5 @@
 <template>
     <nuxt-link
-        
         :to="`/${type}/${data.slug}`"
         class="card-link"
       >
