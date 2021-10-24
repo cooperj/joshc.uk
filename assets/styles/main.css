@@ -404,7 +404,7 @@ main #comment-box {
   }
 
   /* Profile Icon */
-  main.home div.header img {
+  main.home div.header img.profile {
     margin-left: 100px;
     height: 250px;
     border-radius: 100%;
@@ -458,7 +458,7 @@ main #comment-box {
   }
 
   /* Profile Icon */
-  main.home div.header img {
+  main.home div.header img.profile {
     height: 200px;
     border-radius: 100%;
   }
@@ -550,6 +550,11 @@ button:active {
   color: var(--background);
 }
 
+.cards-container {
+  width: 100%;
+  margin: 30px 0;
+}
+
 /* Change card per device */
 /* Large Devices */
 @media screen and (min-width: 768px) {
@@ -560,6 +565,7 @@ button:active {
     margin-bottom: 30px;
     justify-content: flex-start;
     border-radius: 1em;
+    min-width: 100%;
   }
 
   .card .img {
@@ -577,7 +583,8 @@ button:active {
 
   .card .card-body {
     padding-left: 26%;
-    margin: 10px;
+    margin: 15px;
+    margin-right: 50px;
   }
 
   .card .card-body p {
@@ -599,6 +606,20 @@ button:active {
     /* padding: 20px 10px 10px 10px; */
     justify-content: flex-start;
     border-radius: 1em;
+  }
+
+  /* Cards on the Home Page, no image big text */
+  .home .card {
+    padding: 30px;
+  }
+  
+  .home .card h1 {
+    font-size: calc(var(--font-size) * 1.3) !important;
+    font-weight: 800;
+  }
+
+  .home .card .img {
+    display: none !important;
   }
 
    .card .img {

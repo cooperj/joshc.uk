@@ -6,6 +6,7 @@
           Hi! 👋 <br> My name is Josh!
         </h1>
         <img aria-hidden="true"
+          class="profile"
           src="/assets/images/joshua.webp"
           alt="Profile Picture of Joshua"
         >
@@ -18,14 +19,22 @@
           My interests include a collection of <strong>user experience 👬</strong>, <strong>games 🎮</strong>, <strong>web 🌍</strong>, <strong>open source software 🥣</strong>, and cool <strong>hardware 📦</strong>.
         </p>
       </div>
-      <!-- <div class="cards-container">
-        <div class="card">
-          <h1>meta</h1>
+
+      <div id="projects">
+        <p>
+          In the past, I have made projects 🧪 such as...
+        </p>
+        <div class="cards-container">
+          <home-card-bananapocalypse />
         </div>
-      </div> -->
+        <p>
+          ...and many more on my <nuxt-link to="portfolio">portfolio</nuxt-link> 📚!
+        </p>
+      </div>
+
       <div>
         <p>
-          Thank you  for getting to the end of this page! 🙌 Please feel free to
+          Thank you 🙌 for visiting my site! Please feel free to
           <nuxt-link to="/contact/">
             get in contact with me!
           </nuxt-link>

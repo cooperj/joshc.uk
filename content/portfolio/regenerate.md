@@ -3,6 +3,7 @@ title: Linney Regenerate Collection
 description: I created a system for Linney Regenerate's team to receive and then track items that have been referred to them.
 icon: /assets/images/RegnCover.png
 publishDate: 2019-07-30
+draft: false
 ---
 
 ## What is the project?

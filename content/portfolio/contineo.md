@@ -3,6 +3,7 @@ title: Contineo
 description: I designed and created a website for the hosting company, Contineo. I was given a brief which included; colours, text, and font to use for the headers.
 icon: /assets/images/contineo1.png
 publishDate: 2019-07-01
+draft: false
 ---
 
 ## What is the project?

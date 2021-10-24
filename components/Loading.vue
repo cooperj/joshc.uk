@@ -41,10 +41,10 @@ export default {
   display: grid;
   place-items: center;
   position: absolute;
-  top: 100;
+  top: 0;
   left: 0;
   z-index: 10;
-  animation: move-in-steps 1s infinite;
+  animation: move-in-steps 1s alternate ease-in-out;
 }
 
 @keyframes move-in-steps {
