@@ -27,6 +27,12 @@ export default {
 </script>
 
 <style>
+@media (prefers-reduced-motion) {
+  .loading {
+    display: none;
+  }
+}
+
 .loading {
   background: #018281;
   opacity: 1;

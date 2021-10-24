@@ -12,7 +12,8 @@
         class="card-link"
       >
         <div class="card">
-          <div class="img" :style="'background-image: url(' + project.icon + ');'" />
+          <!-- If Icon, use it Else use unsplash random image -->
+          <div class="img" :style="'background-image: url(' + (project.icon ? project.icon : 'https://source.unsplash.com/300x300/?nature,water,landscape') + ');'" />
           <div class="card-body">
             <h1> {{ project.title }} </h1>
             <p>
