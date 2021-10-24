@@ -4,7 +4,7 @@
         <div class="img" />
         <div class="card-body">
             <!-- <h1> Bananapocalypse </h1> -->
-            <img class="logo" src="/assets/images/ba/logo.webp" alt="banana apocalypse" />
+            <img class="logo" src="/images/ba/logo.webp" alt="banana apocalypse" />
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -32,7 +32,7 @@
         margin-bottom: 10px;
     }
     .img {
-        background-image: url('/assets/images/ba/home.webp');
+        background-image: url('/images/ba/home.webp');
         width: 30%;
 
     }

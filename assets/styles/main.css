@@ -679,3 +679,23 @@ button:active {
 .card::selection {
   outline: 5px solid var(--primary);
 }
+
+
+/* Change flex row per device */
+/* Used on articles etc */
+/* Large Devices */
+@media screen and (min-width: 768px) {
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Small Devices */
+@media screen and (max-width: 768px) {
+  .flex-row {
+    display: flex;
+    flex-direction: column;
+  }
+}

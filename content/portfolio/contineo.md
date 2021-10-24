@@ -1,7 +1,7 @@
 ---
 title: Contineo
 description: I designed and created a website for the hosting company, Contineo. I was given a brief which included; colours, text, and font to use for the headers.
-icon: /assets/images/contineo.webp
+icon: /images/contineo.webp
 publishDate: 2019-07-01
 draft: false
 ---
@@ -36,6 +36,6 @@ The images had to include alt text, this is used by a screen reader to describe 
 
 The website had to work on multiple browsers, so I tested that the site worked in **Google Chrome** and **Mozilla Firefox**, this ensures that the code is correct and that there is not going to be any issues.
 
-<iframe src="https://joshc.uk/demos/portfolio/contineo" frameborder="0" width="100%" height="900"></iframe>
+<iframe src="/demos/portfolio/contineo" frameborder="0" width="100%" height="900"></iframe>
 
-<a href="https://joshc.uk/demos/portfolio/contineo" class="btn" target="_blank">View Demo in Full Screen</a>
+<a href="/demos/portfolio/contineo" class="btn" target="_blank">View Demo in Full Screen</a>

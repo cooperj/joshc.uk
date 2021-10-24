@@ -7,7 +7,7 @@
       </h1>
       <img aria-hidden="true"
         class="profile"
-        src="/assets/images/joshua.webp"
+        src="/images/joshua.webp"
         alt="Profile Picture of Joshua"
       >
     </div>

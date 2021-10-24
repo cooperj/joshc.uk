@@ -1,7 +1,7 @@
 ---
 title: Linney Regenerate Collection
 description: I created a system for Linney Regenerate's team to receive and then track items that have been referred to them.
-icon: /assets/images/regenerate/cover.webp
+icon: /images/regenerate/cover.webp
 publishDate: 2019-07-30
 draft: false
 ---
@@ -20,13 +20,13 @@ So, what I created was a form which any member of staff can refer and item with.
 
 This form greets the user with a message which can be easily changed from the settings area. This allows the team to change the message regularly without needing to break into the code.
 
-![the application showing the welcome page](/assets/images/regenerate/welcome.webp)
+![the application showing the welcome page](/images/regenerate/welcome.webp)
 
 To make a referral, the user will fill in this form. This starts with "placeholder" values, this is used to give the user an idea on what needs to be entered, this is useful because it stops the user guessing.
 
 The form uses an internal tool which has all the information about the users. This allows me to take the email address, which is provided when they log in and look up what their name and phone number are. The values are then filled into the form and but still can be changed, this allows them to change the details such as their phone number, as the system will automatically use their desk phones number, they might want to use their mobile number instead.
 
-![the application showing page to submit a request](/assets/images/regenerate/form.webp)
+![the application showing page to submit a request](/images/regenerate/form.webp)
 
 They then fill in a brief description of the item, to put this simply they just need to say what the item is.
 
@@ -38,17 +38,17 @@ When the form is submitted, an email is sent to the user to confirm their reques
 
 ## How does someone login to the system?
 
-![the application showing the login page](/assets/images/regenerate/login.webp)
+![the application showing the login page](/images/regenerate/login.webp)
 
 When a person logs into the system, their roles are checked. If they are a standard user (can only make requests) they get forwarded onto the form.
 
-![the application showing the page to allow an administrator to select which area they want to visit](/assets/images/regenerate/select.webp)
+![the application showing the page to allow an administrator to select which area they want to visit](/images/regenerate/select.webp)
 
 Or if they are an administrator, they get to select which area they would like to access. They can choose to go to the referral list or to add an item page, typically the only page accessible by a user. If they choose to go to the referral list, they will see a list of the items.
 
 If the user is an administrator, they get a navigation bar which contains links to different pages, in a dropdown list, which needs to be used.
 
-![the application showing the drop down menu for the administrator](/assets/images/regenerate/menu.webp)
+![the application showing the drop down menu for the administrator](/images/regenerate/menu.webp)
 
 ## How are the users managed?
 
@@ -56,7 +56,7 @@ Here is the menu to manage the users who have logged into the software this is w
 
 The User role is assigned by default when a user registers an account, they get access to the minimum level of functionality, which is creating referrals in the system, this can be used to remove a user's level of access to the system.
 
-![the application showing the list of users and their access levels](/assets/images/regenerate/users.webp)
+![the application showing the list of users and their access levels](/images/regenerate/users.webp)
 
 Their account can have their privileges changed, if they are changed to have the "Admin" role, they get full access to the system, they can see and manage all the referrals.
 
@@ -64,17 +64,17 @@ They can also be changed to be "Inactive" which disables their access fully to t
 
 An administrator can click on edit next to the user; this makes that row editable.
 
-![the application showing a user having their role changed](/assets/images/regenerate/edit-user-1.webp)
+![the application showing a user having their role changed](/images/regenerate/edit-user-1.webp)
 
 From the drop-down list, the new role can be selected then save button is clicked, this then updates their role.
 
-![the application showing the drop down list to choose a new role](/assets/images/regenerate/edit-user-2.webp)
+![the application showing the drop down list to choose a new role](/images/regenerate/edit-user-2.webp)
 
 ## What items have been referred?
 
 From here an administrator can update the status, get in contact with the person, this is done by clicking on the row.
 
-![the application showing all the new referrals that have been made](/assets/images/regenerate/items.webp)
+![the application showing all the new referrals that have been made](/images/regenerate/items.webp)
 
 When they click on the row a modal appears…
 
@@ -82,7 +82,7 @@ On the left, there is a form. The referral ID and the date submitted are locked.
 
 If you click on the icons next to the email and phone number, they work as hyperlinks and therefore can be used in conjunction with their email and softphone client.
 
-![the application showing an item and which can be edited](/assets/images/regenerate/item.webp)
+![the application showing an item and which can be edited](/images/regenerate/item.webp)
 
 There are 4 stages that an item can be in;
 
@@ -94,7 +94,7 @@ There are 4 stages that an item can be in;
 
 These are used to group the items; this has the effect of making the system able to filter between the status making admin time quicker.
 
-![the application showing the navigation bar which controls the filters](/assets/images/regenerate/nav.webp)
+![the application showing the navigation bar which controls the filters](/images/regenerate/nav.webp)
 
 Furthermore, if the admin selects "Sold" a thank you email or if the status is set to "Rejected" an email which says sorry and that they don’t want the item is sent to the person who made the referral.
 
@@ -106,13 +106,13 @@ At the end of this modal, there are buttons for the user to save or cancel their
 
 The items are shown in pages, each with 20 items. At the end of the page, there are the controls for the pagination, this then can be used to swap between the pages.
 
-![the application showing the pagination function](/assets/images/regenerate/pagination.webp)
+![the application showing the pagination function](/images/regenerate/pagination.webp)
 
 ## What settings can I change?
 
 The settings page also allows the user to change a lot of different settings, for example, they can add, remove and rename merchants.
 
-![the application showing the settings that can be changed](/assets/images/regenerate/settings.webp)
+![the application showing the settings that can be changed](/images/regenerate/settings.webp)
 
 The "change copy" is used to change the wording of text on the add a referral item section, this is useful because it allows the text to be changed quickly and regularly.
 

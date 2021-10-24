@@ -1,7 +1,7 @@
 ---
 title: Bananapocalypse
 description: For my college, I created an Angry Birds style video game prototype within Unity to be played on a mobile phone.
-icon: /assets/images/ba/icon.webp
+icon: /images/ba/icon.webp
 publishDate: 2019-05-15
 draft: false
 ---
@@ -26,16 +26,23 @@ I created the design for my game, this would consist of how the game and all the
 
 There are 4 objects that I created: the Banana, the Super Banana, the Face Banana and the Bad Apple. The Super Banana and the Face Banana are both variants of the standard Banana. The Bad Apple is a complete opposite of the Banana, this removes points, whereas the Banana gives the user points.
 
-![item in the game, banana](/assets/images/ba/banana1.webp)
-![item in the game, face banana](/assets/images/ba/banana2.webp)
-![item in the game, super banana](/assets/images/ba/banana3.webp)
-![item in the game, bad apple](/assets/images/ba/bad-apple.webp)
+<div class="flex-row">
+
+![item in the game, banana](/images/ba/banana1.webp)
+
+![item in the game, face banana](/images/ba/banana2.webp)
+
+![item in the game, super banana](/images/ba/banana3.webp)
+
+![item in the game, bad apple](/images/ba/bad-apple.webp)
+
+</div>
 
 The Super Banana is an enhanced variant of the standard Banana, this gives the user 10 times the number of points, compared to the standard Banana, which only gives a single point. Similarly, the Face Banana is a modification of the standard Banana, however, it only gives the user a single point, it is purely a design change, this was requested by the client during negotiations.
 
 ## The Finished Project
 
-![game being played on an iphone](/assets/images/ba/mobile-demo.webp)
+![game being played on an iphone](/images/ba/mobile-demo.webp)
 
 After creating the game, myself and beta testers have discovered things that were less than pleasant after the game finished its development.
 

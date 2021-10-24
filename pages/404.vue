@@ -9,7 +9,7 @@
       </p>
 
       <p>
-        <img src="/assets/images/spin.gif" alt="Gorilla spinning in the centre, top text: I live in spain, bottom text: without the a" />
+        <img src="/images/spin.gif" alt="Gorilla spinning in the centre, top text: I live in spain, bottom text: without the a" />
       </p>
     </article>
   </main>
