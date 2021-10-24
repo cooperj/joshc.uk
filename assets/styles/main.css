@@ -554,23 +554,22 @@ button:active {
 /* Large Devices */
 @media screen and (min-width: 768px) {
   .card {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     margin-bottom: 30px;
+    justify-content: flex-start;
     border-radius: 1em;
   }
 
   .card .img {
+    position: absolute;
     margin-right: 50px;
-  }
-  
-  .card .img img {
+    height: 100%;
+    width: 25%;
+    background-position: center;
+    background-size: cover;
     border-radius: 1em 0 0 1em;
-    height: 300px;
-    width: 300px;
-    padding: 0;
-    margin: 0;
     opacity: 0.69;
     -webkit-mask-image: linear-gradient(to right, black 42%, transparent);
     mask-image: linear-gradient(to right, black 42%, transparent);
@@ -578,6 +577,7 @@ button:active {
 
   .card .card-body {
     width: 60%;
+    padding-left: 26%;
   }
 
   .card .card-body p {
@@ -595,19 +595,21 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 0 30px 0;
-    padding: 20px 10px 10px 10px;
+    margin: 0 0 30px 0; /* separator border */
+    /* padding: 20px 10px 10px 10px; */
+    justify-content: flex-start;
+    border-radius: 1em;
   }
 
-  .card .img {
-    width: 80%;
-    height: auto;
-    margin-right: 10px;
-  }
-
-  .card .img img {
-    border-radius: 1.1rem;
-    padding: 0;
+   .card .img {
+    border-radius: 1em 1em 0 0;
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.69;
+    -webkit-mask-image: linear-gradient(to bottom, black 42%, transparent);
+    mask-image: linear-gradient(to bottom, black 42%, transparent);
   }
 
   .card .card-body {

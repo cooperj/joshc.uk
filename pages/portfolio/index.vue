@@ -12,9 +12,7 @@
         class="card-link"
       >
         <div class="card">
-          <div class="img">
-            <img :src="project.icon" alt="">
-          </div>
+          <div class="img" :style="'background-image: url(' + project.icon + ');'" />
           <div class="card-body">
             <h1> {{ project.title }} </h1>
             <p>
