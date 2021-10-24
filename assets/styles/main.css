@@ -225,6 +225,9 @@ main summary .publish-date,
   color: var(--secondary);
 }
 
+main article p {
+  padding-bottom: 20px;
+}
 
 /* Change article width per device */
 /* Large Devices */
@@ -239,10 +242,14 @@ main summary .publish-date,
   main article {
     width: 85%;
   }
-}
 
-main article p {
-  padding-bottom: 20px;
+  main summary h1 {
+    font-size: calc(var(--font-size) * 1.6);
+  }
+  
+  main article p {
+    text-align: justify;
+  }
 }
 
 main article img {
@@ -322,6 +329,7 @@ main article form .hidden {
 
 main article form .form-group {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 main article form input:not([type="checkbox"]),
@@ -357,6 +365,7 @@ main article form label {
 main #comment-box {
   width: 80%;
   padding: 20px;
+  margin-top: 60px;
   background-color: var(--secondary-background);
 }
 
@@ -418,6 +427,7 @@ main #comment-box {
     display: inline-flex;
     align-self: center;
     padding-top: 20px;
+    /* overflow: hidden; */
   }
 
   main.home a {
@@ -437,6 +447,7 @@ main #comment-box {
 
   main.home div p {
     font-size: calc(var(--font-size) * 1.5);
+    width: 100%;
 }
 
   main.home div.header {
@@ -449,7 +460,7 @@ main #comment-box {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
     padding-bottom: 50px;
   }
 
@@ -461,6 +472,7 @@ main #comment-box {
   main.home div.header img.profile {
     height: 200px;
     border-radius: 100%;
+    align-self: center;
   }
 }
 

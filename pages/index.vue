@@ -32,6 +32,17 @@
         </p>
       </div>
 
+      <div id="blog">
+        <p>
+          You might also want to check out
+          <nuxt-link to="/blog">my blog</nuxt-link> 📝.
+        </p>
+        <p>
+          My last post was
+          <nuxt-link :to="article[0].path"> {{ article[0].title }} </nuxt-link> 📃.
+        </p>
+      </div>
+
       <div>
         <p>
           Thank you 🙌 for visiting my site! Please feel free to
@@ -66,6 +77,11 @@ export default {
         }
       ]
     }
-  }
+  },
+  async asyncData ({ $content, params }) {
+    const article = await $content('blog', params.slug).only(['title', 'publishDate']).sortBy('publishDate', 'desc').where({ draft: false }).limit(1).fetch()
+    console.log(article)
+    return { article }
+  },
 }
 </script>

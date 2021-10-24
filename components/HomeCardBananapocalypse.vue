@@ -46,9 +46,16 @@
 
     /* Small Devices */
     @media screen and (max-width: 768px) {
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
         .logo {
+            height: 50px;
             width: auto;
-            height: 75px;
+            align-self: center;
+            margin-bottom: 20px;
         }
     }
 </style>
