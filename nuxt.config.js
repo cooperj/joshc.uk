@@ -76,7 +76,7 @@ export default {
     markdown: {
       remarkPlugins: [],
       prism: {
-        // theme: "prism-themes/themes/prism-lucario.css"
+        theme: "prism-themes/themes/prism-nord.min.css"
       }
     }
   },

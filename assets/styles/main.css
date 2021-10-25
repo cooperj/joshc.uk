@@ -19,6 +19,7 @@
   --font-face-bld: museo-sans-rounded, sans-serif;
   --font-weight-bld: 900;
   --font-style-bld: normal;
+  --primary-as-link-text: #f5f5f5;
 }
 
 /* Dark Mode */
@@ -392,6 +393,7 @@ main #comment-box {
 
   main.home a {
     background-color: var(--primary);
+    color: var(--primary-as-link-text);
     font-weight: bold;
   }
 
