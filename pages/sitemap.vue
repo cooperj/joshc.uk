@@ -68,7 +68,7 @@ export default {
       })
     },
     getPageName: (str) => {
-      return str.replace('https://joshc.uk', '')
+      return str.replace('https://www.joshc.uk', '')
     }
   }
 }
