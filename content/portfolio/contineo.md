@@ -8,7 +8,7 @@ draft: false
 
 ## What is the project?
 
-As a part of my Level 3 course, I created a pure HTML, CSS and JavaScript website for the company Contineo. They wanted a website that would be used to create a brand for Contineo.
+As a part of my college course, I created a HTML, CSS and JavaScript website for the fictitious company Contineo. They wanted a website that would be used to create a brand for themselves.
 
 They wanted a professional-looking interactive website, which allows them to concisely show the visitor the information about their company and what services they provide.
 
@@ -28,7 +28,7 @@ The requirements can be broken down into four sections; Branding, Content, Inter
 
 They wanted **content** which included a home page, a services page, a contact us page, a join our team page, and a Frequently Asked Questions page.
 
-The website wanted **interactive** features, such as; Fading buttons, Hidden content, Picture Slideshow, and Google Maps. These will be done using JavaScript. The site is also responsive, this means that it looks correct on a mobile device as the sizes of elements change based on the size of the screen.
+The website wanted **interactive** features, such as; Fading buttons, Hidden content, Pithencture Slideshow, and Google Maps. These will be done using JavaScript. The site is also responsive, this means that it looks correct on a mobile device as the sizes of elements change based on the size of the screen.
 
 The website also had to be **accessible**, this included using colours which are friendly to people with colour blindness or dyslexia, this is done by using contrasting colours.
 
