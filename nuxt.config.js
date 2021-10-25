@@ -76,7 +76,7 @@ export default {
     markdown: {
       remarkPlugins: [],
       prism: {
-        theme: "prism-themes/themes/prism-lucario.css"
+        // theme: "prism-themes/themes/prism-lucario.css"
       }
     }
   },
@@ -87,7 +87,7 @@ export default {
     routes: async () => {
       const { $content } = require('@nuxt/content')
 
-      const files = await $content({ deep: true }).only(["path"]).fetch()
+      const files = await $content({ deep: true }).only(["path"]).where({ draft: false }).fetch()
       return files.map((file) => (file.path === "/index" ? "/" : file.path))
     },
 
