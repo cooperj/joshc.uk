@@ -4,6 +4,13 @@
       <h1>Sitemap</h1>
     </summary>
     <article>
+      <p>
+        An automatically generated list of pages on the site.
+        Also, available as 
+        <a href="/sitemap.xml">sitemap.xml</a>
+        and
+        <a href="/sitemap.xml.gz">sitemap.xml.gz</a>.
+      </p>
       <ul>
         <li v-for="page in pages" :key="pages.indexOf(page)">
           <a :href="page.loc[0]">
