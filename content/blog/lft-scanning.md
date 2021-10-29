@@ -7,7 +7,7 @@ draft: false
 
 # Introduction
 
-So it all started from me seeing this tweet from WillNE.
+So it all started from me seeing this tweet.
 
 [![Tweet from Will, two pictures, first picture 2 positive lateral flow covid tests, second picture Phil Mitchell (from eastenders) looking pensive](/images/lft-scanning/willne-tweet.webp)](https://twitter.com/willne/status/1414232187491266560)
 
