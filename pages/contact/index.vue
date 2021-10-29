@@ -10,6 +10,8 @@
       <p>
         I would appreciate it if you could fill out the following form in as much detail as you can, so I can best deal with your query.
       </p>
+      <p>
+        Please feel free to send 
       <div>
         <form action="/contact/submit/" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
           <div class="hidden">

@@ -11,7 +11,6 @@
         alt="Profile Picture of Joshua"
       >
     </div>
-
     <div id="about">
       <p>
         I'm currently a second year <strong>Games Computing <span aria-hidden="true">👨‍🎓</span></strong> student.
@@ -40,7 +39,8 @@
       </p>
       <p>
         My last post was
-        <nuxt-link :to="'/blog/' + article[0].slug">{{ article[0].title }}</nuxt-link> <span aria-hidden="true">📃</span>.
+        <nuxt-link :to="'/blog/' + article[0].slug">{{ article[0].title }}</nuxt-link> <span aria-hidden="true">📃</span>
+        where {{ article[0].description }}
       </p>
     </div>
 
@@ -80,7 +80,8 @@ export default {
     }
   },
   async asyncData ({ $content }) {
-    const article = await $content('blog').only(['title', 'slug', 'publishDate']).sortBy('publishDate', 'desc').where({ draft: false }).limit(1).fetch()
+    const article = await $content('blog').only(['title', 'slug', 'description', 'publishDate']).sortBy('publishDate', 'desc').where({ draft: false }).limit(1).fetch()
+    console.log(article)
     return { article }
   },
 }
