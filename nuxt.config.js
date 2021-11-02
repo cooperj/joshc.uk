@@ -23,6 +23,7 @@ export default {
       { property: "og:locale", content: "en_GB" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "/assets/images/joshua.webp" },
+      { name: "twitter:card", content: "summary" },
       { name: "twitter:creator", content: "@joshcooperdev" },
     ],
     link: [

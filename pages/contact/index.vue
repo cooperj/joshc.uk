@@ -45,19 +45,19 @@
             <label for="contactForm_msg">Message</label>
             <textarea
               id="contactForm_msg"
-              name="msg"
+              name="message"
               required
               rows="9"
             />
           </div>
           <div class="form-group">
             <input
-              id="agreeToBeContacted"
-              name="agreeToBeContacted"
+              id="privacy-accept"
+              name="privacy-accept"
               required
               type="checkbox"
             >
-            <label for="agreeToBeContacted">
+            <label for="privacy-accept">
               I agree to be contacted following the <nuxt-link to="/privacy">privacy policy.</nuxt-link>
             </label>
           </div>
