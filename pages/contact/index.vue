@@ -17,12 +17,7 @@
         Please feel free to send things that you think I would like <span aria-hidden="true">🐙</span>, but don't add me to your mailing list.
       </p>
       <div>
-        <form action="/contact/submit/" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-          <div class="hidden">
-            <label>Don’t fill this out if you're human:
-              <input name="bot-field">
-            </label>
-          </div>
+        <form @submit.prevent="submitForm">
           <div class="form-group">
             <label for="contactForm_name">Name</label>
             <input
@@ -30,6 +25,7 @@
               required
               type="text"
               name="name"
+              v-model="name"
             >
           </div>
           <div class="form-group">
@@ -39,6 +35,7 @@
               name="email"
               required
               type="email"
+              v-model="email"
             >
           </div>
           <div class="form-group">
@@ -48,6 +45,7 @@
               name="message"
               required
               rows="9"
+              v-model="message"
             />
           </div>
           <div class="form-group">
@@ -56,6 +54,7 @@
               name="privacy-accept"
               required
               type="checkbox"
+              v-model="privacyAccept"
             >
             <label for="privacy-accept">
               I agree to be contacted following the <nuxt-link to="/privacy">privacy policy.</nuxt-link>
@@ -69,11 +68,20 @@
           </button>
         </form>
       </div>
+      <div>
+        <strong>
+          <p>
+            {{ formError }}
+          </p>
+        </strong>
+      </div>
     </article>
   </main>
 </template>
 
 <script>
+const FORMSPARK_ACTION_URL = "https://submit-form.com/U3XU3uws";
+
 import Twitter from '~/components/Twitter.vue'
 export default {
   components: { Twitter },
@@ -95,6 +103,53 @@ export default {
           content: 'Contact'
         }
       ]
+    }
+  },
+
+  data () {
+    return {
+      name: '',
+      email: '',
+      message: '',
+      privacyAccept: '',
+      formError: ''
+    }
+  },
+
+   methods: {
+    async submitForm() {
+      await fetch(FORMSPARK_ACTION_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: this.name,
+          email: this.email,
+          message: this.message,
+          privacyAccept: this.privacyAccept
+        }),
+      })
+      // .then(response => console.log(response.json()))
+      .then((res) => {
+          let response = res.json()
+          console.log(response)
+          console.log(res)
+
+          if (res.ok){
+            console.log("OKAY SICK COOL SWAG")
+            // redirrect?
+            this.$router.push('/contact/submit')
+          }
+          else {
+            throw 'Could not send to server'
+          }
+
+        }).catch((e) => {
+          console.warn(e.message)
+          this.formError = `An error occured while trying to submit the form, please try again later... (${e.message})`
+        })
     }
   }
 }
