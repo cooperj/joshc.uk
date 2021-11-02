@@ -22,7 +22,8 @@ export default {
       { property: "og:site_name", content: "Josh Cooper" },
       { property: "og:locale", content: "en_GB" },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "/assets/images/joshua.webp" }
+      { property: "og:image", content: "/assets/images/joshua.webp" },
+      { name: "twitter:creator", content: "@joshcooperdev" },
     ],
     link: [
       // Adobe fonts
