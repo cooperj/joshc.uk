@@ -6,9 +6,7 @@
             <!-- <h1> Bananapocalypse </h1> -->
             <img class="logo" src="/images/ba/logo.webp" alt="banana apocalypse" />
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                I created a game similar to the popular mobile game Angry Birds, but with a banana flavoured twist.
             </p>
             <p>
                 <nuxt-link class="action-link" to="/portfolio/bananapocalypse">
