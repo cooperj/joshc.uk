@@ -1,5 +1,12 @@
 # joshc.uk
 
+🍍👨🏻‍💻 This repo is for the personal website of Josh Cooper.
+This site includes my blog and portfolio.
+
+This site was built in nuxt.js and is accessible at [www.joshc.uk](https://www.joshc.uk) 🌍.
+
+The site is configured to auto deploy with [netlify](https://www.netlify.com) 💻.
+
 ## Build Setup
 
 Install dependencies
