@@ -5,7 +5,7 @@ publishDate: 2021-10-24
 draft: false
 ---
 
-# Introduction
+## Introduction
 
 So it all started from me seeing this tweet.
 
@@ -38,7 +38,7 @@ My hypothesis is that either either people are either not reporting their tests 
 
 For this exercise I'm gonna follow the National Audit Office's estimation of majority of testing being used and not reported.
 
-# My Aims
+## My Aims
 
 I aim to create a system that makes it much easier to record a test result by taking a picture.
 
@@ -48,14 +48,14 @@ This would work in a similar way to the current service so the data could be imp
 
 I am also going to set a limit on the scope of the project, I'm not going to be testing this to a level which is required of that of a medical device and I'm going to be building a very simple prototype which would output the data to a development console. This would allow the project to be tested without sharing incorrect data to the NHS system.
 
-# Environment
+## Environment
 
 I decided to prototype this as a simple python application. This would allow for a photo to be added and then the program ran. 
 
 When the program was ran it would then open up each layer of the image processing.
 
-# Development
-## Scanning the QR Code
+## Development
+### Scanning the QR Code
 
 Each lateral flow test has a QR code on the top of it. This allows for the identifier to be quickly entered into the website. The IDs are in the format of 3 letters followed by 8 numbers.
 
@@ -73,7 +73,7 @@ But now we can see the QR code and read the data.
 
 *NB: I have added in the label for the X and Y scales and the positive label was a placeholder ready to be filled with the data in the next stage*
 
-## Reading the result (first attempt)
+### Reading the result (first attempt)
 
 My technique for reading the result was to crop into the image to find a the test window and look at the positions of the control and test lines and use that to read a result of true or false. 
 
