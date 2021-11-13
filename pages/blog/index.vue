@@ -27,17 +27,17 @@ export default {
       title: 'Blog',
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: "Things I go and write"
+          hid: 'description',
+          name: 'description',
+          content: 'Things I go and write'
         },
         { 
-          property: "og:description", 
-          content: "Things I go and write"
+          property: 'og:description', 
+          content: 'Things I go and write'
         },
         { 
-          property: "og:title", 
-          content: "Blog"
+          property: 'og:title', 
+          content: 'Blog'
         },
       ]
     }

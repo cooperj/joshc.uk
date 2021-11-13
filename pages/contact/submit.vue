@@ -26,17 +26,17 @@ export default {
       title: 'Thank you!',
             meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content: 'I will try to respond as soon as I can, please feel free to reach out again if you don\'t get a response, allowing me 5 business days to respond.'
         },
         { 
-          property: "og:description", 
-          content: "I will try to respond as soon as I can, please feel free to reach out again if you don\'t get a response, allowing me 5 business days to respond."
+          property: 'og:description', 
+          content: 'I will try to respond as soon as I can, please feel free to reach out again if you don\'t get a response, allowing me 5 business days to respond.'
         },
         { 
-          property: "og:title", 
-          content: "Standing Invitation"
+          property: 'og:title', 
+          content: 'Thank you!'
         },
       ]     
     }

@@ -9,3 +9,8 @@
   from = "/w"
   to = "https://pbs.twimg.com/media/EYVhvZFWsAUY5gv?format=jpg&name=large"
   status = 302
+
+[[redirects]]
+  from = "/grrr"
+  to = "https://www.youtube.com/watch?v=cQl7TTCfpGo"
+  status = 302

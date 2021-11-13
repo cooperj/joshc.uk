@@ -25,6 +25,7 @@
 <script>
 const xml2js = require('xml2js')
 
+// Standard metadata
 export default {
   head () {
     return {
@@ -48,22 +49,27 @@ export default {
   },
   data () {
     return {
+      // Json array of pages fetched from sitemap
       pages: []
     }
   },
   async fetch () {
+    // Get the sitemap file
     const url = process.env.baseUrl + '/sitemap.xml'
     const xmlData = await fetch(url)
       .then(res => res.text())
       .then((data) => {
         return (data.substring(38, data.length))
       })
+
+    // Convert sitemap xml to json
     const jsonData = await this.xmlToJSON(xmlData)
     if (jsonData && jsonData.urlset && jsonData.urlset.url) {
       this.pages = jsonData.urlset.url
     }
   },
   methods: {
+    // Convert XML to Json method
     xmlToJSON: (str, options) => {
       return new Promise((resolve, reject) => {
         xml2js.parseString(str, options, (err, jsonObj) => {
@@ -74,6 +80,8 @@ export default {
         })
       })
     },
+
+    // Remove domain name and stuff
     getPageName: (str) => {
       return str.replace('https://www.joshc.uk', '')
     }

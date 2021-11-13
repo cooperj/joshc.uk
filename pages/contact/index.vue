@@ -80,11 +80,12 @@
 </template>
 
 <script>
+import LinkedIn from '~/components/LinkedIn.vue';
 const FORMSPARK_ACTION_URL = "https://submit-form.com/U3XU3uws";
 
 import Twitter from '~/components/Twitter.vue'
 export default {
-  components: { Twitter },
+  components: { Twitter, LinkedIn },
   head () {
     return {
       title: 'Contact',
@@ -92,15 +93,15 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Get in touch with Josh Cooper!'
+          content: 'This page tells you the best ways to get in contact with me!'
         },
         {
           property: 'og:description',
-          content: 'Get in touch with Josh Cooper!'
+          content: 'This page tells you the best ways to get in contact with me!'
         },
         {
           property: 'og:title',
-          content: 'Contact'
+          content: 'Contact Josh'
         }
       ]
     }
@@ -119,10 +120,10 @@ export default {
    methods: {
     async submitForm() {
       await fetch(FORMSPARK_ACTION_URL, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({
           name: this.name,
@@ -131,15 +132,10 @@ export default {
           privacyAccept: this.privacyAccept
         }),
       })
-      // .then(response => console.log(response.json()))
       .then((res) => {
           let response = res.json()
-          console.log(response)
-          console.log(res)
-
-          if (res.ok){
-            console.log("OKAY SICK COOL SWAG")
-            // redirrect?
+          if (res.ok) {
+            // redirect
             this.$router.push('/contact/submit')
           }
           else {

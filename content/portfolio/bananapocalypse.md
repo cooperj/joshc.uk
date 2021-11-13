@@ -1,6 +1,6 @@
 ---
 title: Bananapocalypse
-description: For my college, I created an Angry Birds style video game prototype within Unity to be played on a mobile phone.
+description: I created a game similar to the popular mobile game Angry Birds, but with a banana flavoured twist.
 icon: /images/ba/icon.webp
 publishDate: 2019-05-15
 draft: false
