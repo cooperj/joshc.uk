@@ -50,7 +50,7 @@
           Cloudflare
         </a>
         and
-        <a href="https://www.netlify.com/privacy" target="_blank"> Netlify </a>.
+        <a href="https://www.netlify.com/privacy" target="_blank"> Netlify.</a>
       </p>
       <h4>Cloudflare Web Analytics</h4>
       <p>
