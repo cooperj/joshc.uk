@@ -1,107 +1,180 @@
 <template>
   <main>
     <summary>
-      <h1> Privacy Policy </h1>
+      <h1>Privacy Policy</h1>
     </summary>
     <article>
       <p>
-        Your privacy is important to us. It is Joshua Cooper's policy to respect your privacy regarding any
-        information we may collect from you across our website (<a href="https://joshc.uk">joshc.uk</a>),
-        email communication, and other sites we own and operate.
+        <em>This policy was last updated: Sunday, 14th November 2021.</em>
       </p>
-
+      <h2>Contact Details</h2>
       <p>
-        We only ask for personal information when we truly need it to provide a service to you.
-        We collect it by fair and lawful means, with your knowledge and consent.
-        We also let you know why we’re collecting it and how it will be used.
+        For privacy/data-based requests contact:
+        <a href="mailto:dpo@joshuacooper.co.uk">dpo@joshuacooper.co.uk</a>
       </p>
-
+      <h2>Type of personal information collected</h2>
       <p>
-        We only retain collected information for as long as necessary to provide you with your requested service,
-        Joshua Cooper is within his right to keep this data for an extended period of time to assist with your future needs.
-        What data we store, we’ll protect within commercially acceptable means to prevent loss and theft,
-        as well as unauthorised access, disclosure, copying, use or modification.
+        We collect information for the purpose of providing a service to you
+        (including providing network connectivity, or to respond to an email) or
+        to assist with a research topic.
       </p>
-
+      <h2>How personal information is collected</h2>
       <p>
-        We don’t share any personally identifying information publicly or with third-parties,
-        except when required to by law and deemed necessary.
+        Personal information is collected by contacting myself or participating
+        in a research project. Information collected from a research project
+        will have an additional privacy policy amended.
       </p>
-
       <p>
-        Our website may link to external sites that are not operated by us.
-        Please be aware that we have no control over the content and practices of these sites,
-        and cannot accept responsibility or liability for their respective privacy policies.
+        Personal information is only collected with your consent. This can be
+        withdrawn at any time.
       </p>
-
+      <h2>How personal information is stored</h2>
       <p>
-        To help operate the site, we use third party tools such as;
+        When sending an email, data will be stored indefinitely. This is so it
+        can be referred to in the future. All other information is kept if
+        deemed necessary.
       </p>
+      <p>All data when requested to be forgotten will be forgotten.</p>
+      <h2>Processing personal information by third parties</h2>
+      <h3>Cloudflare and Netlify</h3>
+      <p>
+        We use Cloudflare for CDN and DNS services, and netlify for webhosting.
+      </p>
+      <p>
+        They collect data on our behalf for the purpose of network connectivity.
+        This is an essential service, and you are unable to opt-out.
+      </p>
+      <p>
+        Please see the privacy polices for
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">
+          Cloudflare
+        </a>
+        and
+        <a href="https://www.netlify.com/privacy" target="_blank"> Netlify </a>.
+      </p>
+      <h4>Cloudflare Web Analytics</h4>
+      <p>
+        We use Cloudflare Web Analytics to provide basic information about the
+        users of our website. The data provides information such as Device
+        information (including Operating System, Web browser, and Type),
+        referring domain, country, and page load time. This is used to provide
+        insight onto how the website is working. This data is anonymised and
+        cannot be reassociated by us.
+      </p>
+      <p>
+        To opt-out, use a web browser extension such as
+        <a href="https://ublockorigin.com/" target="_blank">uBlock origin.</a>
+      </p>
+      <h3>Microsoft 365</h3>
+      <p>
+        We use Microsoft 365 for processing information such as email messages.
+        This is an essential service, and you are unable to opt-out.
+      </p>
+      <p>
+        Please see the
+        <a href="https://privacy.microsoft.com/" target="_blank">
+          Microsoft Privacy microsite
+        </a>
+      </p>
+      <h3>Formspark</h3>
+      <p>
+        We use Formspark to process contact form requests. This is a
+        non-essential service, and you can opt-out by sending your emails
+        directly to <a href="mailto:hi@joshc.uk">hi@joshc.uk</a>.
+      </p>
+      <p>
+        Please refer to the
+        <a href="https://formspark.io/legal/privacy-policy/" target="_blank">
+          Formspark Privacy Policy.
+        </a>
+      </p>
+      <h2>Your data protection rights</h2>
+      <p>Under data protection law, you have rights including:</p>
 
       <ul>
-        <li><a href="https://www.netlify.com/">Netlify</a></li>
-        <li><a href="https://www.cloudflare.com/">Cloudflare</a></li>
-        <li><a href="https://www.cloudflare.com/">CDNJS</a></li>
-        <li><a href="https://www.getbootstrap.com/">Bootstrap</a></li>
-        <li><a href="https://www.bootstrapcdn.com/">BootstrapCDN</a></li>
-        <li><a href="https://fonts.google.com/">Google Fonts</a></li>
-        <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+        <li>
+          <strong>Your right of access</strong>
+          - You have the right to ask us for copies of your personal
+          information.
+        </li>
+        <li>
+          <strong>Your right to rectification</strong>
+          - You have the right to ask us to rectify personal information you
+          think is inaccurate. You also have the right to ask us to complete the
+          information you think is incomplete.
+        </li>
+        <li>
+          <strong>Your right to erasure</strong>
+          - You have the right to ask us to erase your personal information in
+          certain circumstances.
+        </li>
+        <li>
+          <strong>Your right to restriction of processing</strong>
+          - You have the right to ask us to restrict the processing of your
+          personal information in certain circumstances.
+        </li>
+        <li>
+          <strong>Your right to object to processing</strong>
+          - You have the right to object to the processing of your personal
+          information in certain circumstances.
+        </li>
+        <li>
+          <strong>Your right to data portability</strong>
+          - You have the right to ask that we transfer the personal information
+          you gave us to another organisation, or you, in certain circumstances.
+        </li>
       </ul>
 
       <p>
-        These third parties will gather data which they need for their service(s) to function.
-        This is subject to their own individual privacy policies.
+        You are not required to pay any charge for exercising your rights, and
+        if you make a request, it will be responded to within one month.
+      </p>
+      <p>
+        To request this, send an email to
+        <a href="mailto:dpo@joshuacooper.co.uk">dpo@joshuacooper.co.uk</a>
+      </p>
+      <h2>Complaints</h2>
+      <p>
+        If you would like to raise any concerns regarding your personal
+        information you should make a complaint to our
+        <a href="mailto:dpo@joshuacooper.co.uk">dpo@joshuacooper.co.uk</a> email
+        address.
+      </p>
+      <p>
+        You can also make a complaint to the ICO. Their contact details are:
       </p>
 
-      <p>
-        You are free to refuse our request for your personal information,
-        with the understanding that we may be unable to provide you with some of your desired services.
-      </p>
-
-      <p>
-        Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information.
-        If you have any questions about how we handle user data and personal information, feel free to contact us.
-      </p>
-
-      <p>
-        For more information about our privacy practices, if you have questions, if you would like to make a complaint,
-        or if you would like to request the data we have on you (this does not include third parties), please contact us by
-        <nuxt-link to="/contact/">
-          e-mail.
-        </nuxt-link>
-      </p>
-
-      <p>
-        If you decide to get in touch, you agree to have your data stored, this can be requested to be removed at any point.
-        Requests must be made via email.
-      </p>
-
-      <p>
-        <em>This policy is effective as of Saturday, 31st August 2019.</em>
-      </p>
+      <ul>
+        <li>
+          <a href="https://ico.org.uk/make-a-complaint/" target="_blank">
+            ico.org.uk/make-a-complaint
+          </a>
+        </li>
+        <li><a href="tel:+443031231113">0303 123 1113</a></li>
+      </ul>
     </article>
   </main>
 </template>
 
 <script>
 export default {
-  head () {
+  head() {
     return {
       title: 'Privacy Policy',
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: "Sample Text!"
+          hid: 'description',
+          name: 'description',
+          content: 'View the privacy policy in a browser'
         },
-        { 
-          property: "og:description", 
-          content: "Sample Text!"
+        {
+          property: 'og:description',
+          content: 'View the privacy policy in a browser'
         },
-        { 
-          property: "og:title", 
-          content: "Privacy Policy"
-        },
+        {
+          property: 'og:title',
+          content: 'Privacy Policy'
+        }
       ]
     }
   }
