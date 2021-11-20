@@ -1,7 +1,6 @@
 {
   "name": "joshc.uk",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "nuxt --port 8080",
     "build": "nuxt build",
