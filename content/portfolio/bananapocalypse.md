@@ -80,4 +80,8 @@ You can also hold <kbd>Ctrl</kbd> to increase your shooting power.
 
 The trees and items are procedurally generated, and to reload the level, hit <kbd>Esc</kbd> and select the <kbd>Reset Level</kbd> option. This will respawn the trees.
 
-If you are facing difficulties playing the game, you might find it useful to reload this page or to [view the prototype on itch.io](https://joshcooper.itch.io/bananapocalypse).
+If you are facing difficulties playing the game, you might find it useful to reload this page or 
+<a href="/demos/portfolio/bananapocalypse/bananapocalypse_win_x86_64.zip" target="_blank">download the game for windows.</a>
+
+
+This is also available [on itch.io](https://joshcooper.itch.io/bananapocalypse).
