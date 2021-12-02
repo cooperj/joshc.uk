@@ -5,7 +5,7 @@
     </summary>
     <article>
       <p>
-        <em>This policy was last updated: Sunday, 14th November 2021.</em>
+        <em>This policy was last updated: Thursday, 2nd December 2021.</em>
       </p>
       <h2>Contact Details</h2>
       <p>
@@ -132,6 +132,20 @@
       <p>
         To request this, send an email to
         <a href="mailto:dpo@joshuacooper.co.uk">dpo@joshuacooper.co.uk</a>
+      </p>
+      <h2>Children: Under the age of 13</h2>
+      <p>
+        Our services, products and websites are not designed to be used by
+        children aged 13 years or younger, and in the case that they are,
+        (e.g. for research purposes) they will <strong>not</strong> be 
+        covered by this privacy policy.
+      </p>
+      <p>
+        We intend to not collect data of users aged 13 years or younger.
+        We actively do not solicit data from children, 
+        and where this happens, and when we are are made away of this, 
+        such as being notified by a parent or guardian,
+        we will take action to remove the data as soon as possible.
       </p>
       <h2>Complaints</h2>
       <p>
