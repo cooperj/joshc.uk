@@ -104,6 +104,16 @@ export default {
 
   },
 
+  hooks: {
+    // Create medium like reading time
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { text } = require('reading-time')(document.text);
+        document.readingTime = text;
+      }
+    }
+  },
+
   router: {
 		// middleware: "delay",
 	},

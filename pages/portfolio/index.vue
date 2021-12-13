@@ -18,7 +18,7 @@
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const projects = await $content('portfolio', params.slug).only(['title', 'slug', 'publishDate', 'description', 'icon']).sortBy('publishDate', 'desc').where({ draft: false }).fetch()
+    const projects = await $content('portfolio', params.slug).only(['title', 'slug', 'publishDate', 'description', 'icon', 'readingTime']).sortBy('publishDate', 'desc').where({ draft: false }).fetch()
     return { projects }
   },
 

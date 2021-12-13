@@ -8,6 +8,8 @@
       <span class="publish-date">
         {{ formatDate(project.publishDate) }}
       </span>
+      -
+      {{ project.readingTime }}
     </summary>
     <article>
       <nuxt-content :document="project" />

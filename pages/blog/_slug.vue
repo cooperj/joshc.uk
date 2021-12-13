@@ -8,6 +8,8 @@
       <span class="publish-date">
         {{ formatDate(article.publishDate) }}
       </span>
+      -
+      {{ article.readingTime }}
     </summary>
 
     <article>

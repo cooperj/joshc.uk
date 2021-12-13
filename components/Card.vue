@@ -15,17 +15,21 @@
               <span class="label">Published:</span>
               {{ formatDate(data.publishDate) }}
             </p>
+            <p>
+              {{ data.readingTime }}
+            </p>
           </div>
         </div>
       </nuxt-link>
 </template>
 
 <script>
+
 export default {
- props: ['data', 'type'],
- methods: {
-    formatDate (date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+  props: ['data', 'type'],
+  methods: {
+   formatDate (date) {
+     const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     }
   }
