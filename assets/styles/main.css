@@ -237,6 +237,10 @@ main summary .publish-date,
   color: var(--secondary);
 }
 
+main summary p {
+  margin: 0;
+}
+
 main article p {
   padding-bottom: 20px;
 }
