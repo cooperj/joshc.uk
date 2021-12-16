@@ -47,9 +47,7 @@
     <div id="thank-you">
       <p>
         Thank you <span aria-hidden="true">🙌</span> for visiting my site! Please feel free to
-        <nuxt-link to="/contact/">
-          get in contact with me!
-        </nuxt-link>
+        <nuxt-link to="/contact/">get in contact with me!</nuxt-link>
         <span aria-hidden="true">📬</span>
       </p>
     </div>
