@@ -14,3 +14,8 @@
   from = "/grrr"
   to = "https://www.youtube.com/watch?v=cQl7TTCfpGo"
   status = 302
+
+[[redirects]]
+  from = "/covid"
+  to = "https://forms.office.com/r/P31BFfB6Fu"
+  status = 302
