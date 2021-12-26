@@ -103,11 +103,31 @@ What this software does, is allow for the simple creation of models by taking an
 
 This is useful because it can help save costs of creating the dataset from scratch.
 
+So the major problem I have with using a generic model is that it doesn't know what to look for. You then have to train it with images that you have to customise the model. That requires good data.
+
+So searched for lateral flow tests online and took pictures of my own tests, to start creating the model.
+
+I took the data set, and split it in to two groups, training and testing.
+
+![Positive test being displayed as a negative test](/images/lft-scanning/false-positive.webp)
+
+After training the model, I tested the model, and it got it wrong. So I fixed the classification and kept testing, it started to work most of the time. I'm calling that successful.
+
 So I exported the model for TensorFlow ready for the Python project.
 
 ![Exporting as TensorFlow dialogue](/images/lft-scanning/export-tf.webp)
 
-...tbc
+I then swapped to using the TensorFlow model.
+
+![Positive test correctly determined](/images/lft-scanning/working-demo.webp)
+
+And, boom perfect! It is working.
+
+And then, I tried with different sized images and unseen results. It then failed.
+
+## Conclusion
+
+So what have we learned?
 
 ## References
 
