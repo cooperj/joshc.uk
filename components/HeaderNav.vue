@@ -23,24 +23,16 @@
         </header>
       <ul>
         <li>
-          <nuxt-link to="/" v-on:click.native="closeNav()">
-            About
-          </nuxt-link>
+          <nuxt-link to="/" v-on:click.native="closeNav()">About</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/portfolio/" v-on:click.native="closeNav()">
-            Portfolio
-          </nuxt-link>
+          <nuxt-link to="/portfolio/" v-on:click.native="closeNav()">Portfolio</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/blog/" v-on:click.native="closeNav()">
-            Blog
-          </nuxt-link>
+          <nuxt-link to="/blog/" v-on:click.native="closeNav()">Blog</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/contact/" v-on:click.native="closeNav()">
-            Contact
-          </nuxt-link>
+          <nuxt-link to="/contact/" v-on:click.native="closeNav()">Contact</nuxt-link>
         </li>
       </ul>
     </div>
