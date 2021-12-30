@@ -79,7 +79,6 @@ export default {
   },
   async asyncData ({ $content }) {
     const article = await $content('blog').only(['title', 'slug', 'description', 'publishDate']).sortBy('publishDate', 'desc').where({ draft: false }).limit(1).fetch()
-    console.log(article)
     return { article }
   },
 }
