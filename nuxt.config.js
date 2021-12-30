@@ -15,6 +15,9 @@ export default {
     htmlAttrs: {
       lang: "en"
     },
+    script: [
+      { src: "https://static.cloudflareinsights.com/beacon.min.js", "data-cf-beacon": '{"token": "c595c9ecfe2647378176d607156d0cd8"}', defer: true }
+    ],
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
