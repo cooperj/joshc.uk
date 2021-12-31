@@ -4,6 +4,13 @@
   publish = "dist/"
   command = "npm run generate"
 
+
+# Redirects for demos
+[[redirects]]
+  from = "/demos/portfolio/contineo/"
+  to = "/demos/portfolio/contineo/index.html"
+  status = 301
+
 # Short Url Redirects
 [[redirects]]
   from = "/w"
@@ -19,3 +26,6 @@
   from = "/covid"
   to = "https://forms.office.com/r/P31BFfB6Fu"
   status = 302
+
+
+  
