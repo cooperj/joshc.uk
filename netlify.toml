@@ -6,7 +6,7 @@
 
 # Old link redirects
 [[redirects]]
-  from = "/demos/contineo"
+  from = "/demos/contineo/*"
   to = "/portfolio/contineo"
   status = 301
 
