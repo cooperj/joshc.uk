@@ -8,7 +8,7 @@
 # Redirects for demos
 [[redirects]]
   from = "/demos/portfolio/contineo/"
-  to = "/demos/portfolio/contineo/index.html"
+  to = "/demos/portfolio/contineo/home.html"
   status = 301
 
 # Short Url Redirects
