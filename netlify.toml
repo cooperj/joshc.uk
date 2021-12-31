@@ -4,6 +4,12 @@
   publish = "dist/"
   command = "npm run generate"
 
+# Old link redirects
+[[redirects]]
+  from = "/demos/contineo"
+  to = "/portfolio/contineo"
+  status = 301
+
 # Short Url Redirects
 [[redirects]]
   from = "/w"
