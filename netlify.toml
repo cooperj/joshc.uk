@@ -6,6 +6,11 @@
 
 # Old link redirects
 [[redirects]]
+  from = "/portfolio/linneyregeneratecollection"
+  to = "/portfolio/regenerate"
+  status = 301
+
+[[redirects]]
   from = "/demos/contineo/*"
   to = "/portfolio/contineo"
   status = 301
@@ -25,6 +30,5 @@
   from = "/covid"
   to = "https://forms.office.com/r/P31BFfB6Fu"
   status = 302
-
 
   
