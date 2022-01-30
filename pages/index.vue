@@ -3,7 +3,7 @@
 
     <div id="hi">
       <h1>
-        Hi! <span aria-hidden="true">👋</span> <br> My name is Josh!
+        Hello I'm Josh! <span aria-hidden="true">👋</span>
       </h1>
       <img aria-hidden="true"
         class="profile"
