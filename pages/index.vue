@@ -44,11 +44,10 @@
       </p>
     </div>
 
-    <div id="thank-you">
+  <div id="thank-you">
       <p>
-        Cheers <span aria-hidden="true">🙌</span> for checking out my site... Do
-        <nuxt-link to="/contact/">get in contact with me</nuxt-link>
-        if you wanna discuss anything further!
+        Thank you <span aria-hidden="true">🙌</span> for visiting my site! Please feel free to
+        <nuxt-link to="/contact/">get in contact with me!</nuxt-link>
         <span aria-hidden="true">📬</span>
       </p>
     </div>
