@@ -3,7 +3,7 @@
 
     <div id="hi">
       <h1>
-        Hi! <span aria-hidden="true">👋</span> <br> My name is Josh!
+        Hello I'm Josh! <span aria-hidden="true">👋</span>
       </h1>
       <img aria-hidden="true"
         class="profile"
@@ -44,7 +44,7 @@
       </p>
     </div>
 
-    <div id="thank-you">
+  <div id="thank-you">
       <p>
         Thank you <span aria-hidden="true">🙌</span> for visiting my site! Please feel free to
         <nuxt-link to="/contact/">get in contact with me!</nuxt-link>
