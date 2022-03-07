@@ -8,7 +8,7 @@
         Hey <span aria-hidden="true">👋</span> If you would like a longer guaranteed response, please fill in the form below.
       </p>
       <p>
-        But, if you'd like to contact me via Twitter, albeit more informally, I'm <twitter username="joshcdev" />!
+        But, if you'd like to contact me via Twitter, albeit more informally, I'm <social-link username="joshcdev" site="twitter.com" icon="twitter" />!
       </p>
       <p>
         I would appreciate it if you could fill out the form <span aria-hidden="true">📝</span> in as much detail as you can, so I can best deal with your query quickly <span aria-hidden="true">⏳</span>.
@@ -80,12 +80,9 @@
 </template>
 
 <script>
-import LinkedIn from '~/components/LinkedIn.vue';
 const FORMSPARK_ACTION_URL = "https://submit-form.com/U3XU3uws";
 
-import Twitter from '~/components/Twitter.vue'
 export default {
-  components: { Twitter, LinkedIn },
   head () {
     return {
       title: 'Contact',

@@ -6,7 +6,7 @@
   --primary-selected: #06997d;
   --secondary: #156e99;
   --secondary-selected: #065f8f;
-  --font-colour: #040d0a;
+  --font-colour: hsl(160, 53%, 3%);
   --background: #f5f5f5;
   --secondary-background: #ececec;
   --input-background: #fff;
@@ -20,18 +20,22 @@
   --font-weight-bld: 900;
   --font-style-bld: normal;
   --primary-as-link-text: #f5f5f5;
+  --link-text-colour: var(--font-colour);
+  --button-text-colour: var(--background);
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --secondary: #cfcfcf;
-    --background: #1b1b1b;
+    --background: #02111B;
     --font-colour: #fff;
-    --secondary-background: #2c2c2c;
-    --input-background: #585858;
+    --secondary-background: #0e2534;
+    --input-background: var(--secondary-background);
     --header: var(--background);
-    --text-header-link-normal-state-colour: #555555;
+    --text-header-link-normal-state-colour: #1b1702;
+    --link-text-colour: var(--font-colour);
+    --button-text-colour: var(--font-colour);
   }
 }
 
@@ -85,6 +89,15 @@ h6 {
   font-family: var(--font-face-bld);
   font-weight: var(--font-weight-bld);
   font-style: var(--font-style-bld);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--background);
+  z-index: 100;
+  /* opacity: .7; */
 }
 
 /* Change navbar items per device */
@@ -165,15 +178,22 @@ h6 {
   }
 
   header .links-open {
-    position: absolute;
+    position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
     background-color: var(--primary);
-    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 8px 4px grey; 
+    box-shadow: 0px 0px 40px 4px grey;
+  }
+  
+  header .links-open * {
+    color: var(--primary-as-link-text);
   }
 
   header .links-open ul {
@@ -186,10 +206,11 @@ h6 {
 
   header .links-open ul li a {
     display: inline-block;
-    background-color: var(--primary-selected);
+    /* background-color: var(--primary-selected); */
     margin: 10px;
     width: 100%;
     padding: 0 10px;
+    /* border-radius: 50%; */
   }
 
   header .links-open ul li a:hover {
@@ -439,7 +460,7 @@ main #comment-box {
 /* Small Devices */
 @media screen and (max-width: 768px) {
   main.home {
-    width: 80%;
+    width: 90%;
     display: inline-flex;
     align-self: center;
     padding-top: 20px;
@@ -448,6 +469,7 @@ main #comment-box {
   main.home a {
     background-color: var(--primary);
     font-weight: bold;
+    color: var(--primary-as-link-text);
   }
 
   main.home a:hover {
@@ -460,7 +482,7 @@ main #comment-box {
   }
 
   main.home div p {
-    font-size: calc(var(--font-size) * 1.5);
+    font-size: calc(var(--font-size) * 1.2);
     width: 100%;
   }
 
@@ -474,6 +496,7 @@ main #comment-box {
 
   main.home div#hi h1 {
     font-size: calc(var(--font-size) * 1.8);
+    text-align: center;
   }
 
   /* Profile Icon */
@@ -527,7 +550,7 @@ footer a:hover {
 
 a {
   text-decoration: none;
-  color: var(--font-colour);
+  color: var(--link-text-colour);
   border-bottom: 2px dotted var(--primary);
 }
 
@@ -630,7 +653,7 @@ button:active {
 
   /* Cards on the Home Page, no image big text */
   .home .card {
-    padding: 30px;
+    padding: 10px;
   }
 
   .home .card h1 {

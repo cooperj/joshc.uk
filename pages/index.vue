@@ -25,6 +25,7 @@
         In the past, I have made projects <span aria-hidden="true">🧪</span> such as...
       </p>
       <div class="cards-container">
+        <home-card-lft-scanning />
         <home-card-bananapocalypse />
       </div>
       <p>
