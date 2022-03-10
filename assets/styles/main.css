@@ -3,7 +3,7 @@
 :root {
   --font-size: 16pt;
   --primary: #018281;
-  --primary-selected: #06997d;
+  --primary-selected: #01a3a4;
   --secondary: #156e99;
   --secondary-selected: #065f8f;
   --font-colour: hsl(160, 53%, 3%);
@@ -22,6 +22,7 @@
   --primary-as-link-text: #f5f5f5;
   --link-text-colour: var(--font-colour);
   --button-text-colour: var(--background);
+  --drop-shadow-colour: grey;
 }
 
 /* Dark Mode */
@@ -36,6 +37,7 @@
     --text-header-link-normal-state-colour: #1b1702;
     --link-text-colour: var(--font-colour);
     --button-text-colour: var(--font-colour);
+    --drop-shadow-colour: rgb(36, 36, 36);
   }
 }
 
@@ -186,8 +188,8 @@ header {
     flex-direction: column;
     padding-bottom: 40px;
     border-radius: 20px;
-    -webkit-box-shadow: 0px 0px 8px 4px grey; 
-    box-shadow: 0px 0px 40px 4px grey;
+    -webkit-box-shadow: 0px 0px 8px 4px var(--drop-shadow-colour); 
+    box-shadow: 0px 0px 40px 4px var(--drop-shadow-colour);
   }
   
   header .links-open * {
@@ -195,20 +197,29 @@ header {
   }
 
   header .links-open ul {
-    margin: 10px;
+    margin: auto;
     padding: 0;
     list-style-type: none;
     line-height: 3;
-    width: 80%;
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  header .links-open * {
+    box-sizing: border-box;
+  }
+
+  header .links-open ul li {
+    margin-bottom: 15px;
   }
 
   header .links-open ul li a {
     display: inline-block;
-    /* background-color: var(--primary-selected); */
-    margin: 10px;
+    background-color: var(--primary-selected);
+    margin: 0;
     width: 100%;
     padding: 0 10px;
-    /* border-radius: 50%; */
+    border-radius: 10px;
   }
 
   header .links-open ul li a:hover {
@@ -407,6 +418,19 @@ main #comment-box {
   background-color: var(--secondary-background);
 }
 
+a.link-highlighted {
+  background-color: var(--primary);
+  color: var(--primary-as-link-text);
+  font-weight: bold;
+  box-shadow: 5px 0 0 var(--primary), -5px 0 0 var(--primary);
+}
+
+a.link-highlighted:hover {
+  background-color: var(--highlight-colour);
+  border: none;
+  box-shadow: 5px 0 0 var(--highlight-colour), -5px 0 0 var(--highlight-colour);
+}
+
 /* Change home page layout per device */
 /* Large Devices */
 @media screen and (min-width: 768px) {
@@ -415,17 +439,6 @@ main #comment-box {
     display: inline-flex;
     align-self: center;
     padding-top: 40px;
-  }
-
-  main.home a {
-    background-color: var(--primary);
-    color: var(--primary-as-link-text);
-    font-weight: bold;
-  }
-
-  main.home a:hover {
-    background-color: var(--highlight-colour);
-    border: none;
   }
 
   main.home em {
@@ -462,17 +475,6 @@ main #comment-box {
     display: inline-flex;
     align-self: center;
     padding-top: 20px;
-  }
-
-  main.home a {
-    background-color: var(--primary);
-    font-weight: bold;
-    color: var(--primary-as-link-text);
-  }
-
-  main.home a:hover {
-    background-color: var(--highlight-colour);
-    border: none;
   }
 
   main.home em {
@@ -520,10 +522,6 @@ footer {
 footer ul {
   list-style-type: none;
   margin: 0;
-}
-
-footer ul li {
-  padding-bottom: 15px;
 }
 
 footer .left {
@@ -593,6 +591,27 @@ button:active {
 .cards-container {
   width: 100%;
   margin: 30px 0;
+}
+
+/* Small Devices */
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  
+  footer .left {
+    margin-bottom: 20px !important;
+  }
+
+  footer .right {
+    padding-right: 0;
+  }
+  
+  footer div ul {
+    padding: 0;
+    text-align: center !important;
+    
+  }
 }
 
 /* Change card per device */
