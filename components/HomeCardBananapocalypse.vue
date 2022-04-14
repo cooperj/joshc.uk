@@ -41,9 +41,8 @@
 
     a.action-link {
         background: none;
-        border-bottom: 4px solid rgba(255, 231, 79, 80);
-        color: rgba(255, 231, 79, 80);
-        -webkit-text-stroke-width: 0;
+        border-bottom: 4px solid white;
+        color: white;
     }
 
     a.action-link:hover {

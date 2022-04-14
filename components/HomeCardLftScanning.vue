@@ -1,26 +1,34 @@
 <template>
     <div class="card">
-        <!-- If Icon, use it Else use unsplash random image -->
-        <div class="img" />
         <div class="card-body">
-            <h1> Automatic scanning of Lateral Flow Tests </h1>
-            <p>
-                I created a game similar to the popular mobile game Angry Birds, but with a banana flavoured twist.
-            </p>
-            <p>
-                <nuxt-link class="action-link" to="/portfolio/lft-scanning">
-                    Read more
-                </nuxt-link>
-            </p>
+            <div class="card-body-text">
+                <h1> Automatic scanning of Lateral Flow Tests </h1>
+                <p>
+                    Scanning of a test cartridge to automate both the data collection and abstract the reading of the result.
+                </p>
+                <p>
+                    <nuxt-link class="action-link" to="/portfolio/lft-scanning">
+                        Read more
+                    </nuxt-link>
+                </p>
+            </div>
+            <div class="img" />
         </div>
     </div>
 </template>
 
 <style scoped>
     .card {
-        background: rgb(254, 28, 141);
-        background: linear-gradient(0deg, rgb(254, 28, 141) 0%, rgb(252, 100, 176) 47%, rgb(252, 100, 176) 100%); 
+        background: #d16ba5;
+        background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #909ae3, #849be5, #779be7, #6d91e6, #6486e5, #5d7be3, #5870e1);
         color: white;
+        flex-direction: column-reverse;
+    }
+
+    .card-body {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
     }
     .card .card-body p {
         /* -webkit-text-stroke-width: .5px;
@@ -28,10 +36,26 @@
         font-size: 1rem;
         margin-bottom: 10px;
     }
-    .img {
-        background-image: url('/images/lft-scanning/test.webp');
-        width: 30%;
 
+    .card-body-text {
+        width: 100%;
+    }
+
+    .img {
+        transform: rotate(12deg);
+        align-self: flex-end;
+        background-image: url('/images/lft-scanning/phone.webp');
+        background-position: right center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 1;
+        mask-image: none;
+        margin-right: 0;
+        z-index: 2;
+        height: 300px;
+        display: block;
+        position: relative;
+        margin: 20px;
     }
 
     .card:hover {
@@ -55,6 +79,10 @@
         .logo {
             width: auto;
             height: 100px;
+        }
+
+        .card-body {
+            padding: 0;
         }
     }
 
