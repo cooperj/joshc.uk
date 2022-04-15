@@ -169,15 +169,8 @@ header {
     font-size: calc(var(--font-size) * 0.9);
   }
 
-  header #links header {
-    background-color: var(--primary);
-  }
-
-  header .links-closed {
-    display: none;
-  }
-
-  header .links-open {
+  header #links {
+    transition: visibility 0s, opacity 0.2s linear;
     position: fixed;
     z-index: 100;
     top: 0;
@@ -192,6 +185,20 @@ header {
     box-shadow: 0px 0px 40px 4px var(--drop-shadow-colour);
   }
   
+  header .links-closed {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  header .links-open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  header #links header {
+    background-color: var(--primary);
+  }
+
   header .links-open * {
     color: var(--primary-as-link-text);
   }
@@ -230,6 +237,13 @@ header {
   header .links-open ul li a:active {
     background-color: var(--font-colour);
     color: var(--background);
+    box-shadow: inset 0px 0px 0px 2px  var(--primary-selected);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  header #links {
+    transition: visibility 0s, opacity 0s linear;
   }
 }
 
@@ -389,6 +403,7 @@ main article form textarea {
   outline: var(--secondary) 2px dashed;
   border: none;
   background: var(--input-background);
+  color: var(--font-colour);
 }
 
 main article form input:focus,

@@ -11,10 +11,10 @@
         But, if you'd like to contact me via Twitter, albeit more informally, I'm <social-link username="joshcdev" site="twitter.com" icon="twitter" />!
       </p>
       <p>
-        I would appreciate it if you could fill out the form <span aria-hidden="true">📝</span> in as much detail as you can, so I can best deal with your query quickly <span aria-hidden="true">⏳</span>.
+        I would appreciate it if you could fill out the form in as much detail as you can, so I can best deal with your query quickly.
       </p>
       <p>
-        Please feel free to send things that you think I would like <span aria-hidden="true">🐙</span>, but don't add me to your mailing list.
+        Please feel free to send things that you think I would like, but don't add me to your mailing list.
       </p>
       <div>
         <form @submit.prevent="submitForm">
