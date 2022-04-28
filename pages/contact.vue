@@ -12,7 +12,7 @@
         <p>
           <ul>
             <li>
-              Email me at <strong><a href="mailto:hi@joshc.uk" target="_blank">hi@joshc.uk</a></strong>
+              Email: <strong><a href="mailto:hi@joshc.uk" target="_blank">hi@joshc.uk</a></strong>
             </li>
             <!-- <li>
               On the Air: <strong><a href="#" target="_blank">M7XXX</a></strong>
@@ -24,7 +24,7 @@
               GitHub: <strong><a href="https://github.com/cooperj" target="_blank">@cooperj</a></strong>
             </li>
             <li>
-              LinkedIn: <strong><a href="https://www.linkedin.com/in/joshuaecooper/" target="_blank">/in/joshuaecooper</a></strong>
+              LinkedIn: <strong><a href="https://www.linkedin.com/in/JoshuaECooper/" target="_blank">/in/JoshuaECooper</a></strong>
             </li>
           </ul>
         </p>
@@ -37,7 +37,7 @@
         </p>
         <p>
           Please feel free to send things that you think I would like, but don't add me to your mailing list.
-          Email not personally directed at me or is generally spammy - will be marked as junk.
+          Email not personally directed at me or is generally spammy - <em>will</em> be marked as junk.
         </p>
       </div>
     </article>
