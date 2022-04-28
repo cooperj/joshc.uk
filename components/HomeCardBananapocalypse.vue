@@ -41,14 +41,13 @@
 
     a.action-link {
         background: none;
-        border-bottom: 4px solid #23951a;
-        color: #23951a;
-        -webkit-text-stroke-width: 0;
+        border-bottom: 4px solid white;
+        color: white;
     }
 
     a.action-link:hover {
         background: none;
-        border-bottom: none
+        border: none
     }
 
     /* Large Devices */

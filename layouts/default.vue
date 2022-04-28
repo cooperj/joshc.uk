@@ -27,11 +27,6 @@
               Privacy Policy
             </nuxt-link>
           </li>
-          <li>
-            <nuxt-link to="/sitemap">
-              Sitemap
-            </nuxt-link>
-          </li>
         </ul>
       </div>
     </footer>

@@ -3,16 +3,16 @@
 :root {
   --font-size: 16pt;
   --primary: #018281;
-  --primary-selected: #06997d;
+  --primary-selected: #01a3a4;
   --secondary: #156e99;
   --secondary-selected: #065f8f;
-  --font-colour: #040d0a;
+  --font-colour: hsl(160, 53%, 3%);
   --background: #f5f5f5;
   --secondary-background: #ececec;
   --input-background: #fff;
   --highlight-colour: var(--primary-selected);
   --text-header-link-normal-state-colour: #ddd;
-  --header: var(--background);
+  --header: #f5f5f5e8;
   --font-face-std: nimbus-sans, sans-serif;
   --font-weight-std: 400;
   --font-style-std: normal;
@@ -20,18 +20,24 @@
   --font-weight-bld: 900;
   --font-style-bld: normal;
   --primary-as-link-text: #f5f5f5;
+  --link-text-colour: var(--font-colour);
+  --button-text-colour: var(--background);
+  --drop-shadow-colour: grey;
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --secondary: #cfcfcf;
-    --background: #1b1b1b;
+    --background: #02111B;
     --font-colour: #fff;
-    --secondary-background: #2c2c2c;
-    --input-background: #585858;
-    --header: var(--background);
-    --text-header-link-normal-state-colour: #555555;
+    --secondary-background: #0e2534;
+    --input-background: var(--secondary-background);
+    --header: #02111be5;
+    --text-header-link-normal-state-colour: #1b1702;
+    --link-text-colour: var(--font-colour);
+    --button-text-colour: var(--font-colour);
+    --drop-shadow-colour: rgb(36, 36, 36);
   }
 }
 
@@ -87,13 +93,21 @@ h6 {
   font-style: var(--font-style-bld);
 }
 
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--header);
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
 /* Change navbar items per device */
 /* Large Devices */
 @media screen and (min-width: 768px) {
   header {
     display: flex;
     flex-direction: row;
-    background: var(--header);
     padding: 25px 25px;
     justify-content: space-between;
   }
@@ -135,7 +149,6 @@ h6 {
   header {
     display: flex;
     flex-direction: row;
-    background: var(--header);
     padding: 25px 25px;
     justify-content: space-between;
     align-items: center;
@@ -156,40 +169,64 @@ h6 {
     font-size: calc(var(--font-size) * 0.9);
   }
 
-  header #links header {
-    background-color: var(--primary);
-  }
-
-  header .links-closed {
-    display: none;
-  }
-
-  header .links-open {
-    position: absolute;
+  header #links {
+    transition: visibility 0s, opacity 0.2s linear;
+    position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
     background-color: var(--primary);
-    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 8px 4px var(--drop-shadow-colour);
+    box-shadow: 0px 0px 40px 4px var(--drop-shadow-colour);
+  }
+
+  header .links-closed {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  header .links-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  header #links header {
+    background-color: var(--primary);
+  }
+
+  header .links-open * {
+    color: var(--primary-as-link-text);
   }
 
   header .links-open ul {
-    margin: 10px;
+    margin: auto;
     padding: 0;
     list-style-type: none;
     line-height: 3;
-    width: 80%;
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  header .links-open * {
+    box-sizing: border-box;
+  }
+
+  header .links-open ul li {
+    margin-bottom: 15px;
   }
 
   header .links-open ul li a {
     display: inline-block;
     background-color: var(--primary-selected);
-    margin: 10px;
+    margin: 0;
     width: 100%;
     padding: 0 10px;
+    border-radius: 10px;
   }
 
   header .links-open ul li a:hover {
@@ -200,6 +237,13 @@ h6 {
   header .links-open ul li a:active {
     background-color: var(--font-colour);
     color: var(--background);
+    box-shadow: inset 0px 0px 0px 2px var(--primary-selected);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  header #links {
+    transition: visibility 0s, opacity 0s linear;
   }
 }
 
@@ -329,7 +373,8 @@ main article h3 a .icon-link::before,
 main article h4 a .icon-link::before,
 main article h5 a .icon-link::before,
 main article h6 a .icon-link::before {
-  content: "#"; /* Not Vis */
+  content: "#";
+  /* Not Vis */
   font-size: 1rem;
   display: inline-block;
   width: 30px;
@@ -359,6 +404,7 @@ main article form textarea {
   outline: var(--secondary) 2px dashed;
   border: none;
   background: var(--input-background);
+  color: var(--font-colour);
 }
 
 main article form input:focus,
@@ -368,10 +414,14 @@ main article form textarea:focus {
 }
 
 main article form input[type="checkbox"] {
-  -ms-transform: scale(1.75); /* IE */
-  -moz-transform: scale(1.75); /* FF */
-  -webkit-transform: scale(1.75); /* Safari and Chrome */
-  -o-transform: scale(1.75); /* Opera */
+  -ms-transform: scale(1.75);
+  /* IE */
+  -moz-transform: scale(1.75);
+  /* FF */
+  -webkit-transform: scale(1.75);
+  /* Safari and Chrome */
+  -o-transform: scale(1.75);
+  /* Opera */
   transform: scale(1.75);
   padding: 10px;
   background-color: var(--primary);
@@ -388,6 +438,19 @@ main #comment-box {
   background-color: var(--secondary-background);
 }
 
+a.link-highlighted {
+  background-color: var(--primary);
+  color: var(--primary-as-link-text);
+  font-weight: bold;
+  box-shadow: 5px 0 0 var(--primary), -5px 0 0 var(--primary);
+}
+
+a.link-highlighted:hover {
+  background-color: var(--highlight-colour);
+  border: none;
+  box-shadow: 5px 0 0 var(--highlight-colour), -5px 0 0 var(--highlight-colour);
+}
+
 /* Change home page layout per device */
 /* Large Devices */
 @media screen and (min-width: 768px) {
@@ -396,17 +459,6 @@ main #comment-box {
     display: inline-flex;
     align-self: center;
     padding-top: 40px;
-  }
-
-  main.home a {
-    background-color: var(--primary);
-    color: var(--primary-as-link-text);
-    font-weight: bold;
-  }
-
-  main.home a:hover {
-    background-color: var(--highlight-colour);
-    border: none;
   }
 
   main.home em {
@@ -432,27 +484,17 @@ main #comment-box {
   main.home img.profile {
     margin-left: 100px;
     height: 250px;
-    border-radius: 100%;
+    mask-image: url("/images/image-mask.svg");
   }
 }
 
 /* Small Devices */
 @media screen and (max-width: 768px) {
   main.home {
-    width: 80%;
+    width: 90%;
     display: inline-flex;
     align-self: center;
     padding-top: 20px;
-  }
-
-  main.home a {
-    background-color: var(--primary);
-    font-weight: bold;
-  }
-
-  main.home a:hover {
-    background-color: var(--highlight-colour);
-    border: none;
   }
 
   main.home em {
@@ -460,7 +502,7 @@ main #comment-box {
   }
 
   main.home div p {
-    font-size: calc(var(--font-size) * 1.5);
+    font-size: calc(var(--font-size) * 1.2);
     width: 100%;
   }
 
@@ -474,13 +516,17 @@ main #comment-box {
 
   main.home div#hi h1 {
     font-size: calc(var(--font-size) * 1.8);
+    text-align: center;
   }
 
   /* Profile Icon */
-  main.home img.profile {
-    height: 200px;
-    border-radius: 100%;
+  main.home picture {
     align-self: center;
+  }
+
+  main.home picture img {
+    height: 200px;
+    mask-image: url("/images/image-mask.svg");
   }
 }
 
@@ -501,16 +547,14 @@ footer ul {
   margin: 0;
 }
 
-footer ul li {
-  padding-bottom: 15px;
-}
-
 footer .left {
   text-align: left;
 }
+
 footer .center {
   text-align: center;
 }
+
 footer .right {
   text-align: right;
   padding-right: 30px;
@@ -519,6 +563,7 @@ footer .right {
 footer a {
   border-bottom: 3px dotted var(--font-colour);
 }
+
 footer a:hover {
   border-bottom: none;
   color: var(--secondary-background);
@@ -527,7 +572,7 @@ footer a:hover {
 
 a {
   text-decoration: none;
-  color: var(--font-colour);
+  color: var(--link-text-colour);
   border-bottom: 2px dotted var(--primary);
 }
 
@@ -564,6 +609,7 @@ button:active {
   user-select: none;
   border: none;
 }
+
 .gallery .control-buttons span a:hover {
   background-color: var(--secondary);
   color: var(--background);
@@ -572,6 +618,27 @@ button:active {
 .cards-container {
   width: 100%;
   margin: 30px 0;
+}
+
+/* Small Devices */
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer .left {
+    margin-bottom: 20px !important;
+  }
+
+  footer .right {
+    padding-right: 0;
+  }
+
+  footer div ul {
+    padding: 0;
+    text-align: center !important;
+
+  }
 }
 
 /* Change card per device */
@@ -623,14 +690,15 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 0 30px 0; /* separator border */
+    margin: 0 0 30px 0;
+    /* separator border */
     justify-content: flex-start;
     border-radius: 1em;
   }
 
   /* Cards on the Home Page, no image big text */
   .home .card {
-    padding: 30px;
+    padding: 10px;
   }
 
   .home .card h1 {
