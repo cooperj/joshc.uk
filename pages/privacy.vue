@@ -76,7 +76,7 @@
           Microsoft Privacy microsite
         </a>
       </p>
-      <h3>Formspark</h3>
+      <!-- <h3>Formspark</h3>
       <p>
         We use Formspark to process contact form requests. This is a
         non-essential service, and you can opt-out by sending your emails
@@ -87,7 +87,7 @@
         <a href="https://formspark.io/legal/privacy-policy/" target="_blank">
           Formspark Privacy Policy.
         </a>
-      </p>
+      </p> -->
       <h2>Your data protection rights</h2>
       <p>Under data protection law, you have rights including:</p>
 
