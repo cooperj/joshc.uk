@@ -34,7 +34,7 @@
     --secondary-background: #0e2534;
     --input-background: var(--secondary-background);
     --header: #02111be5;
-    --text-header-link-normal-state-colour: #1b1702;
+    --text-header-link-normal-state-colour: #0e2534;
     --link-text-colour: var(--font-colour);
     --button-text-colour: var(--font-colour);
     --drop-shadow-colour: rgb(36, 36, 36);
