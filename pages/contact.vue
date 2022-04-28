@@ -26,6 +26,9 @@
             <li>
               LinkedIn: <strong><a href="https://www.linkedin.com/in/JoshuaECooper/" target="_blank">/in/JoshuaECooper</a></strong>
             </li>
+            <li>
+              Pronouns? <strong><pronouns /></strong>
+            </li>
           </ul>
         </p>
       </div>
