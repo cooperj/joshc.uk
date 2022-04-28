@@ -5,11 +5,16 @@
       <h1>
         Hello I'm Josh! <span aria-hidden="true">👋</span>
       </h1>
-      <img aria-hidden="true"
-        class="profile"
-        src="/images/joshua.webp"
-        alt="Profile Picture of Joshua"
-      >
+
+      <picture>
+        <source srcset="/images/joshua.webp" type="image/webp">
+        <source srcset="/images/joshua.jpg" type="image/jpeg"> 
+        <img aria-hidden="true"
+            class="profile"
+            src="/images/joshua.jpg"
+            alt="Profile Picture of Joshua"
+          >
+      </picture>
     </div>
     <div id="about">
       <p>
