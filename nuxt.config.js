@@ -29,10 +29,7 @@ export default {
       { name: "twitter:card", content: "summary" },
       { name: "twitter:creator", content: "@joshcdev" },
     ],
-    link: [
-      // Adobe fonts
-      { rel: "preconnect", href: "https://use.typekit.net/rtt2lre.css" },
-      
+    link: [     
       // Favicons etc
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico?v=2" },
       { rel: "apple-touch-icon", sizes: "57x57", href: "/favicons/apple-icon-57x57.png?v=2" },

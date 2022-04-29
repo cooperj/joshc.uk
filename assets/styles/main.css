@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/rtt2lre.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --font-size: 16pt;
@@ -13,11 +13,11 @@
   --highlight-colour: var(--primary-selected);
   --text-header-link-normal-state-colour: #ddd;
   --header: #f5f5f5e8;
-  --font-face-std: nimbus-sans, sans-serif;
+  --font-face-std: 'Noto Sans', sans-serif;
   --font-weight-std: 400;
   --font-style-std: normal;
-  --font-face-bld: museo-sans-rounded, sans-serif;
-  --font-weight-bld: 900;
+  --font-face-bld: 'Noto Sans', sans-serif;
+  --font-weight-bld: 700;
   --font-style-bld: normal;
   --primary-as-link-text: #f5f5f5;
   --link-text-colour: var(--font-colour);
@@ -82,7 +82,7 @@ body {
   border-width: 0;
 }
 
-.title h1,
+h1,
 h2,
 h3,
 h4,
@@ -123,7 +123,9 @@ header {
   }
 
   header .title {
-    font-weight: bold;
+    font-family: var(--font-face-bld);
+    font-weight: var(--font-weight-bld);
+    font-style: var(--font-style-bld);
   }
 
   header ul {
@@ -165,7 +167,9 @@ header {
   }
 
   header .title {
-    font-weight: bold;
+    font-family: var(--font-face-bld);
+    font-weight: var(--font-weight-bld);
+    font-style: var(--font-style-bld);
     font-size: calc(var(--font-size) * 0.9);
   }
 
