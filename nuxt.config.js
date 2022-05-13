@@ -100,8 +100,6 @@ export default {
     hostname: "https://www.joshc.uk",
     gzip: true,
     exclude: ["/404"],
-    
-
   },
 
   hooks: {
