@@ -16,7 +16,7 @@ export default {
       lang: "en"
     },
     script: [
-      { src: "https://static.cloudflareinsights.com/beacon.min.js", "data-cf-beacon": `{"token": "c595c9ecfe2647378176d607156d0cd8", "spa": true, "branch": "${process.env.BRANCH}" }`, defer: true }
+      { src: "https://analytics.joshuacooper.co.uk/js/plausible.js", defer: true, "data-domain": "joshc.uk" }
     ],
     meta: [
       { charset: "utf-8" },
