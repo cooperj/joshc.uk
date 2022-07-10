@@ -11,12 +11,13 @@ I've recently been working on a group project to create [Aquanaut](/portfolio/aq
 
 ## What am I doing right now?
 
-I am currently on summer break from University. I'm spending this time to; add more content to this website, over-engineer my home network, and test some other ideas out.
+I am currently on summer break from University.
 
+I'm spending this time to; add more content to this website, over-engineer my home network, and test some other ideas out.
 
-## What am I doing soon?
+After I've got my network setup, and working reliably - I'm planning on setting up ipv6 access.
 
-assasa
+I'm also working on my Blender skills.
 
 
 ---
