@@ -1,6 +1,6 @@
 ---
 title: Aquanaut
-description: A classicly inspired first-person shooter, set in the depths of the ocean. Created as a part of a team.
+description: A classic inspired first-person shooter, set in the depths of the ocean. Created as a part of a team.
 icon: /images/aquanaut/icon.webp
 publishDate: 2022-06-10
 draft: false
@@ -29,17 +29,17 @@ Space makes you Jump!
 
 ## Who made this?
 
- - Josh Cooper - Team Lead/Weapons Systems
- - ["Vanta"](https://vantasia.dev) - Lead Designer/Texturing
- - Artur Wojcik - AI Designer
- - [Matt Silverwood](https://silverwood.dev) - Input System 
+ - Josh Cooper - Team Lead/Weapons Systems
+ - ["Vanta"](https://vantasia.dev) - Lead Designer/Texturing
+ - Artur Wojcik - AI Designer
+ - [Matt Silverwood](https://silverwood.dev) - Input System 
 
 Resources from Other Places
 
- - Enemies Sprites from Doom (Id Software, 1993)*
- - Various Sound Effects from freesound.org
- - Tile Set from tileable.co
- - Some sound effects made with our voices
+ - Enemies Sprites from Doom (Id Software, 1993)*
+ - Various Sound Effects from freesound.org
+ - Tile Set from tileable.co
+ - Some sound effects made with our voices
 
 *Sprites have been used as a placeholder, with the understanding that they will be replaced at a later. They are used for educational purposes only.
 

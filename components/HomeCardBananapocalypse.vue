@@ -10,7 +10,7 @@
             </p>
             <p>
                 <nuxt-link class="action-link" to="/portfolio/bananapocalypse">
-                    Read more
+                    Play Now!
                 </nuxt-link>
             </p>
         </div>

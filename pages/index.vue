@@ -30,6 +30,7 @@
         In the past, I have made projects <span aria-hidden="true">🧪</span> such as...
       </p>
       <div class="cards-container">
+        <home-card-aquanaut />
         <home-card-lft-scanning />
         <home-card-bananapocalypse />
       </div>
@@ -62,7 +63,9 @@
 </template>
 
 <script>
+import HomeCardBananapocalypse from '~/components/HomeCardBananapocalypse.vue'
 export default {
+  components: { HomeCardBananapocalypse },
   head () {
     return {
       title: 'Home',
