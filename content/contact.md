@@ -14,8 +14,11 @@ If you wanna get in touch with me, I'm available in most places. However, I do a
  - On the Air: **<a href="https://www.qrz.com/db/m7jco" target="_blank">M7JCO</a>**
  - Pronouns? **<pronouns />**
 
-I am busy and may miss messages, but I try to reply within a week; so please be patient.
+<div id="comment-box">
+
+⚠️ I am busy and may miss messages, but I try to reply within a week; so please be patient.
 If I've missed your message after a week, please feel free to send a follow up.
 
-Please feel free to send things that you think I would like, but don't add me to your mailing list.
-Email not personally directed at me or is generally spammy - *will* be marked as junk and wont get a response.
+📨 Please feel free to send things that you think I would like, but don't add me to your mailing list. Email not personally directed at me or is generally spammy - *will* be marked as junk and wont get a response.
+
+</div>
