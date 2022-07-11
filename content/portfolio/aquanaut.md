@@ -1,7 +1,7 @@
 ---
 title: Aquanaut
 description: A classicly inspired first-person shooter, set in the depths of the ocean. Created as a part of a team.
-icon: /images/ba/icon.webp
+icon: /images/aquanaut/icon.webp
 publishDate: 2022-06-10
 draft: false
 ---

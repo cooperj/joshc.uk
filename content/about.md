@@ -6,7 +6,7 @@ draft: false
 
 <div id="about">
 
-Hi! I'm Josh.
+Hi! I'm Josh. Here is some text about why im so good and why im so cool and awesome.
 
 <picture>
 <source srcset="/images/joshua.webp" type="image/webp">
