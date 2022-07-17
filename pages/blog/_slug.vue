@@ -1,6 +1,6 @@
 <template>
   <main>
-    <summary>
+    <div class="info">
       <h1> {{ article.title }} </h1>
       <span class="publish-label">
         Published:
@@ -9,7 +9,7 @@
         {{ formatDate(article.publishDate) }}
       </span>
       <p>{{ article.readingTime }}</p>
-    </summary>
+    </div>
 
     <article>
       <nuxt-content :document="article" />

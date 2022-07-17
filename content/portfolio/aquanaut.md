@@ -6,50 +6,58 @@ publishDate: 2022-06-10
 draft: false
 ---
 
+Aquanaut is a classic shooter inspired by game, set in the depths of the ocean. 
+
 <div class="yt-video-container">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PWpO5OhR4_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## What is the project?
-
-
-Aquanaut is a classic shooter inspired game. This is the submission release; taking on changes from the alpha.
-
-How to Play?
-
-Use W, A, S, and D for movement, and the mouse to look left and right.
-
-Press the 1 key to use the pistol, press the 2 key to use the rocket launcher (you will need to unlock this by killing the first boss)
-
-Press E to interact with things.
-
-Left Control is for crouching.
-
-Space makes you Jump!
 
 ## Who made this?
 
-- Josh Cooper - Team Lead/Weapons Systems
-- ["Vanta"](https://vantasia.dev) - Lead Designer/Texturing
-- Artur Wojcik - AI Designer
-- [Matt Silverwood](https://silverwood.dev) - Input System 
+This game was made by:
 
-Resources from Other Places
-
- - Enemies Sprites from Doom (Id Software, 1993)*
- - Various Sound Effects from freesound.org
- - Tile Set from tileable.co
- - Some sound effects made with our voices
-
-*Sprites have been used as a placeholder, with the understanding that they will be replaced at a later. They are used for educational purposes only.
-
-This project is Open Source! Check the code on our [GitHub](https://github.com/CMP2804M-TSE-Group-28/supernova). 
+- <strong>Josh Cooper</strong> (me) - Team Lead & the Weapons Systems
+- <strong>[Vanta](https://vantasia.dev)</strong> - Design Lead & the Texturing
+- <strong>Artur Wojcik</strong> - AI Lead & Game Flow Design
+- <strong>[Matt Silverwood](https://silverwood.dev)</strong> - Input & Interaction Systems
 
 
+We also used resources from other places
+
+- <details><summary>Enemies Sprites from Doom (Id Software, 1993)</summary> <em>Sprites have been used as a placeholder, with the understanding that they will be replaced at a later, and are being used only for educational purposes.</em></details>
+- Various Sound Effects from [freesound](https://freesound.org).
+- Tile Set from [Tileable.co](https://tileable.co/).
+- Some sound effects made with our voices
 
 
-If you are facing difficulties playing the game, you might find it useful to reload this page or 
-<a href="/demos/portfolio/aquanaut_win.zip" target="_blank">download the game for windows.</a>
+## My Role
+
+I did some things
 
 
-This is also available [on itch.io](https://joshcooper.itch.io/aquanaut).
+## The "finished" project
+
+We plan to use, adapt, and steal from the project. We don't see the project as finished, so this page will be updated when we make changes.
+
+We made the project Open Source! You can find the code on [GitHub 🤖](https://github.com/CMP2804M-TSE-Group-28/supernova). 
+
+
+### First Release
+
+You can play the game [on Itch.io](https://joshcooper.itch.io/aquanaut), or you can download the game here for <a href="/demos/portfolio/aquanaut_1.0_win.zip">Windows</a>.
+
+<details>
+    <summary>The Controls</summary>
+
+Use <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> for movement, and the <kbd>mouse</kbd> to look <kbd>left</kbd> and <kbd>right</kbd>.
+
+Press the <kbd>1</kbd> key to use the **Pistol**, press the <kbd>2</kbd> key to use the **Rocket Launcher** (this will need to unlocked).
+
+Press <kbd>E</kbd> to interact with things.
+
+<kbd>Left Control</kbd> is for crouching.
+
+and finally, <kbd>Space</kbd> to Jump!
+
+</details>

@@ -57,6 +57,21 @@
 }
 
 /* Styles */
+
+kbd {
+  background-color: var(--primary);
+  border-radius: 3px;
+  border: 1px solid --primary-selected;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+  color: white;
+  display: inline-block;
+  font-size: .85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 4px 6px;
+  white-space: nowrap;
+}
+
 html,
 body {
   margin: 0;
@@ -265,27 +280,27 @@ main {
   min-height: calc(100vh - 3rem);
 }
 
-main summary {
+main .info {
   text-align: center;
   width: 80%;
   padding-bottom: 25px;
 }
 
-main summary h1 {
+main .info h1 {
   margin-bottom: 10px;
 }
 
-main summary .publish-label,
+main .info .publish-label,
 .card .date .label {
   font-weight: bold;
 }
 
-main summary .publish-date,
+main .info .publish-date,
 .card .date {
   color: var(--secondary);
 }
 
-main summary p {
+main .info p {
   margin: 0;
 }
 
@@ -307,7 +322,7 @@ main article p {
     width: 85%;
   }
 
-  main summary h1 {
+  main .info h1 {
     font-size: calc(var(--font-size) * 1.6);
   }
 
