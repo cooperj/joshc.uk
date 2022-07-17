@@ -1,10 +1,10 @@
 <template>
     <div class="card">
         <!-- If Icon, use it Else use unsplash random image -->
-        <div class="img" />
+        <div class="img"></div>
         <div class="card-body">
             <!-- <h1> Bananapocalypse </h1> -->
-            <img class="logo" src="/images/ba/logo.webp" alt="banana apocalypse" />
+            <img class="logo" src="/images/ba/logo.webp" alt="banana apocalypse">
             <p>
                 I created a game similar to the popular mobile game Angry Birds, but with a banana flavoured twist.
             </p>
@@ -21,11 +21,11 @@
     .card {
         background: rgb(130,245,255);
         background: linear-gradient(0deg, rgba(130,245,255,1) 0%, rgba(151,200,251,1) 47%, rgba(130,192,255,1) 100%); 
-        color: white;
+        color: rgb(49, 42, 0);
     }
     .card .card-body p {
-        -webkit-text-stroke-width: .5px;
-        -webkit-text-stroke-color: rgba(255, 231, 79, 128);
+        /* -webkit-text-stroke-width: .5px;
+        -webkit-text-stroke-color: ; */
         font-size: 1rem;
         margin-bottom: 10px;
     }
@@ -41,8 +41,8 @@
 
     a.action-link {
         background: none;
-        border-bottom: 4px solid white;
-        color: white;
+        border-bottom: 4px solid rgb(49, 42, 0);
+        color: rgb(49, 42, 0);
     }
 
     a.action-link:hover {
@@ -66,7 +66,7 @@
         }
 
         .logo {
-            height: 50px;
+            height: 60px;
             width: auto;
             align-self: center;
             margin-bottom: 20px;

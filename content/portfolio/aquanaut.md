@@ -29,10 +29,10 @@ Space makes you Jump!
 
 ## Who made this?
 
- - Josh Cooper - Team Lead/Weapons Systems
- - ["Vanta"](https://vantasia.dev) - Lead Designer/Texturing
- - Artur Wojcik - AI Designer
- - [Matt Silverwood](https://silverwood.dev) - Input System 
+- Josh Cooper - Team Lead/Weapons Systems
+- ["Vanta"](https://vantasia.dev) - Lead Designer/Texturing
+- Artur Wojcik - AI Designer
+- [Matt Silverwood](https://silverwood.dev) - Input System 
 
 Resources from Other Places
 
