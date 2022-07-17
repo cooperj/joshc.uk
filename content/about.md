@@ -23,7 +23,7 @@ dssdsad
 
 <div id="comment-box">
 
-Since you got to this part of this page, you might want to see what im up to [now](/now) 🧐.
+🧐➡️ Since you've got this far... You might be interested in [what I'm up to right now!](/now)
 
 </div>
 </div>
