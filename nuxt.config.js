@@ -11,13 +11,12 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Josh Cooper",
-    titleTemplate: "%s | Josh Cooper",
+    titleTemplate: "%s → Josh Cooper",
     htmlAttrs: {
       lang: "en"
     },
     script: [
       { src: "https://analytics.joshuacooper.co.uk/js/plausible.js", defer: true, "data-domain": "joshc.uk" }
-      // { src: "https://static.cloudflareinsights.com/beacon.min.js", "data-cf-beacon": `{"token": "c595c9ecfe2647378176d607156d0cd8", "spa": true, "branch": "${process.env.BRANCH}" }`, defer: true }
     ],
     meta: [
       { charset: "utf-8" },
@@ -101,8 +100,6 @@ export default {
     hostname: "https://www.joshc.uk",
     gzip: true,
     exclude: ["/404"],
-    
-
   },
 
   hooks: {

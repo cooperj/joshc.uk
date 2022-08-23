@@ -12,7 +12,7 @@
     <div id="links" :class="linksStateClass">
         <header>
           <span class="title">
-            <nuxt-link to="/">
+            <nuxt-link to="/" v-on:click.native="closeNav()">
               Josh Cooper
             </nuxt-link>
           </span>
@@ -23,7 +23,7 @@
         </header>
       <ul>
         <li>
-          <nuxt-link to="/" v-on:click.native="closeNav()">About</nuxt-link>
+          <nuxt-link to="/about" v-on:click.native="closeNav()">About</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/portfolio/" v-on:click.native="closeNav()">Portfolio</nuxt-link>
