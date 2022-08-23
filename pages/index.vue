@@ -18,7 +18,7 @@
     </div>
     <div id="about">
       <p>
-        I'm currently a second year <strong>Games Computing <span aria-hidden="true">👨‍🎓</span></strong> student.
+        I'm currently a third year <strong>Games Computing <span aria-hidden="true">👨‍🎓</span></strong> student.
       </p>
       <p>
         My interests include a collection of <strong>user experience <span aria-hidden="true">👬</span></strong>, <strong>games <span aria-hidden="true">🎮</span></strong>, <strong>web <span aria-hidden="true">🌍</span></strong>, <strong>open source software <span aria-hidden="true">🥣</span></strong>, and cool <strong>hardware <span aria-hidden="true">📦</span></strong>.

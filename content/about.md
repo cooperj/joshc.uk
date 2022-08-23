@@ -23,7 +23,7 @@ dssdsad
 
 <div id="comment-box">
 
-🧐➡️ Since you've got this far... You might be interested in [what I'm up to right now!](/now)
+<span aria-hidden="true">🧐➡️</span> Since you've got this far... You might be interested in [what I'm up to right now!](/now)
 
 </div>
 </div>

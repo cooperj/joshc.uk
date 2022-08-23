@@ -15,7 +15,7 @@ I am currently on summer break from University.
 
 I'm spending this time to; add more content to this website, over-engineer my home network, and test some other ideas out.
 
-After I've got my network setup, and working reliably - I'm planning on setting up ipv6 access.
+After I've got my network setup, and working reliably - I'm planning on setting up IPv6 access.
 
 I'm also working on my Blender skills.
 

@@ -4,7 +4,7 @@ description: View the privacy policy in a browser
 draft: false
 ---
 
-*This policy was last updated: Thursday, 2nd December 2021.*
+*This policy was last updated: Thursday, 23rd August 2022.*
 
 ## Contact Details
 
@@ -51,15 +51,16 @@ Cloudflare
 and
 <a href="https://www.netlify.com/privacy" target="_blank"> Netlify.</a>
 
-#### Cloudflare Web Analytics
+#### Plausible (Web Analytics)
 
-We use Cloudflare Web Analytics to provide basic information about the
+We use Plausible to provide basic information about the
 users of our website. The data provides information such as Device
 information (including Operating System, Web browser, and Type),
 referring domain, country, and page load time. This is used to provide
 insight onto how the website is working. This data is anonymised and
 cannot be reassociated by us.
 
+Plausible was chosen as it is [an open-source project](https://plausible.io/open-source-website-analytics).
 
 To opt-out, use a web browser extension such as
 <a href="https://ublockorigin.com/" target="_blank">uBlock origin.</a>
