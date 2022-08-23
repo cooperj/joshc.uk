@@ -15,9 +15,6 @@
   to = "https://analytics.joshuacooper.co.uk/api/event"
   status = 200
 
-/js/script.js https://plausible.io/js/script.js 200
-/api/event https://plausible.io/api/event 200
-
 # Old link redirects
 [[redirects]]
   from = "/portfolio/linneyregeneratecollection"
