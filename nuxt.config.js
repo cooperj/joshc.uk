@@ -16,7 +16,7 @@ export default {
       lang: "en"
     },
     script: [
-      { src: "https://analytics.joshuacooper.co.uk/js/plausible.js", defer: true, "data-domain": "joshc.uk" }
+      { src: "/pls.js", defer: true, "data-domain": "joshc.uk" }
     ],
     meta: [
       { charset: "utf-8" },

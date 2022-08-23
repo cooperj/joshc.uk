@@ -4,6 +4,20 @@
   publish = "dist/"
   command = "npm run generate"
 
+# Plausible
+[[redirects]]
+  from = "/pls.js"
+  to = "https://analytics.joshuacooper.co.uk/js/plausible.js"
+  status = 200
+
+[[redirects]]
+  from = "/api/event"
+  to = "https://analytics.joshuacooper.co.uk/api/event"
+  status = 200
+
+/js/script.js https://plausible.io/js/script.js 200
+/api/event https://plausible.io/api/event 200
+
 # Old link redirects
 [[redirects]]
   from = "/portfolio/linneyregeneratecollection"
