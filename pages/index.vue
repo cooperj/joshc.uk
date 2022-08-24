@@ -73,11 +73,11 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'I\'m currently a second year Games Computing student with interests that include a collection of user experience, games, web, open source software, and cool hardware.'
+          content: 'I\'m a multidisciplined software developer with a focus on games technologies. I help ideas come alive!'
         },
         {
           property: 'og:description',
-          content: 'I\'m currently a second year Games Computing student with interests that include a collection of user experience, games, web, open source software, and cool hardware.'
+          content: 'I\'m a multidisciplined software developer with a focus on games technologies. I help ideas come alive!'
         },
         {
           property: 'og:title',
