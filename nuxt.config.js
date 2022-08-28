@@ -27,7 +27,7 @@ export default {
       { property: "og:type", content: "website" },
       { property: "og:image", content: "/assets/images/joshua.jpg" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:creator", content: "@joshcdev" },
+      { name: "twitter:creator", content: "@joshcdev" }
     ],
     link: [     
       // Favicons etc
