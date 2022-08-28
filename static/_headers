@@ -3,5 +3,5 @@ X-Frame-Options: DENY
 X-XSS-Protection: 1; mode=block
 Referrer-Policy: no-referrer
 X-Content-Type-Options: nosniff
-Content-Security-Policy: default-src https://joshc.uk:443 https://*.joshc.uk:443 https://joshuacooper.co.uk:443 https://*.joshuacooper.co.uk:443
+Content-Security-Policy: default-src https://joshc.uk:443 https://*.joshc.uk:443 https://joshuacooper.co.uk:443 https://*.joshuacooper.co.uk:443 unsafe-inline
 Permissions-Policy: geolocation=(), microphone=()
