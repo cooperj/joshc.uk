@@ -4,6 +4,13 @@
   publish = "dist/"
   command = "npm run generate"
 
+
+# Temp
+[[redirects]]
+  from = "/links"
+  to = "/contact"
+  status = 302
+
 # Plausible
 [[redirects]]
   from = "/pls.js"
@@ -14,6 +21,7 @@
   from = "/api/event"
   to = "https://analytics.joshuacooper.co.uk/api/event"
   status = 200
+
 
 # Old link redirects
 [[redirects]]
@@ -26,7 +34,8 @@
   to = "/portfolio/contineo"
   status = 301
 
-# Short Url Redirects
+
+# Short Links
 [[redirects]]
   from = "/w"
   to = "https://pbs.twimg.com/media/EYVhvZFWsAUY5gv?format=jpg&name=large"
