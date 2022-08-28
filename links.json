@@ -1,0 +1,94 @@
+[
+    {
+        "title": "This Site",
+        "links": [
+            {
+                "platform": "Page",
+                "name": "About",
+                "icon": "fa-solid fa-user",
+                "url": "/about"
+            },
+            {
+                "platform": "Page",
+                "name": "Portfolio",
+                "icon": "fa-solid fa-gamepad",
+                "url": "/portfolio"
+            },
+            {
+                "platform": "Page",
+                "name": "Blog",
+                "icon": "fa-solid fa-blog",
+                "url": "/blog"
+            },
+            {
+                "platform": "Page",
+                "name": "Contact",
+                "icon": "fa-solid fa-address-book",
+                "url": "/contact"
+            }
+        ]
+    },
+    {
+        "title": "Professional",
+        "links": [
+            {
+                "platform": "LinkedIn",
+                "name": "/in/JoshuaECooper",
+                "icon": "fa-brands fa-linkedin-in",
+                "url": "https://linkedin.com/in/JoshuaECooper"
+            },
+            {
+                "platform": "GitHub",
+                "name": "/cooperj",
+                "icon": "fa-brands fa-github",
+                "url": "https://github.com/cooperj"
+            },
+            {
+                "platform": "GitLab",
+                "name": "/joshcooper",
+                "icon": "fa-brands fa-gitlab",
+                "url": "https://gitlab.com/joshcooper"
+            }
+        ]
+    },
+    {
+        "title": "Personal",
+        "links": [
+            {
+                "platform": "Twitter",
+                "name": "@joshcdev",
+                "icon": "fa-brands fa-twitter",
+                "url": "https://twitter.com/joshcdev"
+            },
+            {
+                "platform": "Instagram",
+                "name": "@jecooper_",
+                "icon": "fa-brands fa-instagram",
+                "url": "https://instagram.com/jecooper_"
+            },
+            {
+                "platform": "TikTok",
+                "name": "@joshcdev",
+                "icon": "fa-brands fa-tiktok",
+                "url": "https://tiktok.com/@joshcdev"
+            },
+            {
+                "platform": "Keybase",
+                "name": "/joshcooper",
+                "icon": "fa-brands fa-keybase",
+                "url": "https://keybase.io/joshcooper"
+            }
+        ]
+    },
+    {
+        "title": "Hobbies",
+        "links": [
+            {
+                "platform": "QRZ.com",
+                "name": "M7JCO",
+                "icon": "fa-solid fa-tower-broadcast",
+                "url": "https://www.qrz.com/db/m7jco"
+            }
+        ]
+    }
+]

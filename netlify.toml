@@ -5,12 +5,6 @@
   command = "npm run generate"
 
 
-# Temp
-[[redirects]]
-  from = "/links"
-  to = "/contact"
-  status = 302
-
 # Plausible
 [[redirects]]
   from = "/pls.js"
