@@ -1,7 +1,15 @@
 <template>
-  <main>
+  <main class="links">
     <summary>
-      <h1>Links</h1>
+      <picture>
+        <source srcset="/images/joshua.webp" type="image/webp">
+        <source srcset="/images/joshua.jpg" type="image/jpeg"> 
+        <img aria-hidden="true"
+            class="profile"
+            src="/images/joshua.jpg"
+            alt="Profile Picture of Joshua"
+          >
+      </picture>
     </summary>
     <article>
       <div v-for="section in sections" :key="section.title">

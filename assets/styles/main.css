@@ -825,3 +825,14 @@ button:active {
   max-height: 250px;
   border-radius: 10%;
 }
+
+/* Profile Icon for links page*/
+main.links img.profile {
+  height: 170px;
+  mask-image: url("/images/image-mask.svg");
+}
+
+main.links h2 {
+  text-align: center;
+  margin-top: 40px;
+}
