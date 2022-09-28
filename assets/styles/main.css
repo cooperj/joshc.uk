@@ -701,10 +701,12 @@ button:active {
   .card .card-body p {
     margin: 5px 0;
     width: 100%;
+    font-size: 16pt;
   }
 
   .card .card-body h1 {
     margin: 5px 0;
+    font-size: 24pt;
   }
 }
 
