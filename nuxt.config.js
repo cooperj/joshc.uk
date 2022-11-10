@@ -45,7 +45,9 @@ export default {
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/favicon-32x32.png?v=2" },
       { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicons/favicon-96x96.png?v=2" },
       { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicons/favicon-16x16.png?v=2" },
-      { rel: "manifest", href: "/manifest.json?v=2" }
+      { rel: "manifest", href: "/manifest.json?v=2" },
+      // Mastodon
+      { rel: "me", href: "https://mastodon.gamedev.place/@joshc"},
     ]
   },
 
