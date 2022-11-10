@@ -61,6 +61,12 @@
                 "url": "https://twitter.com/joshcdev"
             },
             {
+                "platform": "Mastodon",
+                "name": "@joshc@mastodon.gamedev.place",
+                "icon": "fa-brands fa-mastodon",
+                "url": "https://mastodon.gamedev.place/@joshc"
+            },
+            {
                 "platform": "Instagram",
                 "name": "@jecooper_",
                 "icon": "fa-brands fa-instagram",

@@ -8,6 +8,7 @@ If you want to get in touch with me, I'm available in most places. However, I do
 
 - Email: **<a href="mailto:hi@joshc.uk" target="_blank">hi@joshc.uk</a>**
 - Twitter: **<a href="https://twitter.com/joshcdev" target="_blank">@joshcdev</a>**
+- Mastodon: **<a href="https://mastodon.gamedev.place/@joshc" target="_blank">@joshc@mastodon.gamedev.place</a>**
 - LinkedIn: **<a href="https://www.linkedin.com/in/JoshuaECooper/" target="_blank">/in/JoshuaECooper</a>**
 - Pronouns? **<pronouns />**
 
