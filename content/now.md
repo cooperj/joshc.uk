@@ -2,23 +2,18 @@
 title: What am I doing now?
 description: What things have I been doing? What am I doing right now? What am I doing soon?
 draft: false
+publishDate: 2022-12-05
 ---
 
 ## What things have I been doing?
 
-I've recently been working on a group project to create [Aquanaut](/portfolio/aquanaut) for University. 
-
+I've returned back for my third and final year of Uni, and I'm currently spending my time working with VR!
 
 ## What am I doing right now?
 
-I am currently on summer break from University.
+I'm currently working on my design skills with things such as Blender, and making stuff that's really nice to use.
 
-I'm spending this time to; add more content to this website, over-engineer my home network, and test some other ideas out.
-
-After I've got my network setup, and working reliably - I'm planning on setting up IPv6 access.
-
-I'm also working on my Blender skills.
-
+I'm also really busy working on my dissertation - which is a serious game to allow people to experience the process of international travel to aid with things such as anxiety. More details will be available soon.
 
 ---
 
