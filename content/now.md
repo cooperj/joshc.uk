@@ -9,6 +9,8 @@ publishDate: 2022-12-05
 
 I've returned back for my third and final year of Uni, and I'm currently spending my time working with VR!
 
+I have also been working on [setting up IPv6](/blog/hello-ipv6) for my homes internet connection using a tunnel broker service - things didn't go exactly to plan 🙄
+
 ## What am I doing right now?
 
 I'm currently working on my design skills with things such as Blender, and making stuff that's really nice to use.

@@ -836,3 +836,11 @@ main.links h2 {
   text-align: center;
   margin-top: 40px;
 }
+
+.tweet {
+  text-align: center;
+}
+
+.tweet a {
+  border: var(--primary) solid 2px;
+}
