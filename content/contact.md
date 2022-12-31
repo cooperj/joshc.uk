@@ -7,10 +7,9 @@ draft: false
 If you want to get in touch with me, I'm available in most places. However, I do ask you that if you want a guaranteed longer response if you could send that as an email.
 
 - Email: **[hi@joshc.uk](mailto:hi@joshc.uk)**
-- Twitter: **[@joshcdev](https://twitter.com/joshcdev)**
 - Mastodon: **[@joshc@mastodon.gamedev.place](https://mastodon.gamedev.place/@joshc)**
 - LinkedIn: **[/in/joshcdev](https://www.linkedin.com/in/joshcdev/)**
-- Pronouns? **<pronouns />**
+- Pronouns: **<pronouns />**
 
 Your preferred platform not listed? The above links are my most preferred, but [I'm also on other places on the internet](/links).
 
