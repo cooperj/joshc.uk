@@ -40,7 +40,7 @@ I've created a bunch of different projects in my [portfolio](/portfolio) which I
 
 Not only that, but I'm [**currently available for hire**](/freelance) (employment or freelance) - this is depending on your needs.
 
-Not ready to commit? [Connect with me on LinkedIn](https://linkedin.com/in/JoshuaECooper) or [Follow what I'm up to on Twitter](https://twitter.com/intent/follow?screen_name=joshcdev) <span aria-hidden="true">😄</span>
+Not ready to commit? [Connect with me on LinkedIn](https://linkedin.com/in/JoshuaECooper) or [Follow what I'm up to on Mastodon](https://mastodon.gamedev.place/@joshc) <span aria-hidden="true">🐘</span>
 
 I'm looking forward to speaking with you <span aria-hidden="true">👋</span>
 
