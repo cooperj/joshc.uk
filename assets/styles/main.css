@@ -335,11 +335,8 @@ main article img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
-  width: auto;
-  max-width: 75%;
+  width: 100%;
   height: auto;
-  max-height: 1000px;
 }
 
 main article iframe {
