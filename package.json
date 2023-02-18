@@ -1,6 +1,6 @@
 {
   "name": "joshc.uk",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "scripts": {
     "dev": "nuxt --port 8080",
     "build": "nuxt build",
@@ -21,6 +21,7 @@
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
-    "fibers": "^5.0.0"
+    "fibers": "^5.0.0",
+    "postcss": "^8.4.21"
   }
 }

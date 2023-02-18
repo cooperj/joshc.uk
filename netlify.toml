@@ -2,7 +2,7 @@
 [build]
   base = "/"
   publish = "dist/"
-  command = "nuxt generate"
+  command = "npm run generate"
 
 
 # Plausible
