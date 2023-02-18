@@ -5,7 +5,7 @@
       >
         <div class="card">
           <!-- If Icon, use it Else use unsplash random image -->
-          <div class="img" :style="'background-image: url(' + (data.icon ? data.icon : 'https://source.unsplash.com/300x300/?nature,water,landscape') + ');'" />
+          <div class="img" :style="'background-image: url(' + (data.icon ? data.icon : '/images/no-image.webp') + ');'" />
           <div class="card-body">
             <h1> {{ data.title }} </h1>
             <p>
