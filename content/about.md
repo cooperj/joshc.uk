@@ -25,7 +25,7 @@ Hi! I'm Josh. I'm a **multidisciplined software developer** with a focus on **ga
 
 I'm in my final year of my [**B.Sc. in Games Computing at Lincoln**](https://www.lincoln.ac.uk/course/cgpcmpub/) *(views are my own)*, And I spend my days dealing with a range of different technologies for things such as *games development*, *general programming*, *web development*, *automation*, *networking*, and *cloud computing* - for either University, Freelancing, or Personally.
 
-I am looking to provide my skills to create things that are interesting within a team of like-mind passionate people.
+I am looking to provide my skills to create things that are interesting within a team of like-minded, passionate people.
 
 <br/>
 
