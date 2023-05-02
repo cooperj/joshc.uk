@@ -15,3 +15,5 @@ This should take around an hour of your time, at your convenience, on the Brayfo
 If you would like to get involved or would like more information, please contact me via my University email [25466645@students.lincoln.ac.uk](mailto:25466645@students.lincoln.ac.uk) to learn more.
 
 > *This project has been approved by the University of Lincoln ethics board, reference 13535 and is supervised by [Craig Green](mailto:CrGreen@lincoln.ac.uk?cc=25466645@students.lincoln.ac.uk).*
+
+[📎 Participant Information Sheet](/files/pis.pdf)
