@@ -16,4 +16,4 @@ If you would like to get involved or would like more information, please contact
 
 > *This project has been approved by the University of Lincoln ethics board, reference 13535 and is supervised by [Craig Green](mailto:CrGreen@lincoln.ac.uk?cc=25466645@students.lincoln.ac.uk).*
 
-[📎 Participant Information Sheet](/files/pis.pdf)
+<a href="/files/pis.pdf" target="_blank">📎 Participant Information Sheet</a>
