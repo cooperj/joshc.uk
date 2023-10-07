@@ -1,7 +1,7 @@
 ---
 title: Bananapocalypse
 description: I created a game similar to the popular mobile game Angry Birds, but with a banana flavoured twist.
-icon: /images/ba/icon.webp
+icon: images/ba/icon.webp
 publishDate: 2019-05-15
 draft: false
 ---

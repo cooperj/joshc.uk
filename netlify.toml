@@ -16,6 +16,16 @@
   to = "https://analytics.joshuacooper.co.uk/api/event"
   status = 200
 
+# Strip portfolio and blog
+[[redirects]]
+  from = "/portfolio/*"
+  to = "/*"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/*"
+  status = 301
 
 # Old link redirects
 [[redirects]]
