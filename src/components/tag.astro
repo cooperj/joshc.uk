@@ -1,0 +1,11 @@
+---
+export interface Props {
+    label: string;
+}
+
+const {label} = Astro.props as Props;
+---
+
+<span class="p-2 m-2 bg-sky-600 text-white rounded"> 
+    🔖 {label}
+</span>

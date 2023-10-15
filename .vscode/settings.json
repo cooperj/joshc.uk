@@ -1,4 +1,5 @@
 {
-    "[markdown]": {
-    }
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
 }

@@ -1,0 +1,27 @@
+---
+import Tag from "../../components/tag.astro";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const portfolioEntries = await getCollection("portfolio");
+  return portfolioEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<DefaultLayout title={entry.data.title}>
+  
+  <h1 class="text-5xl font-bold mb-8 text-center">{entry.data.title}</h1>
+
+  <div class="mb-4">
+    { entry.data.tags.map((tag) => (<Tag label={tag} />)) }
+  </div>
+
+  <Content />
+  
+</DefaultLayout>

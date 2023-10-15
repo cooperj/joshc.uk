@@ -6,14 +6,98 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "pages",
-      "path": "[[workspace]]/src/pages"
+      "path": "[[workspace]]/src/pages",
+      "contentTypes": ["default"]
+    },
+    {
+      "title": "blog",
+      "path": "[[workspace]]/src/content/blog",
+      "contentTypes": ["blog"]
+    },
+    {
+      "title": "portfolio",
+      "path": "[[workspace]]/src/content/portfolio",
+      "contentTypes": ["portfolio"]
     }
   ],
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
       "pageBundle": false,
-      "previewPath": "'blog'",
+      "previewPath": "/",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "publishDate",
+          "name": "publishDate",
+          "type": "datetime"
+        },
+        {
+          "title": "icon",
+          "name": "icon",
+          "type": "image"
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "draft"
+        }
+      ]
+    },
+    {
+      "name": "portfolio",
+      "pageBundle": false,
+      "previewPath": "/portfolio/",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "publishDate",
+          "name": "publishDate",
+          "type": "datetime"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "icon",
+          "name": "icon",
+          "type": "image"
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "draft"
+        }
+      ]
+    },
+    {
+      "name": "blog",
+      "pageBundle": false,
+      "previewPath": "/blog/",
       "filePrefix": null,
       "clearEmpty": true,
       "fields": [
