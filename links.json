@@ -37,19 +37,6 @@
         "icon": "fa-brands fa-linkedin-in",
         "url": "https://linkedin.com/in/joshcdev"
       },
-
-      {
-        "platform": "Mastodon",
-        "name": "@joshc@mastodon.gamedev.place",
-        "icon": "fa-brands fa-mastodon",
-        "url": "https://mastodon.gamedev.place/@joshc"
-      },
-      {
-        "platform": "Twitter",
-        "name": "@joshcdev",
-        "icon": "fa-brands fa-twitter",
-        "url": "https://twitter.com/joshcdev"
-      },
       {
         "platform": "Instagram",
         "name": "@jecooper_",

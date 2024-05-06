@@ -4,19 +4,6 @@
   publish = "dist/"
   command = "npm run generate"
 
-
-# Plausible
-[[redirects]]
-  from = "/pls.js"
-  to = "https://analytics.joshuacooper.co.uk/js/plausible.js"
-  status = 200
-
-[[redirects]]
-  from = "/api/event"
-  to = "https://analytics.joshuacooper.co.uk/api/event"
-  status = 200
-
-
 # Old link redirects
 [[redirects]]
   from = "/portfolio/linneyregeneratecollection"
@@ -28,21 +15,9 @@
   to = "/portfolio/contineo"
   status = 301
 
-
 # Short Links
 [[redirects]]
   from = "/w"
   to = "https://pbs.twimg.com/media/EYVhvZFWsAUY5gv?format=jpg&name=large"
   status = 302
-
-[[redirects]]
-  from = "/grrr"
-  to = "https://www.youtube.com/watch?v=cQl7TTCfpGo"
-  status = 302
-
-[[redirects]]
-  from = "/covid"
-  to = "https://forms.office.com/r/P31BFfB6Fu"
-  status = 302
-
   
