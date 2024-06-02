@@ -1,4 +1,0 @@
-Contact: mailto:dpo@joshuacooper.co.uk
-Expires: 2024-04-30T23:00:00.000Z
-Preferred-Languages: en, en-gb
-Canonical: https://www.joshc.uk/.well-known/security.txt

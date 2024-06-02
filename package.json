@@ -1,27 +1,20 @@
 {
-  "name": "joshc.uk",
-  "version": "1.2.2",
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "nuxt --port 8080",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.0.0",
-    "@nuxt/content": "^1.14.0",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.18.3",
-    "nuxt": "^2.15.8",
-    "prism-themes": "^1.9.0",
-    "reading-time": "^1.5.0",
-    "webpack": "^4.46.0",
-    "xml2js": "^0.4.23"
-  },
-  "devDependencies": {
-    "fibers": "^5.0.0",
-    "postcss": "^8.4.21"
+    "@astrojs/mdx": "^3.0.1",
+    "@astrojs/rss": "^4.0.6",
+    "@astrojs/sitemap": "^3.1.5",
+    "astro": "^4.9.2",
+    "@astrojs/check": "^0.7.0",
+    "typescript": "^5.4.5"
   }
 }
