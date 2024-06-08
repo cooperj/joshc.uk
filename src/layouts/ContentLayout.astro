@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const { title, description, pubDate, update, icon } = Astro.props;
+---
+
+<BaseLayout>
+  <article>
+    <div class="hero-image">
+      {icon && <img width={1020} height={510} src={icon} alt="" />}
+    </div>
+    <div class="prose">
+      <div class="title">
+        <div class="date">
+          <FormattedDate date={pubDate} />
+          {
+            update && (
+              <div class="last-updated-on">
+                Last updated on <FormattedDate date={update} />
+              </div>
+            )
+          }
+        </div>
+        <h1>{title}</h1>
+        <hr />
+      </div>
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

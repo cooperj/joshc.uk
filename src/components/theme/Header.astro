@@ -1,0 +1,16 @@
+---
+import HeaderLink from "@/components/theme/HeaderLink.astro";
+import { SITE_TITLE } from "@/consts";
+---
+
+<header class="bg-green-500">
+  <nav>
+    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <div class="internal-links">
+      <HeaderLink href="/about">About</HeaderLink>
+      <HeaderLink href="/portfolio">Portfolio</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/contact">Contact</HeaderLink>
+    </div>
+  </nav>
+</header>

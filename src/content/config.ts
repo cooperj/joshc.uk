@@ -8,7 +8,7 @@ const blog = defineCollection({
 		description: z.string(),
 		// Transform string to Date object
 		pubDate: z.coerce.date(),
-		updateDate: z.coerce.date().optional(),
+		update: z.coerce.date().optional(),
 		icon: z.string().optional()
 	}),
 });
@@ -21,9 +21,9 @@ const portfolio = defineCollection({
 		description: z.string(),
 		// Transform string to Date object
 		pubDate: z.coerce.date(),
-		updateDate: z.coerce.date().optional(),
+		update: z.coerce.date().optional(),
 		icon: z.string().optional()
 	}),
 });
 
-export const collections = { blog };
+export const collections = { blog, portfolio };

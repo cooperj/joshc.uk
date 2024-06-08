@@ -1,4 +1,10 @@
 {
-  "recommendations": ["astro-build.astro-vscode", "unifiedjs.vscode-mdx"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "unifiedjs.vscode-mdx",
+    "aaron-bond.better-comments",
+    "streetsidesoftware.code-spell-checker",
+    "eliostruyf.vscode-front-matter"
+  ],
   "unwantedRecommendations": []
 }
