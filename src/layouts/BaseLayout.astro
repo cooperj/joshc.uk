@@ -10,9 +10,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="flex flex-col h-screen justify-between">
     <Header />
-    <main>
+    <main class="mb-auto mx-20 w-auto max-w-[1140px] border-red-400 border-2">
       <slot />
     </main>
     <Footer />
