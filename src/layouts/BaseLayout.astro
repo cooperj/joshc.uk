@@ -3,6 +3,8 @@ import BaseHead from "@/components/theme/BaseHead.astro";
 import Header from "@/components/theme/Header.astro";
 import Footer from "@/components/theme/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+import "@fontsource-variable/lora";
+import "@fontsource-variable/montserrat";
 ---
 
 <!doctype html>
@@ -10,7 +12,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="flex flex-col h-screen justify-between">
+  <body class="flex flex-col h-screen justify-between bg-yellow-50">
     <Header />
     <main class="mb-auto mx-20 w-auto max-w-[1140px] border-red-400 border-2">
       <slot />
