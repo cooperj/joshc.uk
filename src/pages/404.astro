@@ -1,20 +1,33 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <BaseLayout>
-  <article>
+  <article class="text-center flex flex-col justify-center items-center">
+    <h1>Page not found</h1>
     <p>
       The page you tried visit does not exist. You may have typed the address
-      incorrectly or it may have been deleted. Check the address, and if it's
-      still not working do <nuxt-link to="/contact"> get in touch </nuxt-link>.
+      incorrectly or it may have been deleted.
+    </p>
+    <p>
+      Check the address, and if it's still not working do get in touch :)
     </p>
 
-    <p>
+    <p class="mt-10">
       <img
+        class="rounded-xl"
         src="/images/spin.gif"
         alt="Gorilla spinning in the centre, top text: I live in spain, bottom text: without the a"
       />
     </p>
+
+    <a
+      href="/"
+      class="bg-orange-500 hover:bg-orange-300 text-3xl flex items-center py-2 px-10 rounded-xl mt-10"
+    >
+      <Icon name="lucide:home" class="mr-2" />
+      Try Again?
+    </a>
   </article>
 </BaseLayout>

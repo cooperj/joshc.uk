@@ -3,13 +3,13 @@ import HeaderLink from "@/components/theme/HeaderLink.astro";
 import { SITE_TITLE } from "@/consts";
 ---
 
-<header class="bg-slate-300 px-2 py-5 rounded-b-2xl mb-10 text-lg">
-  <nav class="grid grid-rows-1 grid-cols-3">
+<header class="my-5 tablet:px-20 tablet:py-10 tablet:mb-10 text-2xl">
+  <nav class="flex flex-col tablet:flex-row items-center tablet:items-end w-full">
     
-    <h2 class="font-bold"><a href="/">{SITE_TITLE}</a></h2>
+    <h2 class="font-bold text-3xl flex-1"><a href="/">{SITE_TITLE}</a></h2>
 
-    <div class="text-center">
-      <HeaderLink href="/about">About</HeaderLink>
+    <div class="flex">
+      <HeaderLink href="/">About</HeaderLink>
       <HeaderLink href="/portfolio">Portfolio</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/contact">Contact</HeaderLink>

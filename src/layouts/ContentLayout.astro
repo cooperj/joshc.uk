@@ -9,22 +9,32 @@ const { title, description, pubDate, update, icon } = Astro.props;
 <BaseLayout>
   <article>
     <div class="hero-image">
-      {icon && <img width={1020} height={510} src={icon} alt="" />}
+      {
+        icon && (
+          <header class="relative drop-shadow-md select-none">
+            <img
+              src={icon}
+              aria-hidden="true"
+              class="w-full h-64 rounded-3xl mb-10 object-cover select-none"
+            />
+          </header>
+        )
+      }
     </div>
     <div class="prose">
-      <div class="title">
-        <div class="date">
-          <FormattedDate date={pubDate} />
+      <div class="title mb-8">
+        <h1 class="text-4xl text-center font-extrabold mb-2">{title}</h1>
+        <div class="date text-center">
+          {pubDate && <FormattedDate date={pubDate} />}
+
           {
             update && (
               <div class="last-updated-on">
-                Last updated on <FormattedDate date={update} />
+                Updated on <FormattedDate date={update} />
               </div>
             )
           }
         </div>
-        <h1>{title}</h1>
-        <hr />
       </div>
       <slot />
     </div>

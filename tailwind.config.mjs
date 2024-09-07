@@ -9,6 +9,12 @@ export default {
 				serif: ['Lora', ...defaultTheme.fontFamily.serif],
 				sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
 			},
+			screens: {
+				tablet: '640px',
+				laptop: '1024px',
+				desktop: '1280px',
+				ultra: '3000px'
+			},
 			colors: {
 				black: {
 					100: "#cfd1d3",
