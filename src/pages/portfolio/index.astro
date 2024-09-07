@@ -1,11 +1,6 @@
 ---
-import BaseHead from "@/components/theme/BaseHead.astro";
-import Header from "@/components/theme/Header.astro";
-import Footer from "@/components/theme/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "@/components/FormattedDate.astro";
-import ContentLayout from "@/layouts/ContentLayout.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const projects = (await getCollection("portfolio")).sort(
@@ -18,9 +13,13 @@ const projects = (await getCollection("portfolio")).sort(
     <ul>
       {
         projects.map((project) => (
-          <li>
+          <li class="m-5 border-2 border-black-200 p-2 rounded-xl hover:bg-black-200">
             <a href={`/portfolio/${project.slug}/`}>
-              <img width={720} height={360} src={project.data.icon} alt="" />
+              <img
+                aria-hidden="true"
+                src={project.data.icon}
+                class="rounded-xl"
+              />
               <h4 class="title">{project.data.title}</h4>
               <p class="date">
                 <FormattedDate date={project.data.pubDate} />
