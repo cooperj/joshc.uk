@@ -41,7 +41,7 @@
         }
 
         details {
-            @apply px-10 py-5 mt-5 bg-orange-100 rounded-xl drop-shadow-md
+            @apply px-10 py-5 mt-5 bg-orange-100 dark:bg-orange-700 rounded-xl drop-shadow-md
         }
 
         details summary {
@@ -53,7 +53,7 @@
         }
 
         #content a {
-            @apply underline text-orange-800;
+            @apply underline text-orange-800 dark:text-orange-600;
         }
 }
 @tailwind components;

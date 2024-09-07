@@ -11,7 +11,7 @@ If you want to get in touch with me, I'm available in most places. However, I do
 - Mastodon: **[@joshc@mastodon.gamedev.place](https://mastodon.gamedev.place/@joshc)**
 
 
-<div class="bg-orange-100 p-5 mt-10 rounded-xl drop-shadow-md">
+<div class="bg-orange-100 dark:bg-orange-700 p-5 mt-10 rounded-xl drop-shadow-md">
 
 <p class="mb-5">
     <span aria-hidden="true">⚠️</span> I am busy and may miss messages, but I try to reply within a week; so please be patient.
