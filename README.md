@@ -1,5 +1,7 @@
 # Astro Starter Kit: Blog
 
+Colour Palette: https://coolors.co/0d1821-61988e-2a4d14-f0f4ef-ff9f1c
+
 ```sh
 npm create astro@latest -- --template blog
 ```
