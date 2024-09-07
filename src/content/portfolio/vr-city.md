@@ -10,7 +10,7 @@ This is a VR experience to simulate the effects of being in a city while being i
 
 The game was designed to run on a Meta Quest 2 and was built with the Unity Engine.
 
-<div class="yt-video-container">
+<div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3yyKTZPOewE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

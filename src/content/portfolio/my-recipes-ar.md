@@ -13,7 +13,7 @@ I developed this project using the Unity Engine and built for iOS.
 This project places a plate into the real world and uses the phone as a portal to see that. 
 This then allows the user to interact with the 3D space by placing a plate - and then they can interact with the dish to view information such as the recipe.
 
-<div class="yt-video-container">
+<div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x8vDYn_1wwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

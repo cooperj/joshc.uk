@@ -8,7 +8,7 @@ draft: false
 
 Aquanaut is a classic shooter inspired by game, set in the depths of the ocean. 
 
-<div class="yt-video-container">
+<div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PWpO5OhR4_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

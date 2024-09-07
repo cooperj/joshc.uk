@@ -6,7 +6,7 @@ pubDate: 2022-05-20
 
 This is an implementation of the core mechanics from [Overcooked](https://www.team17.com/games/overcooked/) implemented in SDL and C++.
 
-<div class="yt-video-container">
+<div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x8vDYn_1wwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
