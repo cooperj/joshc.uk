@@ -1,4 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
+import { transform } from 'typescript'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -48,7 +49,7 @@ export default {
 					700: "#192e0c",
 					800: "#111f08",
 					900: "#080f04"
-				}, 
+				},
 				white: {
 					100: "#fcfdfc",
 					200: "#f9fbf9",
@@ -72,6 +73,28 @@ export default {
 					900: "#332006"
 				}
 			},
+
+			keyframes: {
+				wiggle: {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' },
+				},
+				// Wave Animation from https://dev.to/thealexkates/how-to-animate-a-waving-hand-emoji-in-tailwindcss-gn4
+				wave: {
+					'0%': { transform: 'rotate(0.0deg)' },
+					'15%': { transform: 'rotate(14.0deg)' },
+					'30%': { transform: 'rotate(-8.0deg)' },
+					'40%': { transform: 'rotate(14.0deg)' },
+					'50%': { transform: 'rotate(-4.0deg)' },
+					'60%': { transform: 'rotate(10.0deg)' },
+					'70%': { transform: 'rotate(0.0deg)' },
+					'100%': { transform: 'rotate(0.0deg)' },
+				}
+			},
+			animation: {
+				wiggle: 'wiggle 1s ease-in-out infinite',
+				wave: 'wave 2.5s infinite',
+			}
 		},
 	},
 	plugins: [],
