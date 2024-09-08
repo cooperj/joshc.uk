@@ -4,15 +4,33 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
 <BaseLayout pageTitle={SITE_TITLE} pageDescription={SITE_DESCRIPTION}>
+  <div class="flex items-center mx-5 mb-5 tablet:mb-20">
+    <div class="flex-1 flex text-6xl font-serif items-center text-orange-600 dark:text-orange-500 mb-5 mr-2">
+      <p>Hey, I'm Josh!</p>
+      <p class="ml-3 motion-safe:animate-wave">👋</p>
+    </div>
+    <div>
+      <picture>
+        <source srcset="/images/joshua.webp" type="image/webp" />
+        <source srcset="/images/joshua.jpg" type="image/jpeg" />
+        <img
+          aria-hidden="true"
+          class="profile-mask w-56"
+          src="/images/joshua.jpg"
+          alt="Profile Picture of Josh"
+        />
+      </picture>
+    </div>
+  </div>
+<!-- 
   <div class="text-4xl tablet:text-8xl flex w-full justify-between">
-    <p class="motion-safe:animate-wave">👋</p>
     <p class="motion-safe:animate-spin">🧑‍🚀</p>
     <p class="motion-safe:animate-ping">🦆</p>
     <p class="motion-safe:animate-pulse">😍</p>
     <p class="motion-safe:animate-bounce">🐇</p>
     <p class="motion-safe:animate-wiggle">🫡</p>
   </div>
-  <h1>Hello, Astronaut!</h1>
+  <h1>Hello, Astronaut!</h1> -->
 
   <p>// TODO: this is all now wrong! well most of it - rewrite it lol //</p>
 
@@ -100,7 +118,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <div class="rounded-xl w-20 h-20 border border-black bg-black-400"></div>
     <div class="rounded-xl w-20 h-20 border border-black bg-black-500"></div>
     <div class="rounded-xl w-20 h-20 border border-black bg-black-600"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-700"></div>
+    <div class="rounded-xl w-20 h-20 border border-black bg-black-600"></div>
     <div class="rounded-xl w-20 h-20 border border-black bg-black-800"></div>
     <div class="rounded-xl w-20 h-20 border border-black bg-black-900"></div>
   </div>

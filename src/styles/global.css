@@ -59,6 +59,10 @@
   #content p {
     @apply mb-5;
   }
+
+  .profile-mask {
+    mask-image: url("/images/image-mask.svg");
+  }
 }
 @tailwind components;
 @tailwind utilities;
