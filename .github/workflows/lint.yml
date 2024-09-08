@@ -1,7 +1,12 @@
 name: Run Prettier
+
 on:
   pull_request:
-    branches: [main]
+    branches: [main] 
+  push:
+    # only trigger on branches, not on tags
+    branches: '**'
+
 jobs:
   format:
     runs-on: ubuntu-latest
