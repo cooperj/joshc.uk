@@ -1,9 +1,10 @@
 ---
+import { SITE_DESCRIPTION } from "@/consts";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle="Page not found" pageDescription={SITE_DESCRIPTION}>
   <article class="text-center flex flex-col justify-center items-center">
     <h1>Page not found</h1>
     <p>

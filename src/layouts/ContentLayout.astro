@@ -1,33 +1,24 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-// interface Props {
-//   title: string;
-//   description: string;
-//   icon?: string;
-//   pubDate?: Date;
-//   update?: Date;
-// }
-
 const { frontmatter, title, description, pubDate, update, icon } = Astro.props;
 
-const pageTitle = frontmatter?.title || title;
-const pageDescription = frontmatter?.description || description;
-const pageIcon = frontmatter?.icon || icon;
-const pagePubDate = frontmatter?.pubDate || pubDate;
-const pageUpdate = frontmatter?.update || update;
+const pageTitle = frontmatter?.title ?? title ?? undefined;
+const pageDescription = frontmatter?.description ?? description ?? undefined;
+const pageIcon = frontmatter?.icon ?? icon ?? undefined;
+const pagePubDate = frontmatter?.pubDate ?? pubDate ?? undefined;
+const pageUpdate = frontmatter?.update ?? update ?? undefined;
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <article id="content" class="tablet:m-5">
     <div class="hero-image m-5 tablet:m-2 laptop:m-0">
       {
-        icon && (
+        pageIcon && (
           <header class="relative drop-shadow-md select-none">
             <img
-              src={icon}
+              src={pageIcon}
               aria-hidden="true"
               class="w-full h-32 tablet:h-64 rounded-3xl mb-10 object-cover select-none"
             />

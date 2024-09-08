@@ -2,7 +2,6 @@
 layout: "@/layouts/ContentLayout.astro"
 title: What am I doing now?
 description: What things have I been doing? What am I doing right now? What am I doing soon?
-pubDate: 2022-12-05
 ---
 
 ## What things have I been doing?

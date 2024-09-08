@@ -1,8 +1,9 @@
 ---
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={SITE_TITLE} pageDescription={SITE_DESCRIPTION}>
   <div class="text-4xl tablet:text-8xl flex w-full justify-between">
     <p class="motion-safe:animate-wave">👋</p>
     <p class="motion-safe:animate-spin">🧑‍🚀</p>
