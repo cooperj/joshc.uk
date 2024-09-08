@@ -1,0 +1,102 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "blog",
+      "previewPath": "'blog'",
+      "slugTemplate": "{{seoTitle}}",
+      "pageBundle": false,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "name": "pubDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "required": true
+        },
+        {
+          "name": "update",
+          "type": "datetime",
+          "default": "{{now}}"
+        },
+        {
+          "name": "icon",
+          "type": "image",
+          "single": true
+        }
+      ]
+    },
+    {
+      "name": "portfolio",
+      "previewPath": "'portfolio'",
+      "slugTemplate": "{{seoTitle}}",
+      "pageBundle": false,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "name": "pubDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "required": true
+        },
+        {
+          "name": "update",
+          "type": "datetime",
+          "default": "{{now}}"
+        },
+        {
+          "name": "icon",
+          "type": "image",
+          "single": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "blog",
+      "path": "[[workspace]]/src/content/blog",
+      "contentTypes": [
+        "blog"
+      ]
+    },
+    {
+      "title": "portfolio",
+      "path": "[[workspace]]/src/content/portfolio",
+      "contentTypes": [
+        "portfolio"
+      ]
+    },
+    {
+      "title": "pages",
+      "path": "[[workspace]]/src/pages"
+    }
+  ],
+  "frontMatter.content.publicFolder": "public"
+}
