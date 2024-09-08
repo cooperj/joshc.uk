@@ -9,17 +9,31 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout pageTitle="Blog" pageDescription="List of blog articles posted">
+  <div class="prose">
+    <div class="title mb-8">
+      <h1 class="text-4xl text-center font-extrabold mb-2">Blog</h1>
+    </div>
+  </div>
   <section>
     {
       posts.map((post) => (
         <a href={`/blog/${post.slug}/`}>
           <div class="flex flex-col m-2 border-2 border-black-200 p-2 rounded-xl hover:bg-black-200">
             <div class="flex flex-row">
-              <img
-                aria-hidden="true"
-                src={post.data.icon}
-                class="rounded-xl h-20"
-              />
+              {post.data.icon ? (
+                <img
+                  aria-hidden="true"
+                  src={post.data.icon}
+                  class="rounded-xl h-20 tablet:h-32"
+                />
+              ) : (
+                <div
+                  aria-hidden="true"
+                  class="text-center h-20 tablet:h-32 w-20 tablet:w-32"
+                >
+                  <span class="text-8xl text-white-600">#</span>
+                </div>
+              )}
               <div class="flex flex-col ml-5">
                 <h4 class="title mt-0 font-semibold">{post.data.title}</h4>
                 <p class="date">
@@ -27,20 +41,21 @@ const posts = (await getCollection("blog")).sort(
                     <>
                       <FormattedDate date={post.data.pubDate} />
                       <p class="italic">
-                        (
                         <span>
-                          Updated <FormattedDate date={post.data.update} />
+                          (Updated <FormattedDate date={post.data.update} />)
                         </span>
-                        )
                       </p>
                     </>
                   ) : (
                     <FormattedDate date={post.data.pubDate} />
                   )}
                 </p>
+                <div class="mt-2 hidden tablet:block max-w-xl laptop:max-w-4xl">
+                  <p>{post.data.description}</p>
+                </div>
               </div>
             </div>
-            <div class="mt-2">
+            <div class="mt-2 tablet:hidden">
               <p>{post.data.description}</p>
             </div>
           </div>

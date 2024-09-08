@@ -37,7 +37,7 @@
   }
 
   #content ul li {
-    @apply list-disc mb-1;
+    @apply list-disc mb-1 ml-5;
   }
 
   details {

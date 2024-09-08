@@ -1,10 +1,9 @@
 ---
 title: Hello again
-description: I Configure and Learn about IPv6 - and complain about how it doesn't yet work properly at home.
+description: I Configure and Learn about IPv6 - and complain about how it doesn't yet work properly at home. I Configure and Learn about IPv6 - and complain about how it doesn't yet work properly at home. I Configure and Learn about IPv6 - and complain about how it doesn't yet work properly at home.
 pubDate: 2021-12-06
 update: 2024-09-07
 draft: false
-icon: /images/hello-ipv6/icon.webp
 ---
 
 So if you didn't know already <abbr title="Internet Protocol version 6">IPv6</abbr> is - it's the ~~new~~ [old](https://www.techrepublic.com/article/explore-ipv6-with-windows-xp/) standard to replace <abbr title="Internet Protocol version 4">IPv4</abbr>.
