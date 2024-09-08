@@ -25,10 +25,16 @@ This game was made by:
 
 We also used resources from other places
 
-- <details><summary>Enemies Sprites from Doom (Id Software, 1993)</summary> <em>Sprites have been used as a placeholder, with the understanding that they will be replaced at a later, and are being used only for educational purposes.</em></details>
+<details>
+
+<summary>Enemies Sprites from Doom (Id Software, 1993)</summary>
+<em>Sprites have been used as a placeholder, with the understanding that they will be replaced at a later, and are being used only for educational purposes.</em>
+
 - Various Sound Effects from [freesound](https://freesound.org).
 - Tile Set from [Tileable.co](https://tileable.co/).
 - Some sound effects made with our voices
+
+</details>
 
 
 ## My Role

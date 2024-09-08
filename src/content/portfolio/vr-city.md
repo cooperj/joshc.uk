@@ -22,7 +22,6 @@ One way I did this was by heavily expanding the world from the requirements list
 
 This project was created at the same time in the same module as ["My Recipes" - AR Digital Recipe Book](/portfolio/my-recipes-ar), so you may be interested in checking that out too!
 
----
 
 <details>
 <summary> Third-Party Assets Used </summary>

@@ -14,14 +14,20 @@ import { Icon } from "astro-icon/components";
   <div class="mt-5 tablet:mt-0">
     <ul>
       <li class="hover:underline mb-2">
-        <a class="flex items-center" href="https://github.com/cooperj/joshc.uk">
+        <a class="flex items-center" href="/rss.xml" target="_blank">
+          <Icon name="lucide:rss" class="mr-2" />
+          RSS Feed
+        </a>
+      </li>
+      <li class="hover:underline mb-2">
+        <a class="flex items-center" href="https://github.com/cooperj/joshc.uk" target="_blank">
           <Icon name="lucide:external-link" class="mr-2" />
           View Source
         </a>
       </li>
       <li class="hover:underline">
         <a class="flex items-center" href="/privacy">
-          <Icon name="lucide:external-link" class="mr-2" />
+          <Icon name="lucide:cookie" class="mr-2" />
           Privacy Policy
         </a>
       </li>

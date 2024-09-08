@@ -6,16 +6,16 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 const { title, description, pubDate, update, icon } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={title} pageDescription={description}>
   <article id="content">
-    <div class="hero-image">
+    <div class="hero-image m-5 tablet:m-2 laptop:m-0">
       {
         icon && (
           <header class="relative drop-shadow-md select-none">
             <img
               src={icon}
               aria-hidden="true"
-              class="w-full h-64 rounded-3xl mb-10 object-cover select-none"
+              class="w-full h-32 tablet:h-64 rounded-3xl mb-10 object-cover select-none"
             />
           </header>
         )

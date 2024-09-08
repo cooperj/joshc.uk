@@ -5,13 +5,29 @@ import Footer from "@/components/theme/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
 import "@fontsource-variable/lora";
 import "@fontsource-variable/montserrat";
+
+interface Props {
+  pageTitle: string;
+  pageDescription: string;
+}
+
+const { pageTitle, pageDescription } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
+    {
+      pageTitle ? (
+        <BaseHead
+          title={pageTitle + " / " + SITE_TITLE}
+          description={pageDescription}
+        />
+      ) : (
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+      )
+    }</head
+  >
   <body
     class="flex flex-col min-h-screen flex-grow justify-between bg-white-500 dark:bg-black-500 text-black-500 dark:text-white-500"
   >
