@@ -6,6 +6,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 // Generic Item Type
 type ContentItem = {
   slug: string;
+  collection: string;
   data: {
     pubDate: Date;
     title: string;
@@ -133,7 +134,7 @@ const latestContent = content.slice(0, 5);
       {
         latestContent.map((item) => (
           <li>
-            <a href={item.slug}>{item.data.title}</a> -{" "}
+            <a href={`${item.collection}/${item.slug}`}>{item.data.title}</a> -{" "}
             {new Date(item.data.pubDate).toLocaleDateString()}
           </li>
         ))
