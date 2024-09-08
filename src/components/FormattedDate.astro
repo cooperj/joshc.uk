@@ -1,15 +1,15 @@
 ---
 interface Props {
-  date?: Date | string; 
+  date?: Date | string;
 }
 
 let { date } = Astro.props;
 
-let formattedDate = "Invalid Date"; 
+let formattedDate = "Invalid Date";
 
 // Convert date if it exists and is either a Date object or valid date string.
 if (date) {
-  const parsedDate = new Date(date); 
+  const parsedDate = new Date(date);
   if (!isNaN(parsedDate.getTime())) {
     formattedDate = parsedDate.toLocaleDateString("en-gb", {
       year: "numeric",

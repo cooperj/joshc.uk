@@ -5,7 +5,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 <BaseLayout pageTitle={SITE_TITLE} pageDescription={SITE_DESCRIPTION}>
   <div class="flex items-center mx-5 mb-5 tablet:mb-20">
-    <div class="flex-1 flex text-6xl font-serif items-center text-orange-600 dark:text-orange-500 mb-5 mr-2">
+    <div
+      class="flex-1 flex text-6xl font-serif items-center text-orange-600 dark:text-orange-500 mb-5 mr-2"
+    >
       <p>Hey, I'm Josh!</p>
       <p class="ml-3 motion-safe:animate-wave">👋</p>
     </div>
@@ -22,152 +24,148 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       </picture>
     </div>
   </div>
-<!-- 
-  <div class="text-4xl tablet:text-8xl flex w-full justify-between">
-    <p class="motion-safe:animate-spin">🧑‍🚀</p>
-    <p class="motion-safe:animate-ping">🦆</p>
-    <p class="motion-safe:animate-pulse">😍</p>
-    <p class="motion-safe:animate-bounce">🐇</p>
-    <p class="motion-safe:animate-wiggle">🫡</p>
-  </div>
-  <h1>Hello, Astronaut!</h1> -->
 
-  <p>// TODO: this is all now wrong! well most of it - rewrite it lol //</p>
+  <article id="content" class="tablet:m-5">
+    <p>// TODO: this is all now wrong! well most of it - rewrite it lol //</p>
 
-  <p>
-    Hi! I'm Josh. I'm a **multidisciplined software developer** with a focus on
-    **games technologies**. I help ideas come alive! I'm in my final year of my
-    [**B.Sc. in Games Computing at
-    Lincoln**](https://www.lincoln.ac.uk/course/cgpcmpub/) *(views are my own)*,
-    And I spend my days dealing with a range of different technologies for
-    things such as *games development*, *general programming*, *web
-    development*, *automation*, *networking*, and *cloud computing* - for either
-    University, Freelancing, or Personally. I am looking to provide my skills to
-    create things that are interesting within a team of like-minded, passionate
-    people.
-  </p>
+    <p>
+      Hi! I'm Josh. I'm a **multidisciplined software developer** with a focus
+      on **games technologies**. I help ideas come alive! I'm in my final year
+      of my [**B.Sc. in Games Computing at
+      Lincoln**](https://www.lincoln.ac.uk/course/cgpcmpub/) *(views are my
+      own)*, And I spend my days dealing with a range of different technologies
+      for things such as *games development*, *general programming*, *web
+      development*, *automation*, *networking*, and *cloud computing* - for
+      either University, Freelancing, or Personally. I am looking to provide my
+      skills to create things that are interesting within a team of like-minded,
+      passionate people.
+    </p>
 
-  <p>
-    *On the flip side* - I spend my free-time using my skills for good by
-    contributing to [Open-Source projects](https://github.com/cooperj). And, in
-    May 2022, I earned my **Foundation Radio Licence** and possess the call-sign
-    [M7JCO](https://www.qrz.com/db/m7jco)! I've created a bunch of different
-    projects in my [portfolio](/portfolio) which I would recommend you reading,
-    and I also write in my [blog](/blog).
-  </p>
+    <p>
+      *On the flip side* - I spend my free-time using my skills for good by
+      contributing to [Open-Source projects](https://github.com/cooperj). And,
+      in May 2022, I earned my **Foundation Radio Licence** and possess the
+      call-sign [M7JCO](https://www.qrz.com/db/m7jco)! I've created a bunch of
+      different projects in my [portfolio](/portfolio) which I would recommend
+      you reading, and I also write in my [blog](/blog).
+    </p>
 
-  <p>
-    Not only that, but I'm [**currently available for hire**](/freelance)
-    (employment or freelance) - this is depending on your needs. Not ready to
-    commit? [Connect with me on LinkedIn](https://linkedin.com/in/joshcdev) or
-    [Follow what I'm up to on Mastodon](https://mastodon.gamedev.place/@joshc) <span
-      aria-hidden="true">🐘</span
-    >
-  </p>
-
-  <p>
-    I'm looking forward to speaking with you <span aria-hidden="true">👋</span>
-  </p>
-
-  <p>
-    Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
-    template. This template serves as a lightweight, minimally-styled starting point
-    for anyone looking to build a personal website, blog, or portfolio with Astro.
-  </p>
-  <p>
-    This template comes with a few integrations already configured in your
-    <code>astro.config.mjs</code> file. You can customize your setup with
-    <a href="https://astro.build/integrations">Astro Integrations</a> to add tools
-    like Tailwind, React, or Vue to your project.
-  </p>
-  <p>Here are a few ideas on how to get started with the template:</p>
-  <ul>
-    <li>Edit this page in <code>src/pages/index.astro</code></li>
-    <li>
-      Edit the site header items in <code>src/components/Header.astro</code>
-    </li>
-    <li>
-      Add your name to the footer in <code>src/components/Footer.astro</code>
-    </li>
-    <li>
-      Check out the included blog posts in <code>src/content/blog/</code>
-    </li>
-    <li>
-      Customize the blog post page layout in <code
-        >src/layouts/BlogPost.astro</code
+    <p>
+      Not only that, but I'm [**currently available for hire**](/freelance)
+      (employment or freelance) - this is depending on your needs. Not ready to
+      commit? [Connect with me on LinkedIn](https://linkedin.com/in/joshcdev) or
+      [Follow what I'm up to on Mastodon](https://mastodon.gamedev.place/@joshc) <span
+        aria-hidden="true">🐘</span
       >
-    </li>
-  </ul>
-  <p>
-    Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-      >read the docs
-    </a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-  </p>
-  <p>
-    Looking for a blog template with a bit more personality? Check out <a
-      href="https://github.com/Charca/astro-blog-template"
-      >astro-blog-template
-    </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-  </p>
+    </p>
 
-  <div class="flex flex-wrap gap-2 mt-20">
-    <h6 class="w-10 mr-2">black</h6>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-100"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-200"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-300"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-400"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-500"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-600"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-600"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-800"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-black-900"></div>
-  </div>
-  <div class="flex flex-wrap gap-2">
-    <h6 class="w-10 mr-2">teal</h6>
-    <div class="rounded-xl w-20 h-20 border border-black bg-teal-100"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-teal-200"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-teal-300"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-teal-400"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-teal-500"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-teal-600"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-teal-700"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-teal-800"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-teal-900"></div>
-  </div>
-  <div class="flex flex-wrap gap-2">
-    <h6 class="w-10 mr-2">green</h6>
-    <div class="rounded-xl w-20 h-20 border border-black bg-green-100"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-green-200"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-green-300"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-green-400"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-green-500"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-green-600"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-green-700"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-green-800"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-green-900"></div>
-  </div>
-  <div class="flex flex-wrap gap-2">
-    <h6 class="w-10 mr-2">white</h6>
-    <div class="rounded-xl w-20 h-20 border border-black bg-white-100"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-white-200"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-white-300"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-white-400"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-white-500"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-white-600"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-white-700"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-white-800"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-white-900"></div>
-  </div>
-  <div class="flex flex-wrap gap-2">
-    <h6 class="w-10 mr-2">orange</h6>
-    <div class="rounded-xl w-20 h-20 border border-black bg-orange-100"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-orange-200"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-orange-300"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-orange-400"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-orange-500"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-orange-600"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-orange-700"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-orange-800"></div>
-    <div class="rounded-xl w-20 h-20 border border-black bg-orange-900"></div>
-  </div>
+    <p>
+      I'm looking forward to speaking with you <span aria-hidden="true">👋</span
+      >
+    </p>
+
+    <p>
+      Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
+      template. This template serves as a lightweight, minimally-styled starting
+      point for anyone looking to build a personal website, blog, or portfolio with
+      Astro.
+    </p>
+    <p>
+      This template comes with a few integrations already configured in your
+      <code>astro.config.mjs</code> file. You can customize your setup with
+      <a href="https://astro.build/integrations">Astro Integrations</a> to add tools
+      like Tailwind, React, or Vue to your project.
+    </p>
+    <p>Here are a few ideas on how to get started with the template:</p>
+    <ul>
+      <li>Edit this page in <code>src/pages/index.astro</code></li>
+      <li>
+        Edit the site header items in <code>src/components/Header.astro</code>
+      </li>
+      <li>
+        Add your name to the footer in <code>src/components/Footer.astro</code>
+      </li>
+      <li>
+        Check out the included blog posts in <code>src/content/blog/</code>
+      </li>
+      <li>
+        Customize the blog post page layout in <code
+          >src/layouts/BlogPost.astro</code
+        >
+      </li>
+    </ul>
+    <p>
+      Have fun! If you get stuck, remember to <a
+        href="https://docs.astro.build/"
+        >read the docs
+      </a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+    </p>
+    <p>
+      Looking for a blog template with a bit more personality? Check out <a
+        href="https://github.com/Charca/astro-blog-template"
+        >astro-blog-template
+      </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+    </p>
+
+    <div class="flex flex-wrap gap-2 mt-20">
+      <h6 class="w-10 mr-2">black</h6>
+      <div class="rounded-xl w-20 h-20 border border-black bg-black-100"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-black-200"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-black-300"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-black-400"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-black-500"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-black-600"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-black-600"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-black-800"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-black-900"></div>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <h6 class="w-10 mr-2">teal</h6>
+      <div class="rounded-xl w-20 h-20 border border-black bg-teal-100"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-teal-200"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-teal-300"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-teal-400"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-teal-500"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-teal-600"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-teal-700"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-teal-800"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-teal-900"></div>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <h6 class="w-10 mr-2">green</h6>
+      <div class="rounded-xl w-20 h-20 border border-black bg-green-100"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-green-200"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-green-300"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-green-400"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-green-500"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-green-600"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-green-700"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-green-800"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-green-900"></div>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <h6 class="w-10 mr-2">white</h6>
+      <div class="rounded-xl w-20 h-20 border border-black bg-white-100"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-white-200"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-white-300"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-white-400"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-white-500"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-white-600"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-white-700"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-white-800"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-white-900"></div>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <h6 class="w-10 mr-2">orange</h6>
+      <div class="rounded-xl w-20 h-20 border border-black bg-orange-100"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-orange-200"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-orange-300"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-orange-400"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-orange-500"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-orange-600"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-orange-700"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-orange-800"></div>
+      <div class="rounded-xl w-20 h-20 border border-black bg-orange-900"></div>
+    </div>
+  </article>
 </BaseLayout>
