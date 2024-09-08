@@ -5,6 +5,7 @@ icon: /images/ba/icon.webp
 pubDate: 2019-05-15
 draft: false
 ---
+
 ## What is the project?
 
 As a part of my college course, I created a game in the Unity Engine, this was the first game I had ever made to a level of polish. This game was created to be similar to the popular mobile game, [Angry Birds](https://www.angrybirds.com/), but with a banana flavoured twist.
@@ -15,7 +16,7 @@ The project's brief was to create a game which can be used to promote the colleg
 
 - Skills need to be expressed, this is because of with the showcase its main purpose is to present the skills of the individual students and the department as a whole.
 
-- The game needs to be appropriate for the *wide* target audience, so this means that there isn't any inappropriate content, such as extreme violence, this is because this may make the audience feel uncomfortable.
+- The game needs to be appropriate for the _wide_ target audience, so this means that there isn't any inappropriate content, such as extreme violence, this is because this may make the audience feel uncomfortable.
 
 ## The Design
 
@@ -23,9 +24,9 @@ I created the design for my game, this would consist of how the game and all the
 
 ### The Objects/Characters
 
-There are 4 objects that I created: (from left to right) the Banana, the Face Banana, the Super Banana, and the Bad Apple. 
+There are 4 objects that I created: (from left to right) the Banana, the Face Banana, the Super Banana, and the Bad Apple.
 
-The Super Banana and the Face Banana are both variants of the standard Banana. 
+The Super Banana and the Face Banana are both variants of the standard Banana.
 
 The Bad Apple is a complete opposite of the bananas, this removes points, whereas the Banana gives the user points.
 
@@ -47,7 +48,7 @@ Similarly, the Face Banana is a modification of the standard Banana, however, it
 
 ## The First Release
 
-The game was originally designed to target a mobile phone. 
+The game was originally designed to target a mobile phone.
 
 ![game being played on an iphone](/images/ba/mobile-demo.webp)
 
@@ -70,18 +71,18 @@ The first change was to change the target platform, I changed this to be played 
 Secondly, following user feedback I added a projection of where the banana would travel making the game much easier to play.
 
 Finally, I improved the graphics by using softer shades of blue, added more detail to the trees, and added moving clouds.
+
 ### Demo
 
 <iframe src="/demos/portfolio/bananapocalypse" frameborder="0" width="100%" height="900"></iframe>
 
-The game plays by you *(the player)* shooting the other bananas and apples to knock them off the trees to score points. To shoot, use the <kbd>left mouse button</kbd>.
+The game plays by you _(the player)_ shooting the other bananas and apples to knock them off the trees to score points. To shoot, use the <kbd>left mouse button</kbd>.
 
 You can also hold <kbd>Ctrl</kbd> to increase your shooting power.
 
 The trees and items are procedurally generated, and to reload the level, hit <kbd>Esc</kbd> and select the <kbd>Reset Level</kbd> option. This will respawn the trees.
 
-If you are facing difficulties playing the game, you might find it useful to reload this page or 
+If you are facing difficulties playing the game, you might find it useful to reload this page or
 <a href="/demos/portfolio/bananapocalypse/bananapocalypse_win_x86_64.zip" target="_blank">download the game for windows.</a>
-
 
 This is also available [on itch.io](https://joshcooper.itch.io/bananapocalypse).

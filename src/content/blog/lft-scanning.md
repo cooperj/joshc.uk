@@ -14,15 +14,15 @@ I had a brainwave, and thought to myself; "Why can't we just take a picture of t
 
 Currently in the UK as of December 2021, there are two types of tests that the public can access the first being a **Lateral flow test**, and a **PCR test**.
 
-If you do not have symptoms, you can complete a lateral flow test. These are known as <abbr title="Displaying no symptoms">asymptomatic</abbr> tests. 
+If you do not have symptoms, you can complete a lateral flow test. These are known as <abbr title="Displaying no symptoms">asymptomatic</abbr> tests.
 
-These types of tests can be completed anywhere and the result can be received within 15 to 30 minutes from taking the test. 
+These types of tests can be completed anywhere and the result can be received within 15 to 30 minutes from taking the test.
 
 It is very popular to do these tests at home, with my University closing their on-campus testing centre recently.
 
 After a test has been taken, the results should be recorded on the [NHS Test & Trace website](https://gov.uk/report-covid19-result) (or via calling 119). This allows the government to do important stuff, such as analysing the distribution of the virus.
 
-In England alone, it was reported by the National Audit Office that, in the period of 1st March to 30th May 2021, only 14% *(96 million)* of distributed lateral flow tests *(691 million)* were reported back to NHS Test & Trace.
+In England alone, it was reported by the National Audit Office that, in the period of 1st March to 30th May 2021, only 14% _(96 million)_ of distributed lateral flow tests _(691 million)_ were reported back to NHS Test & Trace.
 
 They estimate that 655 million tests would have been used, so that leaves a massive **559 million unreported tests**. [National Audit Office (2021) p.g.7](#references)
 
@@ -36,9 +36,9 @@ For this exercise, I'm gonna follow the National Audit Office's estimation of th
 
 I aim to create a system that makes it much easier to record a test result by taking a picture.
 
-In practice, this would be built into an existing service such as the [NHS App](https://www.nhs.uk/apps-library/nhs-app/). The app could be the targeted platform as it's typically delivered as a native mobile application (but also has a website for improved access) and has access to patient records via their NHS account. 
+In practice, this would be built into an existing service such as the [NHS App](https://www.nhs.uk/apps-library/nhs-app/). The app could be the targeted platform as it's typically delivered as a native mobile application (but also has a website for improved access) and has access to patient records via their NHS account.
 
-This will help to remove the need for manual data entry as much as possible. 
+This will help to remove the need for manual data entry as much as possible.
 
 This would provide the NHS and UKHSA with the exact same data it collects from the existing system.
 
@@ -62,16 +62,16 @@ The position data is then used to create an X and Y scale. These are created by 
 
 ![Lateral flow test labelled with ID number at the top, positive label over QR code, QR is within a bounding box. Y-axis and X-axis is labelled for the scale](/images/lft-scanning/QR-example.webp)
 
-*NB: I have added in the label for the X and Y scales and the positive label was a placeholder ready to be filled with the data in the next stage*
+_NB: I have added in the label for the X and Y scales and the positive label was a placeholder ready to be filled with the data in the next stage_
 
 ### Reading the result with Blob Detection (First Attempt)
 
-My technique for reading the result was to crop into the image to find the test window and look at the positions of the control and test lines and use that to read a result of true or false. 
+My technique for reading the result was to crop into the image to find the test window and look at the positions of the control and test lines and use that to read a result of true or false.
 
 The way the test would be read would be so that the control line would be read first and that would catch the tests that have not worked, if a control line exists then look to see if there is a test line. if there's a test line, it is positive otherwise, it is a negative result.
 
-
 This would be coded something like this:
+
 ```py
 if (control_line):
     if (test_line):
@@ -85,25 +85,25 @@ else:
 
 So what I did was create a system to use the x and y positions of the QR code to orientate where the test windows are. I then added some post-processing to highlight the test lines and then ran blob detection.
 
-*And then, I come into my first problem*. The QR code within the image must be at exactly 90 deg. So what I did is throw my demo image into Photoshop and transform it manually.
+_And then, I come into my first problem_. The QR code within the image must be at exactly 90 deg. So what I did is throw my demo image into Photoshop and transform it manually.
 
 ![Lateral flow test with 2 cropped previews running filtering](/images/lft-scanning/scan-using-positions.webp)
 
-I then *tried* to count the blobs, however, it was detecting shadows as false positives. This indicated to me that this was not a reliable method of determining the result.
+I then _tried_ to count the blobs, however, it was detecting shadows as false positives. This indicated to me that this was not a reliable method of determining the result.
 
-It is important to mention when testing with different images, the exact position is never the same. 
+It is important to mention when testing with different images, the exact position is never the same.
 
 These factors forced me into choosing another method of reading the result.
 
 ### Reading the result with AI (Second Attempt)
 
-I decided to change how I was planning to categorise the results. I used the [Lobe](https://www.lobe.ai/) software package to train a dataset using a wide collection of images that I have either captured myself or downloaded from the internet. 
+I decided to change how I was planning to categorise the results. I used the [Lobe](https://www.lobe.ai/) software package to train a dataset using a wide collection of images that I have either captured myself or downloaded from the internet.
 
-*This was chosen based on the presentation by [Bennett, J. (2020)](#references)*
+_This was chosen based on the presentation by [Bennett, J. (2020)](#references)_
 
 ![Interface showing multiple images of test windows categorised with their result](/images/lft-scanning/lobe-training.webp)
 
-What this software does, is allow for the simple creation of models by taking an existing model and changing it ever so slightly to create a custom model. 
+What this software does, is allow for the simple creation of models by taking an existing model and changing it ever so slightly to create a custom model.
 
 This is useful because it can help save costs of creating the dataset from scratch.
 
@@ -153,4 +153,4 @@ This allows someone to be significantly more independent, and personally, that i
 
 - [Syal, R. (2021), Almost 600m NHS home Covid tests unaccounted for, auditors reveal (The Guardian)](https://www.theguardian.com/society/2021/jun/25/almost-600m-nhs-home-covid-tests-unaccounted-for-auditors-reveal)
 
-- [Bennett, J. (2020), It's the most Cloudful time of the year *(presentation given to the School of Computer Science, University of Lincoln)*](https://youtu.be/6hTUNE1oqYY)
+- [Bennett, J. (2020), It's the most Cloudful time of the year _(presentation given to the School of Computer Science, University of Lincoln)_](https://youtu.be/6hTUNE1oqYY)

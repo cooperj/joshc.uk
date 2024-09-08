@@ -10,7 +10,7 @@ Similar to the [VR City Simulation](/portfolio/vr-city) (it was created as a par
 
 I developed this project using the Unity Engine and built for iOS.
 
-This project places a plate into the real world and uses the phone as a portal to see that. 
+This project places a plate into the real world and uses the phone as a portal to see that.
 This then allows the user to interact with the 3D space by placing a plate - and then they can interact with the dish to view information such as the recipe.
 
 <div class="youtube">

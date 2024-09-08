@@ -1,19 +1,21 @@
 ---
 interface Props {
-	date: Date;
+  date: Date;
 }
 
 let { date } = Astro.props;
 
-if (date == undefined) { date = new Date("1970-01-01") }
+if (date == undefined) {
+  date = new Date("1970-01-01");
+}
 ---
 
 <time datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('en-gb', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
-	}
+  {
+    date.toLocaleDateString("en-gb", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })
+  }
 </time>

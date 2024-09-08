@@ -17,10 +17,9 @@ This will then be useful to allow the user to have a reduced effect of anxiety s
 
 ## The Plan
 
-The plan is to create four key phases with three tasks each. 
+The plan is to create four key phases with three tasks each.
 
 ![A flow chart showing four logical phases. The first phase shows booking, shopping, and travelling to the airport. The next phase shows the check-in desk, the security screening, and border control. The third phase shows, duty free, finding the desired gate, and at the gate. The final phase includes travelling to the plane, boarding the plane and being on the plane.](/images/airport-sim/level-flow.webp)
-
 
 ## Future
 

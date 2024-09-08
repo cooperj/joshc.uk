@@ -4,11 +4,11 @@ import FormattedDate from "@/components/FormattedDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const projects = (await getCollection("portfolio")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle="Portfolio" pageDescription="Josh's Portfolio">
   <section>
     <ul>
       {

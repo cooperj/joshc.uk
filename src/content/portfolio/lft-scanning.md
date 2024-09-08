@@ -30,5 +30,4 @@ That could be overcome, but wouldn't be something I would feel right doing; due 
 
 If I was to do this again, I would build a 'capture app' to run on my Phone and do the processing on-device compared to on a server somewhere else.
 
-*[Update]: As of the 1st April, general testing has stopped in the UK - stopping any further development.* 
-
+_[Update]: As of the 1st April, general testing has stopped in the UK - stopping any further development._

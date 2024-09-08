@@ -1,7 +1,8 @@
 ---
-layout: '@/layouts/ContentLayout.astro'
-description: 'This page tells you the best ways to get in contact with me!'
-title: 'Contact'
+layout: "@/layouts/ContentLayout.astro"
+description: "This page tells you the best ways to get in contact with me!"
+title: "Contact"
+icon: "/images/joshua.webp"
 ---
 
 If you want to get in touch with me, I'm available in most places. However, I do ask you that if you want a guaranteed/longer response please send that as an email.
@@ -9,7 +10,6 @@ If you want to get in touch with me, I'm available in most places. However, I do
 - Email: **[hi@joshc.uk](mailto:hi@joshc.uk)**
 - LinkedIn: **[/in/joshcdev](https://www.linkedin.com/in/joshcdev/)**
 - Mastodon: **[@joshc@mastodon.gamedev.place](https://mastodon.gamedev.place/@joshc)**
-
 
 <div class="bg-orange-100 dark:bg-orange-700 p-5 mt-10 rounded-xl drop-shadow-md">
 

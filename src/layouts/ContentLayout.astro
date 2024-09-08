@@ -3,10 +3,24 @@ import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-const { title, description, pubDate, update, icon } = Astro.props;
+// interface Props {
+//   title: string;
+//   description: string;
+//   icon?: string;
+//   pubDate?: Date;
+//   update?: Date;
+// }
+
+const { frontmatter, title, description, pubDate, update, icon } = Astro.props;
+
+const pageTitle = frontmatter?.title || title;
+const pageDescription = frontmatter?.description || description;
+const pageIcon = frontmatter?.icon || icon;
+const pagePubDate = frontmatter?.pubDate || pubDate;
+const pageUpdate = frontmatter?.update || update;
 ---
 
-<BaseLayout pageTitle={title} pageDescription={description}>
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <article id="content">
     <div class="hero-image m-5 tablet:m-2 laptop:m-0">
       {
@@ -23,14 +37,14 @@ const { title, description, pubDate, update, icon } = Astro.props;
     </div>
     <div class="prose">
       <div class="title mb-8">
-        <h1 class="text-4xl text-center font-extrabold mb-2">{title}</h1>
+        <h1 class="text-4xl text-center font-extrabold mb-2">{pageTitle}</h1>
         <div class="date text-center">
-          {pubDate && <FormattedDate date={pubDate} />}
+          {pagePubDate && <FormattedDate date={pagePubDate} />}
 
           {
-            update && (
+            pageUpdate && (
               <div class="last-updated-on">
-                Updated on <FormattedDate date={update} />
+                Updated on <FormattedDate date={pageUpdate} />
               </div>
             )
           }

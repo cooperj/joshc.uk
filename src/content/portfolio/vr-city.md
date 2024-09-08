@@ -22,7 +22,6 @@ One way I did this was by heavily expanding the world from the requirements list
 
 This project was created at the same time in the same module as ["My Recipes" - AR Digital Recipe Book](/portfolio/my-recipes-ar), so you may be interested in checking that out too!
 
-
 <details>
 <summary> Third-Party Assets Used </summary>
 
@@ -38,12 +37,12 @@ This project was created at the same time in the same module as ["My Recipes" - 
 - Free Stylized Skybox by Yuki2022
 - We Shop Song (Lud and Schlatts Musical Emporium) by Philip Milman
 - freesound.org
-    - footsteps mulch rocks city park by pawsound
-    - busy city 04 by rucisko
-    - Car Engine: Maserati GranTurismo Switch to Sport Mode and Launch by myeclecticself
-    - MITSUBISHI IMIEV electric car HORN LONG by jakobthiesen
-    - SFX Car Engine Outside Idle by GiocoSound
-    - car horn by keweldog
-    - Bird - Pajaro 4 by Lunevix
+  - footsteps mulch rocks city park by pawsound
+  - busy city 04 by rucisko
+  - Car Engine: Maserati GranTurismo Switch to Sport Mode and Launch by myeclecticself
+  - MITSUBISHI IMIEV electric car HORN LONG by jakobthiesen
+  - SFX Car Engine Outside Idle by GiocoSound
+  - car horn by keweldog
+  - Bird - Pajaro 4 by Lunevix
 
 </details>

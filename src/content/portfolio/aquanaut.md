@@ -6,12 +6,11 @@ pubDate: 2022-06-10
 draft: false
 ---
 
-Aquanaut is a classic shooter inspired by game, set in the depths of the ocean. 
+Aquanaut is a classic shooter inspired by game, set in the depths of the ocean.
 
 <div class="youtube">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PWpO5OhR4_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 ## Who made this?
 
@@ -21,7 +20,6 @@ This game was made by:
 - <strong>[Vanta](https://vantasia.dev)</strong> - Design Lead & the Texturing
 - <strong>Artur Wojcik</strong> - AI Lead & Game Flow Design
 - <strong>[Matt Silverwood](https://silverwood.dev)</strong> - Input & Interaction Systems
-
 
 We also used resources from other places
 
@@ -36,27 +34,24 @@ We also used resources from other places
 
 </details>
 
-
 ## My Role
 
 For the project, I was responsible for managing the team to ensure we met the deadline while also creating a high quality product.
 
 This involved me both writing code and organizing/helping others.
 
-The most important lesson I learned from this project; is to identify who will and will not put in the necessary work. 
+The most important lesson I learned from this project; is to identify who will and will not put in the necessary work.
 This surfaced due to the fact the groups we're randomly assigned based on a selected category.
 
 Once I had noticed that - I then put the necessary measures to ensure the project would continue, this included simplifying the scope and reassigning tasks.
 
-These things happen. But, knowing when to detect these things is an important thing to have experience. 
-
+These things happen. But, knowing when to detect these things is an important thing to have experience.
 
 ## The "finished" project
 
 We plan to use, adapt, and steal from the project. We don't see the project as finished, so this page will be updated when we make changes.
 
-Not only that, but we made the project Open Source! You can find the code on [GitHub 🤖](https://github.com/CMP2804M-TSE-Group-28/supernova). 
-
+Not only that, but we made the project Open Source! You can find the code on [GitHub 🤖](https://github.com/CMP2804M-TSE-Group-28/supernova).
 
 ### First Release
 
