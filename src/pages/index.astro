@@ -1,6 +1,28 @@
 ---
+import { getCollection } from "astro:content";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+
+// Generic Item Type
+type ContentItem = {
+  slug: string;
+  data: {
+    pubDate: Date;
+    title: string;
+  };
+};
+
+// Get Posts and projects
+const posts = (await getCollection("blog")) as ContentItem[];
+const projects = (await getCollection("portfolio")) as ContentItem[];
+
+// Mix the contents and sort by newest first
+const content: ContentItem[] = posts
+  .concat(projects)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Get the last 5 contents
+const latestContent = content.slice(0, 5);
 ---
 
 <BaseLayout pageTitle={SITE_TITLE} pageDescription={SITE_DESCRIPTION}>
@@ -106,6 +128,17 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         >astro-blog-template
       </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
     </p>
+
+    <ul>
+      {
+        latestContent.map((item) => (
+          <li>
+            <a href={item.slug}>{item.data.title}</a> -{" "}
+            {new Date(item.data.pubDate).toLocaleDateString()}
+          </li>
+        ))
+      }
+    </ul>
 
     <div class="flex flex-wrap gap-2 mt-20">
       <h6 class="w-10 mr-2">black</h6>
