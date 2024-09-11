@@ -63,6 +63,10 @@
   .profile-mask {
     mask-image: url("/images/image-mask.svg");
   }
+
+  .last-p-mb-0 p:last-child {
+    margin-bottom: 0 !important;
+  }
 }
 @tailwind components;
 @tailwind utilities;

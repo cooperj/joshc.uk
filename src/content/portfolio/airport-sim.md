@@ -1,5 +1,5 @@
 ---
-title: WIP - Airport Simulation
+title: Airport Simulation
 description: Simulating the Affects of International Travel in a Virtual World to Provide Training and Reassurance
 pubDate: 2023-05-01
 draft: false
