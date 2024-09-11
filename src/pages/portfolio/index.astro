@@ -3,9 +3,11 @@ import { getCollection } from "astro:content";
 import FormattedDate from "@/components/FormattedDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-const projects = (await getCollection("portfolio")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const projects = (
+  await getCollection("portfolio", ({ data }) => {
+    return data.draft !== true;
+  })
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <BaseLayout pageTitle="Portfolio" pageDescription="Josh's Portfolio">
@@ -27,12 +29,11 @@ const projects = (await getCollection("portfolio")).sort(
                   class="rounded-xl h-20 tablet:h-32"
                 />
               ) : (
-                <div
+                <img
                   aria-hidden="true"
-                  class="text-center h-20 tablet:h-32 w-20 tablet:w-32"
-                >
-                  <span class="text-7xl tablet:text-8xl text-white-600">#</span>
-                </div>
+                  src="/images/no-image.webp"
+                  class="rounded-xl h-20 tablet:h-32"
+                />
               )}
               <div class="flex flex-col ml-5">
                 <h4 class="title mt-0 font-semibold">{project.data.title}</h4>

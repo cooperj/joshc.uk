@@ -35,6 +35,11 @@
           "name": "icon",
           "type": "image",
           "single": true
+        },
+        {
+          "name": "draft",
+          "type": "boolean",
+          "default": false
         }
       ]
     },
@@ -72,6 +77,11 @@
           "name": "icon",
           "type": "image",
           "single": true
+        },
+        {
+          "name": "draft",
+          "type": "boolean",
+          "default": false
         }
       ]
     }
