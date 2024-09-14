@@ -1,0 +1,122 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "@/components/FormattedDate.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+type ContentItem = {
+  slug: string;
+  collection: string;
+  data: {
+    icon: string;
+    tags: string[];
+    draft: boolean;
+    pubDate: Date;
+    update: Date;
+    description: string;
+    title: string;
+  };
+};
+
+export async function getStaticPaths() {
+  const projects = (await getCollection(
+    "portfolio",
+    ({ data }) => data.draft !== true,
+  )) as ContentItem[];
+
+  const posts = (await getCollection(
+    "blog",
+    ({ data }) => data.draft !== true,
+  )) as ContentItem[];
+
+  const content = posts.concat(projects);
+
+  const allTags = content.flatMap((item) => item.data.tags || []);
+  const uniqueTags = Array.from(new Set(allTags));
+
+  return uniqueTags.map((tag) => ({
+    params: { tag }, // This generates URLs like `/tags/{tag}/`
+  }));
+}
+
+const projects = (await getCollection(
+  "portfolio",
+  ({ data }) => data.draft !== true,
+)) as ContentItem[];
+
+const posts = (await getCollection(
+  "blog",
+  ({ data }) => data.draft !== true,
+)) as ContentItem[];
+
+const content = posts.concat(projects);
+
+const { tag } = Astro.params;
+const filteredPosts = content.filter((item) =>
+  (item.data.tags || []).includes(tag),
+);
+---
+
+<BaseLayout
+  pageTitle={`Tagged: ${tag}`}
+  pageDescription={`Posts tagged with "${tag}"`}
+>
+  <div class="prose">
+    <div class="title mb-8">
+      <h1 class="text-4xl text-center font-extrabold mb-2">
+        Tagged with "{tag}"
+      </h1>
+    </div>
+  </div>
+  <section>
+    {
+      filteredPosts.length > 0 ? (
+        filteredPosts.map((item) => (
+          <a href={`/${item.collection}/${item.slug}/`} key={item.slug}>
+            <div class="flex flex-col m-2 border-2 border-black-200 p-2 rounded-xl hover:bg-black-200">
+              <div class="flex flex-row">
+                {item.data.icon ? (
+                  <img
+                    aria-hidden="true"
+                    src={item.data.icon}
+                    class="rounded-xl h-20 w-20 tablet:h-32 tablet:w-32"
+                  />
+                ) : (
+                  <img
+                    aria-hidden="true"
+                    src="/images/no-image.webp"
+                    class="rounded-xl h-20 tablet:h-32"
+                  />
+                )}
+                <div class="flex flex-col ml-5">
+                  <h4 class="title mt-0 font-semibold">{item.data.title}</h4>
+                  <p class="date">
+                    {item.data.update ? (
+                      <>
+                        <FormattedDate date={item.data.pubDate} />
+                        <p class="italic">
+                          <span>
+                            (Updated <FormattedDate date={item.data.update} />)
+                          </span>
+                        </p>
+                      </>
+                    ) : (
+                      <FormattedDate date={item.data.pubDate} />
+                    )}
+                  </p>
+                  <div class="mt-2 hidden tablet:block max-w-xl laptop:max-w-4xl">
+                    <p>{item.data.description}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 tablet:hidden">
+                <p>{item.data.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      ) : (
+        <p>No items found for this tag.</p>
+      )
+    }
+  </section>
+</BaseLayout>

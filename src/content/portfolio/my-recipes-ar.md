@@ -6,7 +6,7 @@ draft: false
 icon: /images/my-recipes-ar/icon.webp
 tags:
   - unity
-  - c#
+  - c-sharp
   - ar
   - ios
   - android

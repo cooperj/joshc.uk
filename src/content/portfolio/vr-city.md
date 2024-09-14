@@ -7,7 +7,7 @@ draft: false
 tags:
   - vr
   - unity
-  - c#
+  - c-sharp
 ---
 
 This is a VR experience to simulate the effects of being in a city while being inside a VR headset. This was the first time I created anything for VR and I enjoyed doing so - so expect me to see more stuff from me!
