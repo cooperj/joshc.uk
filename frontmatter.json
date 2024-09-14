@@ -97,16 +97,12 @@
     {
       "title": "blog",
       "path": "[[workspace]]/src/content/blog",
-      "contentTypes": [
-        "blog"
-      ]
+      "contentTypes": ["blog"]
     },
     {
       "title": "portfolio",
       "path": "[[workspace]]/src/content/portfolio",
-      "contentTypes": [
-        "portfolio"
-      ]
+      "contentTypes": ["portfolio"]
     },
     {
       "title": "pages",

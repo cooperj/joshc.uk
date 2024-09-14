@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Icon } from "@iconify-icon/react";
 
 type Props = {
   username: string;
@@ -9,7 +10,7 @@ type RepoStats = {
   name: string;
   full_name: string;
   description: string;
-  url: string;
+  html_url: string;
   fork: boolean;
   created_at: Date;
   updated_at: Date;
@@ -21,6 +22,11 @@ type RepoStats = {
   forks: number;
   watchers: number;
   stargazers_count: number;
+  owner: {
+    avatar_url: string;
+    login: string;
+    html_url: string;
+  };
 };
 
 export const TopGithubRepos = ({ username }: Props) => {
@@ -40,8 +46,8 @@ export const TopGithubRepos = ({ username }: Props) => {
 
       // If it has been less than 1 day since last update
       // Use what we already have saved
-      if (timeSinceLastUpdate < oneDayInMs) {
-        const rememberedRepos = localStorage.getItem("github_repos") as string;
+      const rememberedRepos = localStorage.getItem("github_repos") as string;
+      if (timeSinceLastUpdate < oneDayInMs && rememberedRepos) {
         setRepos(JSON.parse(rememberedRepos) || ([] as RepoStats[]));
         setLoading(false);
       }
@@ -57,14 +63,36 @@ export const TopGithubRepos = ({ username }: Props) => {
             setHasErrored(true);
           }
 
-          const sortedRepos = response.data.sort(
-            (a: RepoStats, b: RepoStats) =>
-              b.stargazers_count - a.stargazers_count,
+          // Filter out archived repos with 0 stars
+          let filteredRepos = response.data.filter(
+            (repo: RepoStats) =>
+              !(repo.archived && repo.stargazers_count === 0),
           );
-          setRepos(sortedRepos.slice(0, 5));
+
+          // Filter out the github home repo
+          filteredRepos = filteredRepos.filter(
+            (repo: RepoStats) => !(repo.name === repo.owner.login),
+          );
+
+          const sortedRepos = filteredRepos.sort(
+            (a: RepoStats, b: RepoStats) => {
+              // First compare by stargazers count
+              const starComparison = b.stargazers_count - a.stargazers_count;
+
+              // If stargazers count is the same, compare alphabetically by name
+              if (starComparison !== 0) {
+                return starComparison;
+              } else {
+                // Sort alphabetically by name
+                return a.name.localeCompare(b.name);
+              }
+            },
+          );
+
+          setRepos(sortedRepos.slice(0, 6));
           localStorage.setItem(
             "github_repos",
-            JSON.stringify(sortedRepos.slice(0, 5)),
+            JSON.stringify(sortedRepos.slice(0, 6)),
           );
           localStorage.setItem("github_lastUpdated", new Date().toISOString());
         } catch (error) {
@@ -93,16 +121,43 @@ export const TopGithubRepos = ({ username }: Props) => {
     return <p>No repositories found</p>;
   }
 
-  return (
-    <ul>
-      {repos.map((repo) => (
-        <li key={repo.name}>
-          <a href={repo.url} target="_blank" rel="noopener noreferrer">
-            {repo.full_name}
-          </a>{" "}
-          ⭐ {repo.stargazers_count}
-        </li>
-      ))}
-    </ul>
-  );
+  return repos.map((repo) => (
+    <div
+      key={repo.name}
+      className="bg-orange-100 dark:bg-orange-700 even:bg-green-100 dark:even:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(33.33%-2rem)] justify-start text-black-500 dark:text-white-500"
+    >
+      <a
+        href={repo.html_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black-500 dark:text-white-500 no-underline"
+      >
+        <h4>{repo.full_name}</h4>
+      </a>
+
+      <div className="flex gap-4 align-middle no-underline mb-2">
+        <div className="flex items-center">
+          <Icon icon="lucide:stars" className="mr-1" />
+          {repo.stargazers_count}
+        </div>
+        <div className="flex items-center">
+          <Icon icon="lucide:git-fork" className="mr-1" />
+          {repo.forks}
+        </div>
+
+        {repo.homepage && (
+          <div className="flex items-center">
+            <a
+              href={repo.homepage}
+              target="_blank"
+              className="text-black-500 dark:text-white-500 hover:text-black-700 hover:dark:text-white-700 no-underline"
+            >
+              <Icon icon="lucide:earth" />
+            </a>
+          </div>
+        )}
+      </div>
+      <span className="no-underline">{repo.description}</span>
+    </div>
+  ));
 };

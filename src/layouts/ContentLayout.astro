@@ -68,7 +68,10 @@ const pageTags = frontmatter?.tags ?? tags ?? [];
             pageTags && pageTags.length >= 1 && (
               <>
                 {pageTags.map((tag: string) => (
-                  <a href={`/tags/${tag}`} class="bg-green-100 dark:bg-green-700 mr-4 mb-2 px-2 py-1 rounded-xl no-underline hover:bg-green-200 dark:hover:bg-green-800">
+                  <a
+                    href={`/tags/${tag}`}
+                    class="bg-green-100 dark:bg-green-700 mr-4 mb-2 px-2 py-1 rounded-xl no-underline hover:bg-green-200 dark:hover:bg-green-800"
+                  >
                     {tag}
                   </a>
                 ))}
