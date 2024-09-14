@@ -7,5 +7,7 @@
     "workbench.activityBar.visible": "undefined",
     "workbench.statusBar.visible": "undefined",
     "window.zoomLevel": "undefined"
+  },
+  "[markdown]": {
   }
 }

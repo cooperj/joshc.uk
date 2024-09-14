@@ -2,23 +2,45 @@
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-const { frontmatter, title, description, pubDate, update, icon, tags } =
-  Astro.props;
+const {
+  frontmatter,
+  title,
+  description,
+  pubDate,
+  update,
+  icon,
+  headerImage,
+  tags,
+} = Astro.props;
 
 const pageTitle = frontmatter?.title ?? title ?? undefined;
 const pageDescription = frontmatter?.description ?? description ?? undefined;
 const pageIcon = frontmatter?.icon ?? icon ?? undefined;
+const pageHeaderImage = frontmatter?.headerImage ?? headerImage ?? undefined;
 const pagePubDate = frontmatter?.pubDate ?? pubDate ?? undefined;
 const pageUpdate = frontmatter?.update ?? update ?? undefined;
-
 const pageTags = frontmatter?.tags ?? tags ?? [];
+
+console.log(pageHeaderImage)
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <article id="content" class="tablet:m-5">
     <div class="hero-image m-5 tablet:m-2 laptop:m-0">
       {
-        pageIcon && (
+        pageHeaderImage && (
+          <header class="relative drop-shadow-md select-none">
+            <img
+              src={pageHeaderImage}
+              aria-hidden="true"
+              class="w-full h-32 tablet:h-64 rounded-3xl mb-10 object-cover select-none"
+            />
+          </header>
+        )
+      }
+
+      {
+        !pageHeaderImage && pageIcon && (
           <header class="relative drop-shadow-md select-none">
             <img
               src={pageIcon}

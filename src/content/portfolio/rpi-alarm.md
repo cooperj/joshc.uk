@@ -2,6 +2,7 @@
 title: Raspberry Pi Burglar Alarm
 description: I created a burglar alarm using a Raspberry Pi which alerts the homeowner when there is a potential issue at their house.
 icon: /images/rpi-alarm/case.webp
+headerImage: /images/rpi-alarm/inside.webp
 pubDate: 2018-11-11
 draft: false
 ---

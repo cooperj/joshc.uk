@@ -9,7 +9,14 @@
       "test",
       "unity",
       "vr",
-      "web"
+      "web",
+      "c++",
+      "c#",
+      "javascript-typescript",
+      "python",
+      "golang",
+      "robotics",
+      "bash"
     ],
     "categories": []
   }

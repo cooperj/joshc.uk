@@ -35,11 +35,6 @@
           "name": "icon",
           "type": "image",
           "single": true
-        },
-        {
-          "name": "draft",
-          "type": "boolean",
-          "default": false
         }
       ]
     },
@@ -79,9 +74,19 @@
           "single": true
         },
         {
+          "title": "draft",
           "name": "draft",
-          "type": "boolean",
-          "default": false
+          "type": "draft"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "headerImage",
+          "name": "headerImage",
+          "type": "image"
         }
       ]
     }
@@ -92,17 +97,22 @@
     {
       "title": "blog",
       "path": "[[workspace]]/src/content/blog",
-      "contentTypes": ["blog"]
+      "contentTypes": [
+        "blog"
+      ]
     },
     {
       "title": "portfolio",
       "path": "[[workspace]]/src/content/portfolio",
-      "contentTypes": ["portfolio"]
+      "contentTypes": [
+        "portfolio"
+      ]
     },
     {
       "title": "pages",
       "path": "[[workspace]]/src/pages"
     }
   ],
-  "frontMatter.content.publicFolder": "public"
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.website.host": "https://www.joshc.uk"
 }

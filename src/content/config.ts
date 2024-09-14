@@ -6,10 +6,10 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    // Transform string to Date object
     pubDate: z.coerce.date(),
     update: z.coerce.date().optional(),
     icon: z.string().optional(),
+    headerImage: z.string().optional(),
     draft: z.boolean().default(false),
     tags: z.array(z.string()).default([]),
   }),
@@ -21,10 +21,10 @@ const portfolio = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    // Transform string to Date object
     pubDate: z.coerce.date(),
     update: z.coerce.date().optional(),
     icon: z.string().optional(),
+    headerImage: z.string().optional(),
     draft: z.boolean().default(false),
     tags: z.array(z.string()).optional(),
   }),
