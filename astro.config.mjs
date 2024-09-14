@@ -6,7 +6,9 @@ import tailwind from "@astrojs/tailwind";
 
 import icon from "astro-icon";
 
+import react from "@astrojs/react";
+
 export default defineConfig({
   site: "https://www.joshc.uk",
-  integrations: [mdx(), sitemap(), tailwind(), icon()],
+  integrations: [mdx(), sitemap(), tailwind(), icon(), react()],
 });

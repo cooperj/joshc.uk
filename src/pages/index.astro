@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { TopGithubRepos } from "@/components/TopGithubRepos";
 
 // Generic Item Type
 type ContentItem = {
@@ -105,7 +106,7 @@ const latestContent = content.slice(0, 5);
     </div>
 
     <div>
-      <p>@Other stuff, maybe get data from github????@</p>
+      <TopGithubRepos username="cooperj" client:only="true" />
     </div>
 
     <div>
