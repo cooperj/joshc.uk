@@ -71,7 +71,7 @@ const filteredPosts = content.filter((item) =>
     {
       filteredPosts.length > 0 ? (
         filteredPosts.map((item) => (
-          <a href={`/${item.collection}/${item.slug}/`} key={item.slug}>
+          <a href={`/${item.collection}/${item.slug}/`}>
             <div class="flex flex-col m-2 border-2 border-black-200 p-2 rounded-xl hover:bg-black-200">
               <div class="flex flex-row">
                 {item.data.icon ? (
