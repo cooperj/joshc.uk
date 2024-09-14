@@ -2,13 +2,16 @@
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-const { frontmatter, title, description, pubDate, update, icon } = Astro.props;
+const { frontmatter, title, description, pubDate, update, icon, tags } =
+  Astro.props;
 
 const pageTitle = frontmatter?.title ?? title ?? undefined;
 const pageDescription = frontmatter?.description ?? description ?? undefined;
 const pageIcon = frontmatter?.icon ?? icon ?? undefined;
 const pagePubDate = frontmatter?.pubDate ?? pubDate ?? undefined;
 const pageUpdate = frontmatter?.update ?? update ?? undefined;
+
+const pageTags = frontmatter?.tags ?? tags ?? [];
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
@@ -37,6 +40,19 @@ const pageUpdate = frontmatter?.update ?? update ?? undefined;
               <div class="last-updated-on">
                 Updated on <FormattedDate date={pageUpdate} />
               </div>
+            )
+          }
+        </div>
+        <div class="my-5 flex items-center justify-center flex-wrap">
+          {
+            pageTags && pageTags.length > 1 && (
+              <>
+                {pageTags.map((tag: string) => (
+                  <span class="bg-green-100 dark:bg-green-700 mr-4 mb-2 px-2 py-1 rounded-xl">
+                    {tag}
+                  </span>
+                ))}
+              </>
             )
           }
         </div>
