@@ -4,6 +4,9 @@ description: A classic inspired first-person shooter, set in the depths of the o
 icon: /images/aquanaut/icon.webp
 pubDate: 2022-06-10
 draft: false
+tags:
+    - gamedev
+    - unity
 ---
 
 Aquanaut is a classic shooter inspired by game, set in the depths of the ocean.

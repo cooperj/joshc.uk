@@ -4,6 +4,9 @@ description: "Scanning of a test cartridge to automate both the data collection 
 pubDate: 2021-12-30
 draft: false
 icon: /images/lft-scanning/icon.webp
+tags: 
+    - prototyping
+    - image-processing
 ---
 
 ## What is the project?

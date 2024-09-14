@@ -4,6 +4,9 @@ description: "I spent one weekend building a system to automatically scan asympt
 pubDate: 2021-12-30
 draft: false
 icon: /images/lft-scanning/icon.webp
+tags: 
+    - prototyping
+    - image-processing
 ---
 
 So it all started with me seeing this tweet.

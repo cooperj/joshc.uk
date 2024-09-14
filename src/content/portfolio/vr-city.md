@@ -4,6 +4,9 @@ description: A VR experience for simulating the effects of being in a city while
 icon: /images/vr-city/cover.webp
 pubDate: 2022-12-31
 draft: false
+tags:
+  - vr
+  - unity
 ---
 
 This is a VR experience to simulate the effects of being in a city while being inside a VR headset. This was the first time I created anything for VR and I enjoyed doing so - so expect me to see more stuff from me!

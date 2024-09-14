@@ -3,6 +3,8 @@ title: Undercooked
 description: 2D Overcooked Clone - Made with SDL in C++
 pubDate: 2022-05-20
 draft: true
+tags:
+    - gamedev
 ---
 
 This is an implementation of the core mechanics from [Overcooked](https://www.team17.com/games/overcooked/) implemented in SDL and C++.

@@ -4,6 +4,9 @@ description: I created a game similar to the popular mobile game Angry Birds, bu
 icon: /images/ba/icon.webp
 pubDate: 2019-05-15
 draft: false
+tags:
+    - gamedev
+    - unity
 ---
 
 ## What is the project?

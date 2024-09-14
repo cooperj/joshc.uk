@@ -4,6 +4,8 @@ description: "Tips to make your experience with Unity and Git pleasant!"
 pubDate: 2022-09-28
 draft: false
 icon: /images/unity-git-tips.webp
+tags:
+    - unity
 ---
 
 <div id="comment-box">

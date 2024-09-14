@@ -4,6 +4,9 @@ description: I Configure and Learn about IPv6 - and complain about how it doesn'
 pubDate: 2022-12-06
 draft: false
 icon: /images/hello-ipv6/icon.webp
+tags: 
+    - networking
+    - ipv6
 ---
 
 So if you didn't know already <abbr title="Internet Protocol version 6">IPv6</abbr> is - it's the ~~new~~ [old](https://www.techrepublic.com/article/explore-ipv6-with-windows-xp/) standard to replace <abbr title="Internet Protocol version 4">IPv4</abbr>.

@@ -4,6 +4,8 @@ description: I designed and created a website for the hosting company, Contineo.
 icon: /images/contineo.webp
 pubDate: 2019-07-01
 draft: false
+tags: 
+    - web
 ---
 
 ## What is the project?

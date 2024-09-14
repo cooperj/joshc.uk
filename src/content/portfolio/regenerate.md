@@ -4,6 +4,8 @@ description: I created a system for Linney Regenerate's team to receive and then
 icon: /images/regenerate/cover.webp
 pubDate: 2019-07-30
 draft: false
+tags:
+    - web
 ---
 
 ## What is the project?
