@@ -3,6 +3,10 @@ title: Airport Simulation
 description: Simulating the Affects of International Travel in a Virtual World to Provide Training and Reassurance
 pubDate: 2023-05-01
 draft: false
+tags:
+  - gamedev
+  - unity
+  - vr
 ---
 
 This is my third year dissertation project for my bachelors degree in [Games Computing](https://www.lincoln.ac.uk/course/cgpcmpub/), I am creating a [serious game](https://en.wikipedia.org/wiki/Serious_game).

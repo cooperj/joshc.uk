@@ -8,7 +8,10 @@ function getFeedItems(posts, projects) {
     ...post.data,
     link: `/blog/${post.slug}/`,
     date: new Date(post.data.pubDate),
-    categories: ["blog"],
+    categories:
+      post.data.tags && post.data.tags.length > 1
+        ? ["blog", ...post.data.tags]
+        : ["blog"],
     author: SITE_TITLE,
   }));
 
@@ -16,21 +19,28 @@ function getFeedItems(posts, projects) {
     ...project.data,
     link: `/portfolio/${project.slug}/`,
     date: new Date(project.data.pubDate),
-    categories: ["portfolio"],
+    categories:
+      project.data.tags && project.data.tags.length > 1
+        ? ["portfolio", ...project.data.tags]
+        : ["portfolio"],
     author: SITE_TITLE,
   }));
 
-  const data = blog.concat(portfolio);
-
   // Sort by date in descending order
+  const data = blog.concat(portfolio);
   data.sort((a, b) => b.date - a.date);
-
   return data;
 }
 
 export async function GET(context) {
-  const posts = await getCollection("blog");
-  const projects = await getCollection("portfolio");
+  const posts = await getCollection("blog", ({ data }) => {
+    return data.draft !== true;
+  });
+
+  const projects = await getCollection("portfolio", ({ data }) => {
+    return data.draft !== true;
+  });
+
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,

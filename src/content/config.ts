@@ -11,6 +11,7 @@ const blog = defineCollection({
     update: z.coerce.date().optional(),
     icon: z.string().optional(),
     draft: z.boolean().default(false),
+    tags: z.array(z.string()).default([]),
   }),
 });
 
@@ -25,6 +26,7 @@ const portfolio = defineCollection({
     update: z.coerce.date().optional(),
     icon: z.string().optional(),
     draft: z.boolean().default(false),
+    tags: z.array(z.string()).optional(),
   }),
 });
 
