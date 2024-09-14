@@ -1,11 +1,15 @@
 ---
 title: '"My Recipes" - AR Digital Recipe Book'
-description: Simulating the Affects of International Travel in a Virtual World to Provide Training and Reassurance
+description: An AR iOS/Android app built in Unity that allows users to place and interact with a virtual plate to view recipe information.
 pubDate: 2023-01-12
 draft: false
 icon: /images/my-recipes-ar/icon.webp
 tags:
   - unity
+  - c#
+  - ar
+  - ios
+  - android
 ---
 
 Similar to the [VR City Simulation](/portfolio/vr-city) (it was created as a part of the same module), this is my first deep dive into augmented reality development.

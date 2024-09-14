@@ -7,6 +7,7 @@ draft: false
 tags:
   - gamedev
   - unity
+  - c#
 ---
 
 Aquanaut is a classic shooter inspired by game, set in the depths of the ocean.
