@@ -4,8 +4,8 @@ description: Simulating the Affects of International Travel in a Virtual World t
 pubDate: 2023-01-12
 draft: false
 icon: /images/my-recipes-ar/icon.webp
-tags: 
-    - unity
+tags:
+  - unity
 ---
 
 Similar to the [VR City Simulation](/portfolio/vr-city) (it was created as a part of the same module), this is my first deep dive into augmented reality development.

@@ -5,7 +5,7 @@ icon: /images/regenerate/cover.webp
 pubDate: 2019-07-30
 draft: false
 tags:
-    - web
+  - web
 ---
 
 ## What is the project?

@@ -5,8 +5,8 @@ icon: /images/ba/icon.webp
 pubDate: 2019-05-15
 draft: false
 tags:
-    - gamedev
-    - unity
+  - gamedev
+  - unity
 ---
 
 ## What is the project?

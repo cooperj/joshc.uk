@@ -45,7 +45,7 @@ const pageTags = frontmatter?.tags ?? tags ?? [];
         </div>
         <div class="my-5 flex items-center justify-center flex-wrap">
           {
-            pageTags && pageTags.length > 1 && (
+            pageTags && pageTags.length >= 1 && (
               <>
                 {pageTags.map((tag: string) => (
                   <span class="bg-green-100 dark:bg-green-700 mr-4 mb-2 px-2 py-1 rounded-xl">
