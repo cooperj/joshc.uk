@@ -20,8 +20,6 @@ const pageHeaderImage = frontmatter?.headerImage ?? headerImage ?? undefined;
 const pagePubDate = frontmatter?.pubDate ?? pubDate ?? undefined;
 const pageUpdate = frontmatter?.update ?? update ?? undefined;
 const pageTags = frontmatter?.tags ?? tags ?? [];
-
-console.log(pageHeaderImage)
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
@@ -70,9 +68,9 @@ console.log(pageHeaderImage)
             pageTags && pageTags.length >= 1 && (
               <>
                 {pageTags.map((tag: string) => (
-                  <span class="bg-green-100 dark:bg-green-700 mr-4 mb-2 px-2 py-1 rounded-xl">
+                  <a href={`/tags/${tag}`} class="bg-green-100 dark:bg-green-700 mr-4 mb-2 px-2 py-1 rounded-xl no-underline hover:bg-green-200 dark:hover:bg-green-800">
                     {tag}
-                  </span>
+                  </a>
                 ))}
               </>
             )
