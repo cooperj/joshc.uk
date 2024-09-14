@@ -130,7 +130,7 @@ export const TopGithubRepos = ({ username }: Props) => {
         href={repo.html_url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-black-500 dark:text-white-500 no-underline"
+        className="text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600"
       >
         <h4>{repo.full_name}</h4>
       </a>
@@ -157,7 +157,17 @@ export const TopGithubRepos = ({ username }: Props) => {
           </div>
         )}
       </div>
-      <span className="no-underline">{repo.description}</span>
+      <span className="flex-1 no-underline">{repo.description}</span>
+
+      <a
+        href={repo.html_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-2 self-end justify-self-end text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600 flex items-center"
+      >
+        Read More
+        <Icon icon="lucide:chevron-right" className="ml-2" />
+      </a>
     </div>
   ));
 };

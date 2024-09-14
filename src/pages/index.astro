@@ -3,12 +3,14 @@ import { getCollection } from "astro:content";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { TopGithubRepos } from "@/components/TopGithubRepos";
+import { Icon } from "astro-icon/components";
 
 // Generic Item Type
 type ContentItem = {
   slug: string;
   collection: string;
   data: {
+    description: string;
     pubDate: Date;
     title: string;
   };
@@ -29,7 +31,7 @@ const content: ContentItem[] = posts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Get the last 5 contents
-const latestContent = content.slice(0, 5);
+const latestContent = content.slice(0, 6);
 ---
 
 <BaseLayout pageTitle={SITE_TITLE} pageDescription={SITE_DESCRIPTION}>
@@ -85,25 +87,38 @@ const latestContent = content.slice(0, 5);
     <div>
       <h3>@@ Portfolio/Blog, need better name@@ What have I been up to?</h3>
       <p>I have been up to a collection of things such as:</p>
-      <p>
-        <ul>
-          {
-            latestContent.map((item) => (
-              <li>
-                <a href={`${item.collection}/${item.slug}`}>
-                  {item.data.title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </p>
-      <p>
-        If you would like to know more, you should check out my <a
-          href="/portfolio">portfolio</a
-        > and <a href="/blog">blog</a>.
-      </p>
     </div>
+
+    <div class="flex justify-center flex-wrap w-full tablet:-mx-4 my-10">
+      {
+        latestContent.map((item) => (
+          <div class="bg-orange-100 dark:bg-orange-700 odd:bg-green-100 dark:odd:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(33.33%-2rem)] justify-start text-black-500 dark:text-white-500">
+            <a
+              href={`${item.collection}/${item.slug}`}
+              class="text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600"
+            >
+              <h4>{item.data.title}</h4>
+            </a>
+
+            <span class="flex-1 no-underline">{item.data.description}</span>
+
+            <a
+              href={`${item.collection}/${item.slug}`}
+              class="self-end justify-self-end	 mt-2 text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600 flex items-center"
+            >
+              Read More
+              <Icon name="lucide:chevron-right" class="ml-2" />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+
+    <p>
+      If you would like to know more, you should check out my <a
+        href="/portfolio">portfolio</a
+      > and <a href="/blog">blog</a>.
+    </p>
 
     <div class="flex justify-center flex-wrap w-full tablet:-mx-4 my-10">
       <TopGithubRepos username="cooperj" client:only="true" />
