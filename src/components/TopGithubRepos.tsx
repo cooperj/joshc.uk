@@ -89,10 +89,10 @@ export const TopGithubRepos = ({ username }: Props) => {
             },
           );
 
-          setRepos(sortedRepos.slice(0, 6));
+          setRepos(sortedRepos.slice(0, 4));
           localStorage.setItem(
             "github_repos",
-            JSON.stringify(sortedRepos.slice(0, 6)),
+            JSON.stringify(sortedRepos.slice(0, 4)),
           );
           localStorage.setItem("github_lastUpdated", new Date().toISOString());
         } catch (error) {
@@ -110,11 +110,11 @@ export const TopGithubRepos = ({ username }: Props) => {
   }, [username]);
 
   if (hasErrored) {
-    return <p>Something has gone wrong :(</p>;
+    return <p>Something has gone wrong 😓</p>;
   }
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p>Loading GitHub Repos... 🤔</p>;
   }
 
   if (repos.length === 0) {
@@ -124,7 +124,7 @@ export const TopGithubRepos = ({ username }: Props) => {
   return repos.map((repo) => (
     <div
       key={repo.name}
-      className="bg-orange-100 dark:bg-orange-700 even:bg-green-100 dark:even:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(33.33%-2rem)] justify-start text-black-500 dark:text-white-500"
+      className="bg-orange-100 dark:bg-orange-700 even:bg-green-100 dark:even:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(25%-2rem)] justify-start text-black-500 dark:text-white-500"
     >
       <a
         href={repo.html_url}
@@ -132,7 +132,7 @@ export const TopGithubRepos = ({ username }: Props) => {
         rel="noopener noreferrer"
         className="text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600"
       >
-        <h4>{repo.full_name}</h4>
+        <h4>{repo.name}</h4>
       </a>
 
       <div className="flex gap-4 align-middle no-underline mb-2">
@@ -157,7 +157,11 @@ export const TopGithubRepos = ({ username }: Props) => {
           </div>
         )}
       </div>
-      <span className="flex-1 no-underline">{repo.description}</span>
+      <span className="flex-1 no-underline">
+        {
+          repo.description.replace(/[^\p{L}\p{N}\p{P}\p{Z}^$\n]/gu, "") // remove emojis
+        }
+      </span>
 
       <a
         href={repo.html_url}
