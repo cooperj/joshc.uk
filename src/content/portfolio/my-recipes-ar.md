@@ -4,6 +4,7 @@ description: An AR iOS/Android app built in Unity that allows users to place and
 pubDate: 2023-01-12
 draft: false
 icon: /images/my-recipes-ar/icon.webp
+headerImage: /images/my-recipes-ar/cover.webp
 tags:
   - unity
   - c-sharp
