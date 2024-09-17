@@ -1,70 +1,60 @@
-# Astro Starter Kit: Blog
+# joshc.uk
 
-Colour Palette: https://coolors.co/0d1821-61988e-2a4d14-f0f4ef-ff9f1c
+The personal site, portfolio and blog of Josh Cooper!
 
-```sh
-npm create astro@latest -- --template blog
-```
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/cooperj/joshc.uk)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+![Website Screenshot](./.assets/site.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Colour Palette
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 100" xml:space="preserve">
+    <rect fill="#0d1821" x="0" y="0" width="100" height="100"/>
+    <rect fill="#61988e" x="100" y="0" width="100" height="100"/>
+    <rect fill="#2a4d14" x="200" y="0" width="100" height="100"/>
+    <rect fill="#f0f4ef" x="300" y="0" width="100" height="100"/>
+    <rect fill="#ff9f1c" x="400" y="0" width="100" height="100"/>
+</svg>
 
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+[Generated with coolors.co](https://coolors.co/0d1821-61988e-2a4d14-f0f4ef-ff9f1c)
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+This project is built using Astro. You'll see the following folders and files:
 
 ```text
+├── .devcontainer/
+|   └── devcontainer.json     # <--- This enables cool stuff like devcontainers and codespaces
 ├── public/
+|   ├── .well-known/
+|   ├── demos/
+|   ├── favicons/
+|   ├── files/
+|   └── images/
 ├── src/
 │   ├── components/
 │   ├── content/
 │   ├── layouts/
-│   └── pages/
+│   ├── pages/
+│   └── styles/
 ├── astro.config.mjs
 ├── README.md
 ├── package.json
 └── tsconfig.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
+Astro looks for `.astro`, `.md`, `.mdx` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+| Command                   | Action                                                |
+| :------------------------ | :---------------------------------------------------- |
+| `npm install`             | Installs dependencies                                 |
+| `npm run dev`             | Starts local dev server at `localhost:4321`           |
+| `npm run build`           | Build your production site to `./dist/`               |
+| `npm run preview`         | Preview your build locally, before deploying          |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`      |
+| `npm run astro -- --help` | Get help using the Astro CLI                          |
+| `npm run lint`            | Calls prettier and lints all the files in the project |
