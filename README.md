@@ -52,3 +52,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`      |
 | `npm run astro -- --help` | Get help using the Astro CLI                          |
 | `npm run lint`            | Calls prettier and lints all the files in the project |
+| `npx @astrojs/upgrade`    | Runs the astro upgrader!                              |
