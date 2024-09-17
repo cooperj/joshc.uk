@@ -8,13 +8,7 @@ The personal site, portfolio and blog of Josh Cooper!
 
 ## Colour Palette
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 100" xml:space="preserve">
-    <rect fill="#0d1821" x="0" y="0" width="100" height="100"/>
-    <rect fill="#61988e" x="100" y="0" width="100" height="100"/>
-    <rect fill="#2a4d14" x="200" y="0" width="100" height="100"/>
-    <rect fill="#f0f4ef" x="300" y="0" width="100" height="100"/>
-    <rect fill="#ff9f1c" x="400" y="0" width="100" height="100"/>
-</svg>
+![Palette Screenshot](./.assets/palette.png)
 
 [Generated with coolors.co](https://coolors.co/0d1821-61988e-2a4d14-f0f4ef-ff9f1c)
 
