@@ -40,4 +40,4 @@ The website had to work on multiple browsers, so I tested that the site worked i
 
 <iframe src="/demos/portfolio/contineo/home.html" frameborder="0" width="100%" height="900"></iframe>
 
-<a href="/demos/portfolio/contineo/home.html" target="_blank">View Demo in Full Screen</a>
+<a href="/demos/portfolio/contineo/home.html" target="_blank" class="button no-underline">View Demo in Full Screen</a>
