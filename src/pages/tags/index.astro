@@ -1,0 +1,62 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "@/components/FormattedDate.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+type ContentItem = {
+  slug: string;
+  collection: string;
+  data: {
+    tags: string[];
+    draft: boolean;
+    pubDate: Date;
+    description: string;
+    title: string;
+  };
+};
+
+const projects: ContentItem[] = (await getCollection(
+  "portfolio",
+  ({ data }) => {
+    return data.draft !== true;
+  },
+)) as ContentItem[];
+
+const posts: ContentItem[] = (await getCollection("blog", ({ data }) => {
+  return data.draft !== true;
+})) as ContentItem[];
+
+const content: ContentItem[] = posts.concat(projects);
+
+const allTags = content.flatMap((post) => post.data.tags);
+
+const filteredTags = allTags.filter(
+  (tag) => tag !== undefined && tag !== null && tag !== "",
+);
+
+const uniqueTags = [...new Set(filteredTags)].sort((a, b) =>
+  a.localeCompare(b),
+);
+---
+
+<BaseLayout pageTitle="Tags" pageDescription="Tags">
+  <div class="prose">
+    <div class="title mb-8">
+      <h1 class="text-4xl text-center font-extrabold mb-2">Tags</h1>
+    </div>
+  </div>
+  <section>
+    <div class="w-full flex flex-wrap">
+      {
+        uniqueTags.map((tag) => (
+          <a
+            href={`/tags/${tag}`}
+            class="bg-green-100 dark:bg-green-700 mr-4 mb-2 px-2 py-1 rounded-xl no-underline hover:bg-green-200 dark:hover:bg-green-800"
+          >
+            {tag}
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

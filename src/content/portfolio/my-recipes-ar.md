@@ -1,0 +1,42 @@
+---
+title: '"My Recipes" - AR Digital Recipe Book'
+description: An AR iOS/Android app built in Unity that allows users to place and interact with a virtual plate to view recipe information.
+pubDate: 2023-01-12
+draft: false
+icon: /images/my-recipes-ar/icon.webp
+headerImage: /images/my-recipes-ar/cover.webp
+tags:
+  - unity
+  - c-sharp
+  - ar
+  - ios
+  - android
+---
+
+Similar to the [VR City Simulation](/portfolio/vr-city) (it was created as a part of the same module), this is my first deep dive into augmented reality development.
+
+I developed this project using the Unity Engine and built for iOS.
+
+This project places a plate into the real world and uses the phone as a portal to see that.
+This then allows the user to interact with the 3D space by placing a plate - and then they can interact with the dish to view information such as the recipe.
+
+<div class="youtube">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x8vDYn_1wwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+Due to the limited time this project had, the implementation is limited, but I made sure to focus on the interaction that is presented.
+
+If I was to spend further time to develop this - I would first integrate the recipes into the app or have the AR experience be a lesser focus. Similar to how games such as Pokémon GO have the user enter into an AR mode out of choice and can use the experience without it, and use this to have the recipes built into the application using a remote server to provide them.
+
+---
+
+<details>
+<summary> Third-Party Assets Used </summary>
+
+- Unity 2021.3
+- Unity AR Feature Pack - Using AR Foundations 4.2.7
+- [Garfield Lasagna](https://skfb.ly/owEu9) by Fiasco_Fox is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
+- [Cookies on a Plate](https://skfb.ly/o7nJH) by Renee Beenen is licensed under [Creative Commons Attribution-NonCommercial](http://creativecommons.org/licenses/by-nc/4.0/).
+- [Pizza](https://skfb.ly/o8LIY) by inƨane is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
+
+</details>

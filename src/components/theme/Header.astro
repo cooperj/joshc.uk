@@ -1,0 +1,23 @@
+---
+import HeaderLink from "@/components/theme/HeaderLink.astro";
+import { SITE_TITLE } from "@/consts";
+---
+
+<header
+  class="my-2 tablet:px-5 laptop:px-20 laptop:py-10 tablet:mb-5 text-2xl text-green-500 dark:text-green-200"
+>
+  <nav
+    class="flex flex-col tablet:flex-row items-center tablet:items-end w-full"
+  >
+    <h2 class="font-bold text-3xl tablet:flex-1">
+      <a href="/">{SITE_TITLE}.</a>
+    </h2>
+
+    <div class="flex">
+      <HeaderLink href="/">About</HeaderLink>
+      <HeaderLink href="/portfolio">Portfolio</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/contact">Contact</HeaderLink>
+    </div>
+  </nav>
+</header>

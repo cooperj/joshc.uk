@@ -1,0 +1,6 @@
+{
+  "name": "joshc.uk",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
+  "forwardPorts": [4321],
+  "postCreateCommand": "npm install"
+}

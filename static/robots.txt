@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-User-agent: GPTBot
-Disallow: /
-
-Sitemap: https://www.joshc.uk/sitemap.xml
-

@@ -1,38 +1,54 @@
 # joshc.uk
 
-🍍👨🏻‍💻 This repo is for the personal website of Josh Cooper.
-This site includes my blog and portfolio.
+The personal site, portfolio and blog of Josh Cooper!
 
-This site was built in nuxt.js and is accessible at [www.joshc.uk](https://www.joshc.uk) 🌍.
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/cooperj/joshc.uk)
 
-The site is configured to auto deploy with [netlify](https://www.netlify.com) 💻.
+![Website Screenshot](./.assets/site.png)
 
-## Build Setup
+## Colour Palette
 
-Install dependencies
+![Palette Screenshot](./.assets/palette.png)
 
-```sh
-npm install
+[Generated with coolors.co](https://coolors.co/0d1821-61988e-2a4d14-f0f4ef-ff9f1c)
+
+## 🚀 Project Structure
+
+This project is built using Astro. You'll see the following folders and files:
+
+```text
+├── .devcontainer/
+|   └── devcontainer.json     # <--- This enables cool stuff like devcontainers and codespaces
+├── public/
+|   ├── .well-known/
+|   ├── demos/
+|   ├── favicons/
+|   ├── files/
+|   └── images/
+├── src/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   ├── pages/
+│   └── styles/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
 ```
 
-Serve with hot reload at `localhost:3000`
-```sh
-npm run dev
-```
+Astro looks for `.astro`, `.md`, `.mdx` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-Build for production and launch server
-```sh
-npm run build
-```
+## 🧞 Commands
 
-```sh
-npm run start
-```
+All commands are run from the root of the project, from a terminal:
 
-Generate static project
-
-```sh
-npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+| Command                   | Action                                                |
+| :------------------------ | :---------------------------------------------------- |
+| `npm install`             | Installs dependencies                                 |
+| `npm run dev`             | Starts local dev server at `localhost:4321`           |
+| `npm run build`           | Build your production site to `./dist/`               |
+| `npm run preview`         | Preview your build locally, before deploying          |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`      |
+| `npm run astro -- --help` | Get help using the Astro CLI                          |
+| `npm run lint`            | Calls prettier and lints all the files in the project |

@@ -1,0 +1,33 @@
+---
+interface Props {
+  date?: Date | string;
+}
+
+let { date } = Astro.props;
+
+let formattedDate = "Invalid Date";
+
+// Convert date if it exists and is either a Date object or valid date string.
+if (date) {
+  const parsedDate = new Date(date);
+  if (!isNaN(parsedDate.getTime())) {
+    formattedDate = parsedDate.toLocaleDateString("en-gb", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+    date = parsedDate; // Ensure `date` is now a Date object.
+  }
+}
+---
+
+{
+  formattedDate !== "Invalid Date" ? (
+    // Ensure date is a Date before calling toISOString
+    <time datetime={date instanceof Date ? date.toISOString() : ""}>
+      {formattedDate}
+    </time>
+  ) : (
+    <span>{formattedDate}</span>
+  )
+}

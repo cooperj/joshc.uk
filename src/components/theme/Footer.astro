@@ -1,0 +1,41 @@
+---
+const today = new Date();
+import { SITE_TITLE } from "@/consts";
+import { Icon } from "astro-icon/components";
+---
+
+<footer
+  class="p-5 text-center flex flex-col tablet:flex-row items-center justify-between text-lg my-10 pb-5 pt-10 border-t-2 border-t-black-200 mx-10 dark:border-t-white-200"
+>
+  <div class="flex flex-col items-center tablet:items-start mb-5 tablet:mb-0">
+    <p>{SITE_TITLE}, {today.getFullYear()}</p>
+    <p class="text-xs italic">Views are my own unless otherwise stated.</p>
+  </div>
+
+  <div class="mt-5 tablet:mt-0">
+    <ul>
+      <li class="hover:underline mb-2">
+        <a class="flex items-center" href="/rss.xml" target="_blank">
+          <Icon name="lucide:rss" class="mr-2" />
+          RSS Feed
+        </a>
+      </li>
+      <li class="hover:underline mb-2">
+        <a
+          class="flex items-center"
+          href="https://github.com/cooperj/joshc.uk"
+          target="_blank"
+        >
+          <Icon name="lucide:external-link" class="mr-2" />
+          View Source
+        </a>
+      </li>
+      <li class="hover:underline">
+        <a class="flex items-center" href="/privacy">
+          <Icon name="lucide:cookie" class="mr-2" />
+          Privacy Policy
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>

@@ -1,0 +1,86 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const {
+  frontmatter,
+  title,
+  description,
+  pubDate,
+  update,
+  icon,
+  headerImage,
+  tags,
+} = Astro.props;
+
+const pageTitle = frontmatter?.title ?? title ?? undefined;
+const pageDescription = frontmatter?.description ?? description ?? undefined;
+const pageIcon = frontmatter?.icon ?? icon ?? undefined;
+const pageHeaderImage = frontmatter?.headerImage ?? headerImage ?? undefined;
+const pagePubDate = frontmatter?.pubDate ?? pubDate ?? undefined;
+const pageUpdate = frontmatter?.update ?? update ?? undefined;
+const pageTags = frontmatter?.tags ?? tags ?? [];
+---
+
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <article id="content" class="tablet:m-5">
+    <div class="hero-image m-5 tablet:m-2 laptop:m-0">
+      {
+        pageHeaderImage && (
+          <header class="relative drop-shadow-md select-none">
+            <img
+              src={pageHeaderImage}
+              aria-hidden="true"
+              class="w-full h-32 tablet:h-64 rounded-3xl mb-10 object-cover select-none"
+            />
+          </header>
+        )
+      }
+
+      {
+        !pageHeaderImage && pageIcon && (
+          <header class="relative drop-shadow-md select-none">
+            <img
+              src={pageIcon}
+              aria-hidden="true"
+              class="w-full h-32 tablet:h-64 rounded-3xl mb-10 object-cover select-none"
+            />
+          </header>
+        )
+      }
+    </div>
+    <div class="prose">
+      <div class="title mb-8">
+        <h1 class="text-4xl text-center font-extrabold mb-2">{pageTitle}</h1>
+        <div class="date text-center">
+          {pagePubDate && <FormattedDate date={pagePubDate} />}
+
+          {
+            pageUpdate && (
+              <div class="last-updated-on">
+                Updated on <FormattedDate date={pageUpdate} />
+              </div>
+            )
+          }
+        </div>
+        <div class="my-5 flex items-center justify-center flex-wrap">
+          {
+            pageTags && pageTags.length >= 1 && (
+              <>
+                {pageTags.map((tag: string) => (
+                  <a
+                    href={`/tags/${tag}`}
+                    class="bg-green-100 dark:bg-green-700 mr-4 mb-2 px-2 py-1 rounded-xl no-underline hover:bg-green-200 dark:hover:bg-green-800"
+                  >
+                    {tag}
+                  </a>
+                ))}
+              </>
+            )
+          }
+        </div>
+      </div>
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,4 @@
+Contact: mailto:hi@joshc.uk
+Expires: 2025-06-01T00:00:00.000Z
+Preferred-Languages: en, en-gb
+Canonical: https://www.joshc.uk/.well-known/security.txt

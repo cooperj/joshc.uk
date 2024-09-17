@@ -1,0 +1,177 @@
+---
+import { getCollection } from "astro:content";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { TopGithubRepos } from "@/components/TopGithubRepos";
+import { Icon } from "astro-icon/components";
+
+// Generic Item Type
+type ContentItem = {
+  slug: string;
+  collection: string;
+  data: {
+    description: string;
+    pubDate: Date;
+    title: string;
+  };
+};
+
+// Get Posts and projects
+const posts = (await getCollection("blog", ({ data }) => {
+  return data.draft !== true;
+})) as ContentItem[];
+
+const projects = (await getCollection("portfolio", ({ data }) => {
+  return data.draft !== true;
+})) as ContentItem[];
+
+// Mix the contents and sort by newest first
+const content: ContentItem[] = posts
+  .concat(projects)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Get the last 6 contents
+const latestContent = content.slice(0, 6);
+---
+
+<BaseLayout pageTitle={SITE_TITLE} pageDescription={SITE_DESCRIPTION}>
+  <div class="flex items-center mx-5 mb-5 tablet:mb-20">
+    <div
+      class="flex-1 flex text-6xl font-serif items-center text-orange-600 dark:text-orange-500 mb-5 mr-2"
+    >
+      <p>Hey, I'm Josh!</p>
+      <p class="ml-3 motion-safe:animate-wave">👋</p>
+    </div>
+    <div>
+      <picture>
+        <source srcset="/images/joshua.webp" type="image/webp" />
+        <source srcset="/images/joshua.jpg" type="image/jpeg" />
+        <img
+          aria-hidden="true"
+          class="profile-mask w-56 hover:animate-wiggle"
+          src="/images/joshua.jpg"
+          alt="Profile Picture of Josh"
+        />
+      </picture>
+    </div>
+  </div>
+
+  <article id="content" class="tablet:m-5">
+    <div>
+      <p>
+        I am currently a technician at the
+        <a href="https://www.lincoln.ac.uk/" target="_blank"
+          >University of Lincoln</a
+        >
+        where I look after things such as our robots, computers, and software systems
+        which we use for both teaching and research, surrounding around subject areas
+        such as Computer Science and Engineering. These systems have been developed
+        to help our students navigate around our department in the form of our signage
+        or have a simple and intuitive experience to using our resources.
+      </p>
+      <p>
+        I am interested in a range of activites, such as: software and
+        application development, robotics, automation, networking, cloud,
+        homelab and games.
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Previously, I studied <a
+          href="https://www.lincoln.ac.uk/course/cgpcmpub/"
+          target="_blank">Games Computing at the University of Lincoln.</a
+        >
+        This degree is designed to teach computer science principals and theory,
+        while giving a games development flavour. This has allowed me to have a wider
+        range of perspective with the experiences I work with.
+      </p>
+
+      <p>
+        If you would like to see my whole CV, you should either <a
+          href="/contact">contact me directly</a
+        > or checkout my <a
+          href="https://linkedin.com/in/joshcdev"
+          target="_blank">LinkedIn</a
+        >.
+      </p>
+    </div>
+
+    <div class="mt-5">
+      <h2 class="text-center">What have I been up to?</h2>
+      <p>
+        Here are some of my most recent projects, where I've been doing stuff
+        with a range of technologies and applications of it. But, If you'd like
+        to learn more about my recent work (and some of my older work too), you
+        can explore my <a href="/portfolio">portfolio</a> for an in-depth look at
+        my projects.
+      </p>
+      <div
+        class="flex
+          justify-center
+          flex-wrap
+          w-full
+          tablet:-mx-4
+          my-10"
+      >
+        {
+          latestContent.map((item) => (
+            <div class="bg-orange-100 dark:bg-orange-700 odd:bg-green-100 dark:odd:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(33.3%-2rem)] justify-start text-black-500 dark:text-white-500">
+              <a
+                href={`${item.collection}/${item.slug}`}
+                class="text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600"
+              >
+                <h4>{item.data.title}</h4>
+              </a>
+
+              <span class="flex-1 no-underline">{item.data.description}</span>
+
+              <a
+                href={`${item.collection}/${item.slug}`}
+                class="mt-2 self-end justify-self-end text-black-500 dark:text-white-500 no-underline hover:text-black-800 dark:hover:text-white-800 flex items-center hover:underline"
+              >
+                Read More
+                <Icon name="lucide:chevron-right" class="ml-2" />
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h2 class="text-center">But what about Github?</h2>
+      <p>
+        Not everything I do ends up being substanial enough for me to write a <a
+          href="/blog">blog post</a
+        > or adding it to <a href="/portfolio">my portfolio</a>, but I do
+        release stuff on my <a
+          href="https://github.com/cooperj"
+          target="_blank"
+        >
+          Github account</a
+        >. Here is a selection of my top rated repositories ranked by their
+        stars.
+      </p>
+    </div>
+    <div class="flex justify-center flex-wrap w-full tablet:-mx-4 mb-10">
+      <TopGithubRepos username="cooperj" client:only="react" />
+    </div>
+  </article>
+
+  <div class="mt-5 text-center">
+    <h2>Like what you see?</h2>
+    <p>
+      Thanks for checking out my site. If you have seen someone that you like,
+      or what to talk aboout feel free to <a href="/contact">get in contact</a> with
+      me.
+    </p>
+
+    <div class="flex items-center justify-center">
+      <a href="/contact" class="button">
+        <Icon name="lucide:megaphone" class="mr-4" />
+        Contact Me
+      </a>
+    </div>
+  </div>
+</BaseLayout>

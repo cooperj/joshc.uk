@@ -1,0 +1,32 @@
+---
+import { SITE_DESCRIPTION } from "@/consts";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<BaseLayout pageTitle="Page not found" pageDescription={SITE_DESCRIPTION}>
+  <article class="text-center flex flex-col justify-center items-center">
+    <h1>Page not found</h1>
+    <p>
+      The page you tried visit does not exist. You may have typed the address
+      incorrectly or it may have been deleted.
+    </p>
+    <p>Check the address, and if it's still not working do get in touch :)</p>
+
+    <p class="mt-10">
+      <img
+        class="rounded-xl"
+        src="/images/spin.gif"
+        alt="Gorilla spinning in the centre, top text: I live in spain, bottom text: without the a"
+      />
+    </p>
+
+    <a
+      href="/"
+      class="bg-green-100 dark:bg-green-700 mr-4 mb-2 px-8 py-2 rounded-xl no-underline hover:bg-green-200 dark:hover:bg-green-800 flex items-center text-xl mt-5"
+    >
+      <Icon name="lucide:home" class="mr-2" />
+      Try Again?
+    </a>
+  </article>
+</BaseLayout>

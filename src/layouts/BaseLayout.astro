@@ -1,0 +1,43 @@
+---
+import BaseHead from "@/components/theme/BaseHead.astro";
+import Header from "@/components/theme/Header.astro";
+import Footer from "@/components/theme/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+import "@fontsource-variable/lora";
+import "@fontsource-variable/montserrat";
+
+interface Props {
+  pageTitle: string;
+  pageDescription: string;
+}
+
+const { pageTitle, pageDescription } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {
+      pageTitle !== SITE_TITLE ? (
+        <BaseHead
+          title={pageTitle + " / " + SITE_TITLE}
+          description={pageDescription}
+        />
+      ) : (
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+      )
+    }</head
+  >
+  <body
+    class="flex flex-col min-h-screen flex-grow justify-between bg-white-500 dark:bg-black-500 text-black-500 dark:text-white-500 mx-2 tablet:mx-5"
+  >
+    <Header />
+    <main
+      class="mx-auto max-w-[1140px] mb-20 flex-1"
+      transition:animate="slide"
+    >
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
