@@ -4,6 +4,7 @@ description: "I spent one weekend building a system to automatically scan asympt
 pubDate: 2021-12-30
 draft: false
 icon: /images/lft-scanning/icon.webp
+headerImage: /images/lft-scanning/cover.webp
 tags:
   - prototyping
   - image-processing
@@ -63,7 +64,7 @@ Once the QR code has been scanned the position of the 4 corners are revealed. Th
 
 The position data is then used to create an X and Y scale. These are created by measuring the distance between the top points and the left points.
 
-![Lateral flow test labelled with ID number at the top, positive label over QR code, QR is within a bounding box. Y-axis and X-axis is labelled for the scale](/images/lft-scanning/QR-example.webp)
+![Lateral flow test labelled with ID number at the top, positive label over QR code, QR is within a bounding box. Y-axis and X-axis is labelled for the scale](/images/lft-scanning/qr-example.webp)
 
 _NB: I have added in the label for the X and Y scales and the positive label was a placeholder ready to be filled with the data in the next stage_
 
