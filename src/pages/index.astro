@@ -37,7 +37,7 @@ const latestContent = content.slice(0, 6);
 <BaseLayout pageTitle={SITE_TITLE} pageDescription={SITE_DESCRIPTION}>
   <div class="flex items-center mx-5 mb-5 tablet:mb-20">
     <div
-      class="flex-1 flex text-6xl font-serif items-center text-orange-600 dark:text-orange-500 mb-5 mr-2"
+      class="flex-1 flex text-6xl font-serif items-center text-orange-800 dark:text-orange-500 mb-5 mr-2"
     >
       <p>Hey, I'm Josh!</p>
       <p class="ml-3 motion-safe:animate-wave">👋</p>
@@ -116,7 +116,7 @@ const latestContent = content.slice(0, 6);
       >
         {
           latestContent.map((item) => (
-            <div class="bg-orange-100 dark:bg-orange-700 odd:bg-green-100 dark:odd:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(33.3%-2rem)] justify-start text-black-500 dark:text-white-500">
+            <div class="bg-orange-300 dark:bg-orange-700 odd:bg-green-300 dark:odd:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(33.3%-2rem)] justify-start text-black-900 dark:text-white-500">
               <a
                 href={`${item.collection}/${item.slug}`}
                 class="text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600"

@@ -124,7 +124,7 @@ export const TopGithubRepos = ({ username }: Props) => {
   return repos.map((repo) => (
     <div
       key={repo.name}
-      className="bg-orange-100 dark:bg-orange-700 even:bg-green-100 dark:even:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(25%-2rem)] justify-start text-black-500 dark:text-white-500"
+      className="bg-orange-300 dark:bg-orange-700 odd:bg-green-300 dark:odd:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(25%-2rem)] justify-start text-black-900 dark:text-white-500"
     >
       <a
         href={repo.html_url}
