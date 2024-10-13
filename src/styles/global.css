@@ -3,6 +3,40 @@
 @tailwind utilities;
 
 @layer base {
+  @media print {
+    .profile-mask {
+      mask-image: none;
+      border-radius: 100%;
+    }
+
+    main a {
+      @apply underline
+    }
+
+    main a::after {
+      content: ' (' attr(href) ')';
+    }
+
+    abbr::after {
+      content: ' (' attr(title) ')';
+    }
+
+    .youtube::after {
+      content: attr(data-video-url);
+      display: block;
+      margin-top: 10px;
+    }
+
+    .youtube iframe {
+      display: none;
+    }
+
+    .button {
+      @apply border-2 border-green-900 rounded-xl no-underline flex items-center justify-center text-xl mt-5 w-full !important;
+    }
+
+  }
+
   html {
     @apply font-sans;
   }

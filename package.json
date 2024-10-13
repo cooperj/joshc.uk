@@ -1,7 +1,7 @@
 {
   "name": "joshc.uk",
   "type": "module",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,18 +11,18 @@
     "lint": "npx prettier . --write"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/mdx": "^3.1.7",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^3.1.8",
     "@astrojs/react": "^3.6.2",
-    "@astrojs/rss": "^4.0.7",
-    "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/tailwind": "^5.1.1",
+    "@astrojs/rss": "^4.0.8",
+    "@astrojs/sitemap": "^3.2.0",
+    "@astrojs/tailwind": "^5.1.2",
     "@fontsource-variable/lora": "^5.0.19",
     "@fontsource-variable/montserrat": "^5.0.20",
     "@iconify-json/lucide": "^1.2.2",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.15.9",
+    "astro": "^4.16.2",
     "astro-icon": "^1.1.1",
     "axios": "^1.7.7",
     "react": "^18.3.1",

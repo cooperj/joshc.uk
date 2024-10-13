@@ -167,7 +167,7 @@ export const TopGithubRepos = ({ username }: Props) => {
         href={repo.html_url}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-2 self-end justify-self-end text-black-500 dark:text-white-500 no-underline hover:text-black-800 dark:hover:text-white-800 flex items-center hover:underline"
+        className="print:hidden mt-2 self-end justify-self-end text-black-500 dark:text-white-500 no-underline hover:text-black-800 dark:hover:text-white-800 flex items-center hover:underline"
       >
         Read More
         <Icon icon="lucide:chevron-right" className="ml-2" />

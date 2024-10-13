@@ -82,4 +82,13 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
   src="https://static.cloudflareinsights.com/beacon.min.js"
   data-cf-beacon='{"token": "5a27966e749f48e8885d5a271a3b6990"}'></script>
 
+<!-- Force all detail/summaries to be open on print -->
+<script>
+  window.addEventListener("beforeprint", () => {
+    document.querySelectorAll("details").forEach((detail) => {
+      detail.setAttribute("open", "true");
+    });
+  });
+</script>
+
 <ViewTransitions />

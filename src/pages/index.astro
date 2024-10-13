@@ -40,7 +40,7 @@ const latestContent = content.slice(0, 6);
       class="flex-1 flex text-6xl font-serif items-center text-orange-800 dark:text-orange-500 mb-5 mr-2"
     >
       <p>Hey, I'm Josh!</p>
-      <p class="ml-3 motion-safe:animate-wave">👋</p>
+      <p class="ml-3 motion-safe:animate-wave print:hidden">👋</p>
     </div>
     <div>
       <picture>
@@ -128,9 +128,9 @@ const latestContent = content.slice(0, 6);
 
               <a
                 href={`${item.collection}/${item.slug}`}
-                class="mt-2 self-end justify-self-end text-black-500 dark:text-white-500 no-underline hover:text-black-800 dark:hover:text-white-800 flex items-center hover:underline"
+                class="print:hidden mt-2 self-end justify-self-end text-black-500 dark:text-white-500 no-underline hover:text-black-800 dark:hover:text-white-800 flex items-center hover:underline"
               >
-                Read More
+                  Read More
                 <Icon name="lucide:chevron-right" class="ml-2" />
               </a>
             </div>

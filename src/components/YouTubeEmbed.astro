@@ -1,0 +1,15 @@
+--- 
+const {videoId} = Astro.props; 
+const videoUrl = `https://www.youtube-nocookie.com/embed/${videoId}`; 
+---
+
+<div class="youtube" data-video-url={videoUrl}>
+  <iframe
+    width="560"
+    height="315"
+    src={videoUrl}
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+</div>
