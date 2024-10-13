@@ -1,6 +1,6 @@
---- 
-const {videoId} = Astro.props; 
-const videoUrl = `https://www.youtube-nocookie.com/embed/${videoId}`; 
+---
+const { videoId } = Astro.props;
+const videoUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
 ---
 
 <div class="youtube" data-video-url={videoUrl}>
