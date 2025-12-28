@@ -9,6 +9,11 @@ import icon from "astro-icon";
 import react from "@astrojs/react";
 
 export default defineConfig({
+  vite: {
+    server: {
+      allowedHosts: true,
+    },
+  },
   site: "https://www.joshc.uk",
   integrations: [mdx(), sitemap(), tailwind(), icon(), react()],
 });
