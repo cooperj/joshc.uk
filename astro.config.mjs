@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import mermaid from 'astro-mermaid';
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
@@ -13,5 +14,18 @@ export default defineConfig({
     },
   },
   site: "https://www.joshc.uk",
-  integrations: [mdx(), sitemap(), icon(), react()],
+  integrations: [mermaid({
+    theme: 'forest',
+    autoTheme: true,
+    iconPacks: [
+      {
+        name: 'logos',
+        loader: () => fetch('https://unpkg.com/@iconify-json/arcticons@1/icons.json').then(res => res.json())
+      },
+      {
+        name: 'lucide',
+        loader: () => fetch('https://unpkg.com/@iconify-json/lucide@1/icons.json').then(res => res.json())
+      }
+    ]
+  }), mdx(), sitemap(), icon(), react()],
 });
