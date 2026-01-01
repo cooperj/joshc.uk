@@ -4,13 +4,12 @@ pubDate: 2025-12-31
 draft: false
 fmContentType: blog
 tags:
-   - homelab
-   - networking
+  - homelab
+  - networking
 description: End of the Year Review into my Homelab Setup
 ---
 
 I have been running a homelab for years, starting with a single Raspberry Pi and my old Mac Mini running Windows Server 2012R2 with HyperV tucked away in a cupboard. Over time, I’ve built and torn down many setups: Minecraft servers, Plex, home automation, and numerous other services. Along the way, I’ve learned what works, and what definitely doesn’t (including opening too many ports in my firewall).
-
 
 ## 1. Hardware
 
@@ -64,11 +63,11 @@ I think it's pretty good – but with the [enforcement of using Synology branded
 
 Where I have moved the VMs to is my Proxmox VE cluster, this is made of the following three machines.
 
-| Node                      | CPU                      | Memory                         | Storage           |
-|---------------------------|--------------------------|--------------------------------|-------------------|
-| **Minisforum UM690S**     | AMD Ryzen 9 6900HX       | 32 GB DDR5 @ 4800 MT/s         | 1 TB NVMe SSD     |
-| **Topton N5105**          | Intel Celeron N5105      | 16 GB DDR4                     | 1 TB SATA SSD     |
-| **Mac mini (Late 2012)**  | Intel Core i5-3210M      | 10 GB DDR3 (2 GB + 8 GB)       | 250 GB SATA SSD   |
+| Node                     | CPU                 | Memory                   | Storage         |
+| ------------------------ | ------------------- | ------------------------ | --------------- |
+| **Minisforum UM690S**    | AMD Ryzen 9 6900HX  | 32 GB DDR5 @ 4800 MT/s   | 1 TB NVMe SSD   |
+| **Topton N5105**         | Intel Celeron N5105 | 16 GB DDR4               | 1 TB SATA SSD   |
+| **Mac mini (Late 2012)** | Intel Core i5-3210M | 10 GB DDR3 (2 GB + 8 GB) | 250 GB SATA SSD |
 
 The Minisforum PC was purchased specifically for running VMs – it's nice and powerful, but is small and power efficient.
 
@@ -86,10 +85,9 @@ The main purpose is to run the bridge for TP-Link HS100 smart plugs that I have 
 
 The other thing is that it hosts a DHT22 sensor, but I plan on replacing this with the exact same sensor connected to an ESP32 running ESP Home or something that supports Matter out of the box.
 
-
 ## 2. Apps and Services
 
-So over the years, I've run stuff, and it's "fell over" and I've not been the best at keeping it alive, it's a *lab* after all, but here are the tools that I actually use and have fixed when they broke!
+So over the years, I've run stuff, and it's "fell over" and I've not been the best at keeping it alive, it's a _lab_ after all, but here are the tools that I actually use and have fixed when they broke!
 
 The biggest tool that I regret not picking up for the longest time is [Home Assistant](https://www.home-assistant.io?ref=joshc.uk), practically all the problems I had with it previously have now been fully resolved thanks to Matter and the managed HAOS, that takes Home Assistant and turns it into a nice to deploy 'set it and forget it' appliance. I want to use this alongside Apple HomeKit as this is what my family have got used to as we have been using [Homebridge](https://homebridge.io?ref=joshc.uk).
 
@@ -134,4 +132,3 @@ Scrypted can be moved into Kubernetes with a little bit of Helm wrangling as the
 ### IPv6
 
 I haven't set this up again. Using HE.net's Tunnel Broker is just too slow to make it practical to use, so where I need to use IPv6 I connect to a VPN or tether from my phone and rely on legacy IPv4 for everything.
-
