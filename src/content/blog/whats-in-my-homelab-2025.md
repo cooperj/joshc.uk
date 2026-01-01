@@ -73,15 +73,15 @@ The Minisforum PC was purchased specifically for running VMs – it's nice and p
 
 The Topton N5105 machine was originally used as a pfSense router and Proxmox host, but I decided to go against mixing my router and VM hosts to avoid annoying my family and taking the internet out due to a misconfiguration.
 
-The Mac mini wasn't originally planned to be apart of the cluster, but I added this simply to maintain Quorum of the cluster, it doesn't typically run much mainly a container running Uptime Kuma, which monitors the cluster (among other things).
+The Mac mini wasn't originally planned to be a part of the cluster, but I added this simply to maintain Quorum of the cluster, it doesn't typically run much mainly a container running Uptime Kuma, which monitors the cluster (among other things).
 
 ### Raspberry Pi 2
 
-Also outside the cluster, I have an old Raspberry Pi 2, this is the first Pi I brought, and has been chugging along ever since February 2015. I originally brought this to run Home Assistant, which wasn't as good as it is now – more about that later, but I am currently using Apple Home.
+Also outside the cluster, I have an old Raspberry Pi 2, this is the first Pi I bought, and has been chugging along ever since February 2015. I originally bought this to run Home Assistant, which wasn't as good as it is now – more about that later, but I am currently using Apple Home.
 
 So this Pi is just acting as a [Homebridge](https://homebridge.io/) server, to connect non-HomeKit devices into Apple Home. Originally I ran more through it, but now it runs the [`homebridge-tplink-smarthome`](https://github.com/plasticrake/homebridge-tplink-smarthome) and [`homebridge-temperature-sensor-dht`](https://github.com/RaresAil/homebridge-temperature-sensor-dht) plugins.
 
-The main purpose is to run the bridge for TP-Link HS100 smart plugs that I have brought about five over the years (but do not go out you're way to buy them now! Go buy something Matter or Zigbee supported, as they decided to try and close up the local API. Vote with your wallet, but don't replace what doesn't need replacing) and now need a way to keep them working.
+The main purpose is to run the bridge for TP-Link HS100 smart plugs that I have bought about five over the years (but do not go out you're way to buy them now! Go buy something Matter or Zigbee supported, as they decided to try and close up the local API. Vote with your wallet, but don't replace what doesn't need replacing) and now need a way to keep them working.
 
 The other thing is that it hosts a DHT22 sensor, but I plan on replacing this with the exact same sensor connected to an ESP32 running ESP Home or something that supports Matter out of the box.
 
@@ -125,7 +125,7 @@ But the question now is, how are you going to manage the containers? I am curren
 
 So I have recently started running Home Assistant again, and since I first and last used it seriously in about 2017, it has grown to be an incredibly strong choice and part of that is the ecosystem around HAOS. Currently, I am running: Home Assistant, Homebridge and Scrypted, and all the automations are over the place some in Home Assistant, some in HomeKit.
 
-I am hoping that Home Assistant can be used to consolidate my requirements for Home Automation including Homebridge. But, the problem with this is deploying it to Kubernetes is that the easiest option is to deploy just the container. Doing this looses some of the nice to haves of HA such as Add-ons. So my current plan is to run HAOS as a VM still, but manage it with Kubernetes using [KubeVirt](https://kubevirt.io?ref=joshc.uk) – this would also be my go-to method for running other non-containerise-able appliances and test machines.
+I am hoping that Home Assistant can be used to consolidate my requirements for Home Automation including Homebridge. But, the problem with this is deploying it to Kubernetes is that the easiest option is to deploy just the container. Doing this loses some of the nice to haves of HA such as Add-ons. So my current plan is to run HAOS as a VM still, but manage it with Kubernetes using [KubeVirt](https://kubevirt.io?ref=joshc.uk) – this would also be my go-to method for running other non-containerise-able appliances and test machines.
 
 Scrypted can be moved into Kubernetes with a little bit of Helm wrangling as they build a Docker container and provide a Docker Compose file. I would use this inside of Home Assistant, but due to HA being in a VM I would have the same problems of not being able to use the iGPU.
 
