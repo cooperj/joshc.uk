@@ -17,11 +17,15 @@ export default defineConfig({
   integrations: [mermaid({
     theme: 'forest',
     autoTheme: true,
-    iconPacks: [
-      {
-        name: 'logos',
-        loader: () => fetch('https://unpkg.com/@iconify-json/arcticons@1/icons.json').then(res => res.json())
+    mermaidConfig: {
+      flowchart: {
+        htmlLabels: true
       },
+      accessibility: {
+        ariaRoledescription: 'diagram'
+      }
+    },
+    iconPacks: [
       {
         name: 'lucide',
         loader: () => fetch('https://unpkg.com/@iconify-json/lucide@1/icons.json').then(res => res.json())
