@@ -11,6 +11,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -130,34 +131,39 @@
     @apply border border-dashed bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-gray-800 dark:text-gray-200;
   }
 
-  #content > div.prose > table {
+  #content>div.prose>table {
     @apply my-6 w-full text-sm rounded-lg overflow-hidden border border-gray-300 dark:border-gray-700;
     border-collapse: separate;
     border-spacing: 0;
   }
 
-  #content > div.prose > table thead {
+  #content>div.prose>table thead {
     @apply bg-orange-100 dark:bg-gray-800;
   }
 
-  #content > div.prose > table thead th,
-  #content > div.prose > table tbody td {
+  #content>div.prose>table thead th,
+  #content>div.prose>table tbody td {
     @apply border-b border-r border-gray-300 dark:border-gray-700 px-4 py-2 text-left;
   }
 
-  #content > div.prose > table thead th:last-child,
-  #content > div.prose > table tbody td:last-child {
+  #content>div.prose>table thead th:last-child,
+  #content>div.prose>table tbody td:last-child {
     @apply border-r-0;
   }
 
-  #content > div.prose > table tbody tr:last-child td {
+  #content>div.prose>table tbody tr:last-child td {
     @apply border-b-0;
   }
-}
 
-/* Override the background colour of the mermaid charts on dark backgrounds because theres not enough contrast */
-@media (prefers-color-scheme: dark) {
+  /* Override the background colour of the mermaid charts */
   pre.mermaid[data-processed] {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(0, 0, 0, 0.04) !important;
+    @apply rounded-3xl;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    pre.mermaid[data-processed] {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
   }
 }
