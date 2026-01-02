@@ -74,6 +74,11 @@ export const TopGithubRepos = ({ username }: Props) => {
             (repo: RepoStats) => !(repo.name === repo.owner.login),
           );
 
+          // Filter out joshc.uk repo
+          filteredRepos = filteredRepos.filter(
+            (repo: RepoStats) => repo.name !== "joshc.uk",
+          );
+
           const sortedRepos = filteredRepos.sort(
             (a: RepoStats, b: RepoStats) => {
               // First compare by stargazers count
@@ -132,7 +137,7 @@ export const TopGithubRepos = ({ username }: Props) => {
         rel="noopener noreferrer"
         className="text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600"
       >
-        <h4>{repo.name}</h4>
+        <h4 className="mt-0">{repo.name}</h4>
       </a>
 
       <div className="flex gap-4 align-middle no-underline mb-2">

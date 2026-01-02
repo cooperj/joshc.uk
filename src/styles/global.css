@@ -1,6 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@config '../../tailwind.config.mjs';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 @layer base {
   @media print {
@@ -32,7 +50,7 @@
     }
 
     .button {
-      @apply border-2 border-green-900 rounded-xl no-underline flex items-center justify-center text-xl mt-5 w-full !important;
+      @apply border-2 border-green-900 rounded-xl no-underline flex items-center justify-center text-xl mt-5 w-full;
     }
   }
 
@@ -45,23 +63,23 @@
   }
 
   h2 {
-    @apply text-3xl font-semibold mt-6 mb-3 font-serif;
+    @apply text-3xl font-semibold mt-16 mb-3 font-serif;
   }
 
   h3 {
-    @apply text-2xl font-medium mt-4 mb-2 font-serif;
+    @apply text-2xl font-medium mt-8 mb-2 font-serif;
   }
 
   h4 {
-    @apply text-xl font-normal mt-2 mb-1 font-serif;
+    @apply text-xl font-normal mt-6 mb-1 font-serif;
   }
 
   h5 {
-    @apply text-lg font-normal mt-1 mb-0 font-serif;
+    @apply text-lg font-normal mt-4 mb-0 font-serif;
   }
 
   h6 {
-    @apply text-sm font-normal mt-0 mb-0 font-serif;
+    @apply text-sm font-normal mt-2 mb-0 font-serif;
   }
 
   .youtube {
@@ -69,7 +87,7 @@
   }
 
   .youtube iframe {
-    @apply absolute top-0 left-0 w-full h-full outline-none;
+    @apply absolute top-0 left-0 w-full h-full outline-hidden;
   }
 
   #content ul li {
@@ -105,6 +123,46 @@
   }
 
   .button {
-    @apply text-green-900 dark:text-white-500 bg-green-300 border-2 border-green-900 dark:bg-green-700 mr-4 mb-2 px-8 py-2 rounded-xl no-underline hover:bg-green-200 dark:hover:bg-green-800 flex items-center justify-center text-xl mt-5 tablet:w-1/3 !important;
+    @apply text-green-900 dark:text-white-500 bg-green-300 border-2 border-green-900 dark:bg-green-700 mr-4 mb-2 px-8 py-2 rounded-xl no-underline hover:bg-green-200 dark:hover:bg-green-800 flex items-center justify-center text-xl mt-5 tablet:w-1/3;
+  }
+
+  code {
+    @apply border border-dashed bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-gray-800 dark:text-gray-200;
+  }
+
+  #content > div.prose > table {
+    @apply my-6 w-full text-sm rounded-lg overflow-hidden border border-gray-300 dark:border-gray-700;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  #content > div.prose > table thead {
+    @apply bg-orange-100 dark:bg-gray-800;
+  }
+
+  #content > div.prose > table thead th,
+  #content > div.prose > table tbody td {
+    @apply border-b border-r border-gray-300 dark:border-gray-700 px-4 py-2 text-left;
+  }
+
+  #content > div.prose > table thead th:last-child,
+  #content > div.prose > table tbody td:last-child {
+    @apply border-r-0;
+  }
+
+  #content > div.prose > table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+
+  /* Override the background colour of the mermaid charts */
+  pre.mermaid[data-processed] {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+    @apply rounded-3xl;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    pre.mermaid[data-processed] {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
   }
 }

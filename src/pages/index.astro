@@ -35,14 +35,17 @@ const latestContent = content.slice(0, 6);
 ---
 
 <BaseLayout pageTitle={SITE_TITLE} pageDescription={SITE_DESCRIPTION}>
-  <div class="flex items-center mx-5 mb-5 tablet:mb-20">
+  <div class="flex items-center mx-5 mb-5 tablet:mb-20 gap-4">
     <div
-      class="flex-1 flex text-6xl font-serif items-center text-orange-800 dark:text-orange-500 mb-5 mr-2"
+      class="flex flex-1 flex-col font-serif text-orange-800 dark:text-orange-500 mb-5"
     >
-      <p>Hey, I'm Josh!</p>
-      <p class="ml-3 motion-safe:animate-wave print:hidden">👋</p>
+      <div class="flex text-6xl">
+        <p>Hey, I'm Josh!</p>
+        <p class="ml-3 motion-safe:animate-wave print:hidden self-center">👋</p>
+      </div>
+      <p class="mt-5 text-xl">Software Engineer in Nottinghamshire, UK</p>
     </div>
-    <div>
+    <div class="h-full self-start">
       <picture>
         <source srcset="/images/joshua.webp" type="image/webp" />
         <source srcset="/images/joshua.jpg" type="image/jpeg" />
@@ -59,9 +62,22 @@ const latestContent = content.slice(0, 6);
   <article id="content" class="tablet:m-5">
     <div>
       <p>
-        I am currently a technician at the
-        <a href="https://www.lincoln.ac.uk/" target="_blank"
-          >University of Lincoln</a
+        I work as a Junior Software Engineer on the <a
+          href="https://agri-opencore.org/"
+          target="_blank"
+          rel="noopener noreferrer">Agri-OpenCore</a
+        > research project as a part of <a
+          href="https://lcas.lincoln.ac.uk"
+          target="_blank"
+          rel="noopener noreferrer">Lincoln Centre of Autonomous Systems</a
+        > group, working with ROS2 and many Docker containers.
+      </p>
+      <p>
+        I am also a technician at the
+        <a
+          href="https://www.lincoln.ac.uk/"
+          target="_blank"
+          rel="noopener noreferrer">University of Lincoln</a
         >
         where I look after things such as our robots, computers, and software systems
         which we use for both teaching and research, surrounding around subject areas
@@ -82,9 +98,9 @@ const latestContent = content.slice(0, 6);
           href="https://www.lincoln.ac.uk/course/cgpcmpub/"
           target="_blank">Games Computing at the University of Lincoln.</a
         >
-        This degree is designed to teach computer science principals and theory,
-        while giving a games development flavour. This has allowed me to have a wider
-        range of perspective with the experiences I work with.
+        This degree is designed to teach computer science principals and theory, while
+        giving a games development flavour. This has allowed me to have a wider range
+        of perspective with the experiences I work with.
       </p>
 
       <p>
@@ -121,7 +137,7 @@ const latestContent = content.slice(0, 6);
                 href={`${item.collection}/${item.slug}`}
                 class="text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600"
               >
-                <h4>{item.data.title}</h4>
+                <h4 class="mt-0">{item.data.title}</h4>
               </a>
 
               <span class="flex-1 no-underline">{item.data.description}</span>
@@ -163,7 +179,7 @@ const latestContent = content.slice(0, 6);
     <h2>Like what you see?</h2>
     <p>
       Thanks for checking out my site. If you have seen someone that you like,
-      or what to talk aboout feel free to <a href="/contact">get in contact</a> with
+      or what to talk about feel free to <a href="/contact">get in contact</a> with
       me.
     </p>
 

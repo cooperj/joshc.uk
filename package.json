@@ -1,7 +1,7 @@
 {
   "name": "joshc.uk",
   "type": "module",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,28 +11,33 @@
     "lint": "npx prettier . --write"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.0.7",
-    "@astrojs/react": "^4.1.6",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/rss": "^4.0.14",
+    "@astrojs/sitemap": "^3.6.0",
     "@fontsource-variable/lora": "^5.0.19",
     "@fontsource-variable/montserrat": "^5.0.20",
     "@iconify-json/lucide": "^1.2.2",
+    "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "astro": "^5.15.9",
+    "astro": "^5.16.6",
     "astro-icon": "^1.1.1",
+    "astro-mermaid": "^1.2.0",
     "axios": "^1.12.2",
+    "mermaid": "^11.12.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@iconify-icon/react": "^2.1.0",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
+  },
+  "overrides": {
+    "@anthropic-ai/claude-code": "./__EXCLUDE"
   }
 }
