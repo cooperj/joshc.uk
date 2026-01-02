@@ -79,7 +79,7 @@ The Mac mini wasn't originally planned to be a part of the cluster, but I added 
 
 Also outside the cluster, I have an old Raspberry Pi 2, this is the first Pi I bought, and has been chugging along ever since February 2015. I originally bought this to run Home Assistant, which wasn't as good as it is now – more about that later, but I am currently using Apple Home.
 
-So this Pi is just acting as a [Homebridge]((https://homebridge.io?ref=joshc.uk) server, to connect non-HomeKit devices into Apple Home. Originally I ran more through it, but now it runs the [`homebridge-tplink-smarthome`](https://github.com/plasticrake/homebridge-tplink-smarthome) and [`homebridge-temperature-sensor-dht`](https://github.com/RaresAil/homebridge-temperature-sensor-dht) plugins.
+So this Pi is just acting as a [Homebridge](https://homebridge.io?ref=joshc.uk) server, to connect non-HomeKit devices into Apple Home. Originally I ran more through it, but now it runs the [`homebridge-tplink-smarthome`](https://github.com/plasticrake/homebridge-tplink-smarthome) and [`homebridge-temperature-sensor-dht`](https://github.com/RaresAil/homebridge-temperature-sensor-dht) plugins.
 
 The main purpose is to run the bridge for TP-Link HS100 smart plugs that I have bought about five over the years (but do not go out you're way to buy them now! Go buy something Matter or Zigbee supported, as they decided to try and close up the local API. Vote with your wallet, but don't replace what doesn't need replacing) and now need a way to keep them working.
 
