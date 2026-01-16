@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "astro": "^5.16.6",
+    "astro": "^5.16.10",
     "astro-icon": "^1.1.1",
     "astro-mermaid": "^1.2.0",
     "axios": "^1.12.2",
