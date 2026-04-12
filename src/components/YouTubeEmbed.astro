@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 
 const { videoId } = Astro.props;
-const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+const thumbnailUrl = `/internal/youtube-thumbnail/${videoId}.jpg`;
 const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
 const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
 ---
@@ -33,7 +33,11 @@ const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
     <p class="text-xs text-black-400 dark:text-white-600 max-w-xs mt-0">
       Loading this video will share your data with Google.
     </p>
-    <button data-action="embed" class="button !py-1 !px-4 !text-sm !mt-1">
+    <button
+      type="button"
+      data-action="embed"
+      class="button !py-1 !px-4 !text-sm !mt-1"
+    >
       Play Video
     </button>
     <a
@@ -42,7 +46,12 @@ const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
       rel="noopener noreferrer"
       class="text-xs underline text-orange-800 dark:text-orange-500 hover:text-orange-600 dark:hover:text-orange-300"
     >
-      <Icon name="lucide:external-link" class="inline mr-1" />
+      <Icon
+        name="lucide:external-link"
+        class="inline mr-1"
+        aria-hidden="true"
+        focusable="false"
+      />
       Open on YouTube
     </a>
   </div>

@@ -1,14 +1,6 @@
 User-agent: *
 Allow: /
-
-User-agent: *
-Disallow: /tags/*
-
-User-agent: *
 Disallow: /tags
-
-User-agent: GPTBot
-Disallow: /
+Disallow: /internal
 
 Sitemap: https://www.joshc.uk/sitemap-index.xml
-
