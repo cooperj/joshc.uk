@@ -1,10 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import FormattedDate from "@/components/FormattedDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 type ContentItem = {
-  slug: string;
+  id: string;
   collection: string;
   data: {
     tags: string[];

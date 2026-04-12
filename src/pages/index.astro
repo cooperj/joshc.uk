@@ -7,7 +7,7 @@ import { Icon } from "astro-icon/components";
 
 // Generic Item Type
 type ContentItem = {
-  slug: string;
+  id: string;
   collection: string;
   data: {
     description: string;
@@ -134,7 +134,7 @@ const latestContent = content.slice(0, 6);
           latestContent.map((item) => (
             <div class="bg-orange-300 dark:bg-orange-700 odd:bg-green-300 dark:odd:bg-green-700 px-4 py-4 m-2 rounded-xl flex flex-col w-full tablet:w-[calc(50%-2rem)] laptop:w-[calc(33.3%-2rem)] justify-start text-black-900 dark:text-white-500">
               <a
-                href={`${item.collection}/${item.slug}`}
+                href={`${item.collection}/${item.id}`}
                 class="text-black-500 dark:text-white-500 no-underline hover:text-black-600 dark:hover:text-white-600"
               >
                 <h4 class="mt-0">{item.data.title}</h4>
@@ -143,7 +143,7 @@ const latestContent = content.slice(0, 6);
               <span class="flex-1 no-underline">{item.data.description}</span>
 
               <a
-                href={`${item.collection}/${item.slug}`}
+                href={`${item.collection}/${item.id}`}
                 class="print:hidden mt-2 self-end justify-self-end text-black-500 dark:text-white-500 no-underline hover:text-black-800 dark:hover:text-white-800 flex items-center hover:underline"
               >
                 Read More
