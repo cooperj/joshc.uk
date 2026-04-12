@@ -8,7 +8,7 @@ const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
 ---
 
 <div
-  class="youtube-consent my-10 rounded-xl overflow-hidden relative min-h-70 tablet:aspect-video"
+  class="youtube-consent my-10 rounded-xl overflow-hidden relative min-h-72 tablet:aspect-video"
   data-embed-url={embedUrl}
 >
   <img
@@ -33,7 +33,7 @@ const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
     <p class="text-xs text-black-400 dark:text-white-600 max-w-xs mt-0">
       Loading this video will share your data with Google.
     </p>
-    <button data-action="embed" class="button py-1! px-4! text-sm! mt-1!">
+    <button data-action="embed" class="button !py-1 !px-4 !text-sm !mt-1">
       Play Video
     </button>
     <a
@@ -50,11 +50,12 @@ const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
   <iframe
     class="youtube-iframe absolute inset-0 w-full h-full rounded-xl opacity-0 pointer-events-none transition-opacity duration-300"
     src=""
+    title="YouTube video player"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
 </div>
 
-<script>
+<script lang="ts">
   document
     .querySelectorAll<HTMLElement>(".youtube-consent")
     .forEach((wrapper) => {
@@ -69,8 +70,7 @@ const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
           iframe.classList.replace("opacity-0", "opacity-100");
           iframe.classList.remove("pointer-events-none");
 
-          overlay.classList.replace("opacity-100", "opacity-0");
-          overlay.classList.add("pointer-events-none");
+          overlay.classList.replace("opacity-0", "pointer-events-none");
           overlay.addEventListener(
             "transitionend",
             () => overlay.classList.add("hidden"),
