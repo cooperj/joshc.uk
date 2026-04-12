@@ -8,5 +8,8 @@
     "workbench.statusBar.visible": "undefined",
     "window.zoomLevel": "undefined"
   },
-  "[markdown]": {}
+  "[markdown]": {},
+  "cSpell.words": [
+    "lucide"
+  ]
 }

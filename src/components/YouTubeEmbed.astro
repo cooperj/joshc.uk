@@ -8,60 +8,74 @@ const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
 ---
 
 <div
-  class="youtube-consent my-10 rounded-xl overflow-hidden relative"
+  class="youtube-consent my-10 rounded-xl overflow-hidden relative min-h-70 tablet:aspect-video"
   data-embed-url={embedUrl}
 >
   <img
     src={thumbnailUrl}
     alt="YouTube video thumbnail"
-    class="w-full object-cover aspect-video opacity-30 block"
+    class="absolute inset-0 w-full h-full object-cover opacity-30"
   />
+
   <div
-    class="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center"
+    class="youtube-overlay absolute inset-0 flex flex-col items-center justify-center gap-2 p-6 text-center transition-opacity duration-300"
   >
     <Icon
       name="lucide:play"
-      class="w-20 h-20"
+      class="w-10 h-10 tablet:w-14 tablet:h-14"
       aria-hidden="true"
     />
-
-    <h3 class="font-serif text-black-500 dark:text-white-500 mt-2 mb-0">
+    <h3
+      class="font-serif text-black-500 dark:text-white-500 text-base tablet:text-lg mt-1 mb-0"
+    >
       This video is hosted by YouTube
     </h3>
-
-    <p class="text-sm text-black-400 dark:text-white-600 max-w-sm mt-0">
+    <p class="text-xs text-black-400 dark:text-white-600 max-w-xs mt-0">
       Loading this video will share your data with Google.
     </p>
-
-    <button data-action="embed" class="button">
+    <button data-action="embed" class="button py-1! px-4! text-sm! mt-1!">
       Play Video
     </button>
-
     <a
       href={watchUrl}
       target="_blank"
       rel="noopener noreferrer"
-      class="text-sm underline text-orange-800 dark:text-orange-500 hover:text-orange-600 dark:hover:text-orange-300"
+      class="text-xs underline text-orange-800 dark:text-orange-500 hover:text-orange-600 dark:hover:text-orange-300"
     >
       <Icon name="lucide:external-link" class="inline mr-1" />
       Open on YouTube
     </a>
   </div>
+
+  <iframe
+    class="youtube-iframe absolute inset-0 w-full h-full rounded-xl opacity-0 pointer-events-none transition-opacity duration-300"
+    src=""
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
 </div>
 
 <script>
-  document.querySelectorAll(".youtube-consent").forEach((wrapper) => {
-    wrapper
-      .querySelector("[data-action='embed']")
-      ?.addEventListener("click", () => {
-        const embedUrl = (wrapper as HTMLElement).dataset.embedUrl!;
-        const iframe = document.createElement("iframe");
-        iframe.src = embedUrl;
-        iframe.allow =
-          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-        iframe.allowFullscreen = true;
-        iframe.classList.add("w-full", "aspect-video", "rounded-xl", "my-10");
-        wrapper.replaceWith(iframe);
-      });
-  });
+  document
+    .querySelectorAll<HTMLElement>(".youtube-consent")
+    .forEach((wrapper) => {
+      const overlay = wrapper.querySelector<HTMLElement>(".youtube-overlay")!;
+      const iframe =
+        wrapper.querySelector<HTMLIFrameElement>(".youtube-iframe")!;
+
+      wrapper
+        .querySelector("[data-action='embed']")
+        ?.addEventListener("click", () => {
+          iframe.src = wrapper.dataset.embedUrl!;
+          iframe.classList.replace("opacity-0", "opacity-100");
+          iframe.classList.remove("pointer-events-none");
+
+          overlay.classList.replace("opacity-100", "opacity-0");
+          overlay.classList.add("pointer-events-none");
+          overlay.addEventListener(
+            "transitionend",
+            () => overlay.classList.add("hidden"),
+            { once: true },
+          );
+        });
+    });
 </script>
