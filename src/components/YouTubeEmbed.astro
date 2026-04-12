@@ -55,27 +55,26 @@ const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
     allowfullscreen></iframe>
 </div>
 
-<script lang="ts">
-  document
-    .querySelectorAll<HTMLElement>(".youtube-consent")
-    .forEach((wrapper) => {
-      const overlay = wrapper.querySelector<HTMLElement>(".youtube-overlay")!;
-      const iframe =
-        wrapper.querySelector<HTMLIFrameElement>(".youtube-iframe")!;
+<script is:inline>
+  document.querySelectorAll(".youtube-consent").forEach((wrapper) => {
+    const overlay = wrapper.querySelector(".youtube-overlay");
+    const iframe = wrapper.querySelector(".youtube-iframe");
 
-      wrapper
-        .querySelector("[data-action='embed']")
-        ?.addEventListener("click", () => {
-          iframe.src = wrapper.dataset.embedUrl!;
-          iframe.classList.replace("opacity-0", "opacity-100");
-          iframe.classList.remove("pointer-events-none");
+    if (!overlay || !iframe) return;
 
-          overlay.classList.replace("opacity-0", "pointer-events-none");
-          overlay.addEventListener(
-            "transitionend",
-            () => overlay.classList.add("hidden"),
-            { once: true },
-          );
-        });
-    });
+    wrapper
+      .querySelector("[data-action='embed']")
+      ?.addEventListener("click", () => {
+        iframe.src = wrapper.dataset.embedUrl;
+        iframe.classList.replace("opacity-0", "opacity-100");
+        iframe.classList.remove("pointer-events-none");
+
+        overlay.classList.add("opacity-0", "pointer-events-none");
+        overlay.addEventListener(
+          "transitionend",
+          () => overlay.classList.add("hidden"),
+          { once: true },
+        );
+      });
+  });
 </script>
