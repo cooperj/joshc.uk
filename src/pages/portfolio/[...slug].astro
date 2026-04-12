@@ -4,7 +4,6 @@ import ContentLayout from "@/layouts/ContentLayout.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("portfolio");
-  console.log(projects.map((project) => project.id));
   return projects.map((project) => ({
     params: { slug: project.id },
     props: project,

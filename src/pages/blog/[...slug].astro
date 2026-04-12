@@ -4,7 +4,6 @@ import ContentLayout from "@/layouts/ContentLayout.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  console.log(posts.map((post) => post.id));
   return posts.map((post) => ({
     params: { slug: post.id },
     props: post,
