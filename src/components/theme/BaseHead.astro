@@ -2,7 +2,6 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "@/styles/global.css";
-import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -19,6 +18,7 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
+<meta name="referrer" content="origin" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -78,6 +78,7 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 
 <!-- Cloudflare Web Analytics -->
 <script
+  is:inline
   defer
   src="https://static.cloudflareinsights.com/beacon.min.js"
   data-cf-beacon='{"token": "5a27966e749f48e8885d5a271a3b6990"}'></script>

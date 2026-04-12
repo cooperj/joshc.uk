@@ -39,16 +39,6 @@
       content: " (" attr(title) ")";
     }
 
-    .youtube::after {
-      content: attr(data-video-url);
-      display: block;
-      margin-top: 10px;
-    }
-
-    .youtube iframe {
-      display: none;
-    }
-
     .button {
       @apply border-2 border-green-900 rounded-xl no-underline flex items-center justify-center text-xl mt-5 w-full;
     }
@@ -80,14 +70,6 @@
 
   h6 {
     @apply text-sm font-normal mt-2 mb-0 font-serif;
-  }
-
-  .youtube {
-    @apply h-0 pb-[56.25%] relative my-10;
-  }
-
-  .youtube iframe {
-    @apply absolute top-0 left-0 w-full h-full outline-hidden;
   }
 
   #content ul li {
