@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 function getFeedItems(posts, projects) {
   const blog = posts.map((post) => ({
     ...post.data,
-    link: `/blog/${post.slug}/`,
+    link: `/blog/${post.id}/`,
     date: new Date(post.data.pubDate),
     categories:
       post.data.tags && post.data.tags.length > 1
@@ -17,7 +17,7 @@ function getFeedItems(posts, projects) {
 
   const portfolio = projects.map((project) => ({
     ...project.data,
-    link: `/portfolio/${project.slug}/`,
+    link: `/portfolio/${project.id}/`,
     date: new Date(project.data.pubDate),
     categories:
       project.data.tags && project.data.tags.length > 1
