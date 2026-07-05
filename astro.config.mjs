@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import { unified } from "@astrojs/markdown-remark";
 import mermaid from "astro-mermaid";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
@@ -7,6 +8,9 @@ import icon from "astro-icon";
 import react from "@astrojs/react";
 
 export default defineConfig({
+  markdown: {
+    processor: unified(),
+  },
   vite: {
     plugins: [tailwindcss()],
     server: {
