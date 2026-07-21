@@ -1,24 +1,29 @@
 ---
 import FormattedDate from "../components/FormattedDate.astro";
+import ProjectDate from "../components/ProjectDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const {
   frontmatter,
   title,
   description,
+  fromDate,
   pubDate,
   update,
   icon,
   headerImage,
   tags,
+  active,
 } = Astro.props;
 
 const pageTitle = frontmatter?.title ?? title ?? undefined;
 const pageDescription = frontmatter?.description ?? description ?? undefined;
 const pageIcon = frontmatter?.icon ?? icon ?? undefined;
 const pageHeaderImage = frontmatter?.headerImage ?? headerImage ?? undefined;
+const pageFromDate = frontmatter?.fromDate ?? fromDate ?? undefined;
 const pagePubDate = frontmatter?.pubDate ?? pubDate ?? undefined;
 const pageUpdate = frontmatter?.update ?? update ?? undefined;
+const pageActive = frontmatter?.active ?? active ?? undefined;
 const pageTags = frontmatter?.tags ?? tags ?? [];
 ---
 
@@ -53,7 +58,15 @@ const pageTags = frontmatter?.tags ?? tags ?? [];
       <div class="title mb-8">
         <h1 class="text-4xl text-center font-extrabold mb-2">{pageTitle}</h1>
         <div class="date text-center">
-          {pagePubDate && <FormattedDate date={pagePubDate} />}
+          {
+            (pageFromDate || pagePubDate) && (
+              <ProjectDate
+                fromDate={pageFromDate}
+                pubDate={pagePubDate}
+                active={pageActive}
+              />
+            )
+          }
 
           {
             pageUpdate && (

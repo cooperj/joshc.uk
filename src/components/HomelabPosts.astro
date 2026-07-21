@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+const posts = (
+  await getCollection("blog", ({ data }) => {
+    return data.draft !== true && data.tags.includes("homelab");
+  })
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<ul>
+  {
+    posts.map((post) => (
+      <li>
+        <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+        <span class="text-sm text-black-300 dark:text-black-100 ml-2">
+          (<FormattedDate date={post.data.pubDate} />)
+        </span>
+      </li>
+    ))
+  }
+</ul>

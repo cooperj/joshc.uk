@@ -1,17 +1,20 @@
 ---
 import { getCollection } from "astro:content";
 import FormattedDate from "@/components/FormattedDate.astro";
+import ProjectDate from "@/components/ProjectDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 type ContentItem = {
   id: string;
   collection: string;
   data: {
-    icon: string;
+    icon?: string;
     tags: string[];
     draft: boolean;
-    pubDate: Date;
-    update: Date;
+    fromDate?: Date;
+    pubDate?: Date;
+    update?: Date;
+    active?: boolean;
     description: string;
     title: string;
   };
@@ -90,17 +93,15 @@ const filteredPosts = content.filter((item) =>
                 <div class="flex flex-col ml-5">
                   <h4 class="title mt-0 font-semibold">{item.data.title}</h4>
                   <p class="date">
-                    {item.data.update ? (
-                      <>
-                        <FormattedDate date={item.data.pubDate} />
-                        <p class="italic">
-                          <span>
-                            (Updated <FormattedDate date={item.data.update} />)
-                          </span>
-                        </p>
-                      </>
-                    ) : (
-                      <FormattedDate date={item.data.pubDate} />
+                    <ProjectDate
+                      fromDate={item.data.fromDate}
+                      pubDate={item.data.pubDate}
+                      active={item.data.active}
+                    />
+                    {item.data.update && (
+                      <span class="italic ml-2">
+                        (Updated <FormattedDate date={item.data.update} />)
+                      </span>
                     )}
                   </p>
                   <div class="mt-2 hidden tablet:block max-w-xl laptop:max-w-4xl">

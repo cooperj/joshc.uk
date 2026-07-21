@@ -1,13 +1,14 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getContentDate, getContentDateValue } from "../utils/contentDates";
 
 // Sort the array by date in descending order
 function getFeedItems(posts, projects) {
   const blog = posts.map((post) => ({
     ...post.data,
     link: `/blog/${post.id}/`,
-    date: new Date(post.data.pubDate),
+    date: getContentDate(post.data) ?? new Date(0),
     categories:
       post.data.tags && post.data.tags.length > 1
         ? ["blog", ...post.data.tags]
@@ -18,7 +19,7 @@ function getFeedItems(posts, projects) {
   const portfolio = projects.map((project) => ({
     ...project.data,
     link: `/portfolio/${project.id}/`,
-    date: new Date(project.data.pubDate),
+    date: getContentDate(project.data) ?? new Date(0),
     categories:
       project.data.tags && project.data.tags.length > 1
         ? ["portfolio", ...project.data.tags]
@@ -28,7 +29,7 @@ function getFeedItems(posts, projects) {
 
   // Sort by date in descending order
   const data = blog.concat(portfolio);
-  data.sort((a, b) => b.date - a.date);
+  data.sort((a, b) => getContentDateValue(b) - getContentDateValue(a));
   return data;
 }
 
