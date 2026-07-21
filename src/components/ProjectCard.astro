@@ -1,8 +1,14 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import FormattedDate from "@/components/FormattedDate.astro";
 import ProjectDate from "@/components/ProjectDate.astro";
 
-const { project, showUpdate = false } = Astro.props;
+interface Props {
+  project: CollectionEntry<"portfolio">;
+  showUpdate?: boolean;
+}
+
+const { project, showUpdate = false }: Props = Astro.props;
 ---
 
 <a href={`/portfolio/${project.id}/`}>
