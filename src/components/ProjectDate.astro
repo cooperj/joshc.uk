@@ -1,0 +1,24 @@
+---
+import FormattedDate from "@/components/FormattedDate.astro";
+
+interface Props {
+  fromDate?: Date | string;
+  pubDate?: Date | string;
+}
+
+const { fromDate, pubDate } = Astro.props;
+---
+
+{
+  fromDate && pubDate ? (
+    <>
+      <FormattedDate date={fromDate} />
+      {" \u2013 "}
+      <FormattedDate date={pubDate} />
+    </>
+  ) : fromDate ? (
+    <FormattedDate date={fromDate} />
+  ) : pubDate ? (
+    <FormattedDate date={pubDate} />
+  ) : null
+}

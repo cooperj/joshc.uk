@@ -2,10 +2,10 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
-const contentSchema = z.object({
+const baseSchema = z.object({
   title: z.string(),
   description: z.string(),
-  pubDate: z.coerce.date(),
+  fromDate: z.coerce.date().optional(),
   update: z.coerce.date().optional(),
   icon: z.string().optional(),
   headerImage: z.string().optional(),
@@ -13,7 +13,14 @@ const contentSchema = z.object({
   tags: z.array(z.string()).default([]),
 });
 
-const portfolioSchema = contentSchema.extend({
+// Blog posts always have a publication date (toDate / pubDate).
+const contentSchema = baseSchema.extend({
+  pubDate: z.coerce.date(),
+});
+
+// Portfolio items may be ongoing (active), so pubDate (toDate) is optional.
+const portfolioSchema = baseSchema.extend({
+  pubDate: z.coerce.date().optional(),
   active: z.boolean().default(false),
 });
 
