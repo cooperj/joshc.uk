@@ -4,6 +4,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { TopGithubRepos } from "@/components/TopGithubRepos";
 import { Icon } from "astro-icon/components";
+import { getContentDateValue } from "@/utils/contentDates";
 
 // Generic Item Type
 type ContentItem = {
@@ -11,7 +12,8 @@ type ContentItem = {
   collection: string;
   data: {
     description: string;
-    pubDate: Date;
+    fromDate?: Date;
+    pubDate?: Date;
     title: string;
   };
 };
@@ -28,7 +30,10 @@ const projects = (await getCollection("portfolio", ({ data }) => {
 // Mix the contents and sort by newest first
 const content: ContentItem[] = posts
   .concat(projects)
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  .sort(
+    (a, b) =>
+      getContentDateValue(b.data) - getContentDateValue(a.data),
+  );
 
 // Get the last 6 contents
 const latestContent = content.slice(0, 6);

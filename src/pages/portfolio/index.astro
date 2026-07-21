@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import ProjectDate from "@/components/ProjectDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getContentDateValue } from "@/utils/contentDates";
 
 const allProjects = await getCollection("portfolio", ({ data }) => {
   return data.draft !== true;
@@ -9,18 +10,11 @@ const allProjects = await getCollection("portfolio", ({ data }) => {
 
 const activeProjects = allProjects
   .filter((p) => p.data.active)
-  .sort(
-    (a, b) =>
-      (b.data.fromDate?.valueOf() ?? b.data.pubDate?.valueOf() ?? 0) -
-      (a.data.fromDate?.valueOf() ?? a.data.pubDate?.valueOf() ?? 0),
-  );
+  .sort((a, b) => getContentDateValue(b.data) - getContentDateValue(a.data));
 
 const inactiveProjects = allProjects
   .filter((p) => !p.data.active)
-  .sort(
-    (a, b) =>
-      (b.data.pubDate?.valueOf() ?? 0) - (a.data.pubDate?.valueOf() ?? 0),
-  );
+  .sort((a, b) => getContentDateValue(b.data) - getContentDateValue(a.data));
 ---
 
 <BaseLayout pageTitle="Portfolio" pageDescription="Josh's Portfolio">

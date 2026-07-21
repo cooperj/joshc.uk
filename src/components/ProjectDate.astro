@@ -13,7 +13,7 @@ const { fromDate, pubDate } = Astro.props;
   fromDate && pubDate ? (
     <>
       <FormattedDate date={fromDate} />
-      {" \u2013 "}
+      {" to "}
       <FormattedDate date={pubDate} />
     </>
   ) : fromDate ? (
