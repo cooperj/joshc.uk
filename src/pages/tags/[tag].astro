@@ -98,6 +98,11 @@ const filteredPosts = content.filter((item) =>
                       pubDate={item.data.pubDate}
                       active={item.data.active}
                     />
+                    {item.data.update && (
+                      <span class="italic ml-2">
+                        (Updated <FormattedDate date={item.data.update} />)
+                      </span>
+                    )}
                   </p>
                   <div class="mt-2 hidden tablet:block max-w-xl laptop:max-w-4xl">
                     <p>{item.data.description}</p>
