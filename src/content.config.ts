@@ -13,6 +13,10 @@ const contentSchema = z.object({
   tags: z.array(z.string()).default([]),
 });
 
+const portfolioSchema = contentSchema.extend({
+  active: z.boolean().default(false),
+});
+
 const blog = defineCollection({
   loader: glob({
     base: "src/content/blog",
@@ -26,7 +30,7 @@ const portfolio = defineCollection({
     base: "src/content/portfolio",
     pattern: "**/*.{md,mdx}",
   }),
-  schema: contentSchema,
+  schema: portfolioSchema,
 });
 
 export const collections = {

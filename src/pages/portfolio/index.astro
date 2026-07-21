@@ -3,11 +3,14 @@ import { getCollection } from "astro:content";
 import FormattedDate from "@/components/FormattedDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-const projects = (
+const allProjects = (
   await getCollection("portfolio", ({ data }) => {
     return data.draft !== true;
   })
 ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const activeProjects = allProjects.filter((p) => p.data.active);
+const inactiveProjects = allProjects.filter((p) => !p.data.active);
 ---
 
 <BaseLayout pageTitle="Portfolio" pageDescription="Josh's Portfolio">
@@ -16,9 +19,77 @@ const projects = (
       <h1 class="text-4xl text-center font-extrabold mb-2">Portfolio</h1>
     </div>
   </div>
-  <section>
+
+  {
+    activeProjects.length > 0 && (
+      <section aria-label="Active projects">
+        <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+          <span
+            aria-hidden="true"
+            class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"
+          />
+          Active Projects
+        </h2>
+        {activeProjects.map((project) => (
+          <a href={`/portfolio/${project.id}/`}>
+            <div class="flex flex-col m-2 border-2 border-green-500 p-2 rounded-xl hover:bg-black-200">
+              <div class="flex flex-row">
+                {project.data.icon ? (
+                  <img
+                    aria-hidden="true"
+                    src={project.data.icon}
+                    class="rounded-xl h-20 w-20 tablet:h-32 tablet:w-32"
+                  />
+                ) : (
+                  <img
+                    aria-hidden="true"
+                    src="/images/no-image.webp"
+                    class="rounded-xl h-20 tablet:h-32"
+                  />
+                )}
+                <div class="flex flex-col ml-5">
+                  <h4 class="title mt-0 font-semibold">{project.data.title}</h4>
+                  <p class="date">
+                    {project.data.update ? (
+                      <>
+                        <FormattedDate date={project.data.pubDate} />
+                        <p class="italic">
+                          <span>
+                            (Updated <FormattedDate date={project.data.update} />
+                            )
+                          </span>
+                        </p>
+                      </>
+                    ) : (
+                      <FormattedDate date={project.data.pubDate} />
+                    )}
+                  </p>
+                  <div class="mt-2 hidden tablet:block max-w-xl laptop:max-w-4xl">
+                    <p>{project.data.description}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 tablet:hidden">
+                <p>{project.data.description}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </section>
+    )
+  }
+
+  <section
+    aria-label="Previous projects"
+    class={activeProjects.length > 0 ? "mt-10" : ""}
+  >
     {
-      projects.map((project) => (
+      activeProjects.length > 0 && (
+        <h2 class="text-2xl font-semibold mb-4">Previous Projects</h2>
+      )
+    }
+    {
+      inactiveProjects.map((project) => (
         <a href={`/portfolio/${project.id}/`}>
           <div class="flex flex-col m-2 border-2 border-black-200 p-2 rounded-xl hover:bg-black-200">
             <div class="flex flex-row">
