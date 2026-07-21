@@ -5,10 +5,10 @@ fromDate: 2025-12-01
 active: true
 draft: false
 tags:
-    - ai
-    - robotics
-    - python
-    - docker
+  - ai
+  - robotics
+  - python
+  - docker
 icon: /images/aoc_thumb.webp
 ---
 

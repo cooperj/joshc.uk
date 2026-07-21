@@ -5,10 +5,10 @@ fromDate: 2025-06-01
 active: true
 draft: false
 tags:
-    - ai
-    - robotics
-    - unity
-    - python
+  - ai
+  - robotics
+  - unity
+  - python
 icon: /images/autoshep/thumb.webp
 headerImage: /images/autoshep/header.webp
 ---
