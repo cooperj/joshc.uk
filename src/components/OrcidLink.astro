@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  orcidId?: string; // Pass just the 16-digit ID (e.g. "0000-0002-1825-0097")
+}
+
+const { orcidId } = Astro.props;
+
+// Build the full URL dynamically if orcidId is provided
+const url = orcidId ? `https://orcid.org/${orcidId}` : '#';
+---
+
+<a 
+  href={url}
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="inline-flex items-baseline gap-0.5 font-medium no-underline text-inherit hover:underline"
+>
+  <span><slot /></span>
+  
+  <Icon 
+    name="academicons:orcid" 
+    class="w-3 h-3 text-[#A6CE39] self-start relative -top-0.5 shrink-0" 
+    aria-hidden="true" 
+  />
+</a>

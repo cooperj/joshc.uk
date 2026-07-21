@@ -38,6 +38,13 @@ export default defineConfig({
               (res) => res.json(),
             ),
         },
+        {
+          name: "academicons",
+          loader: () =>
+            fetch("https://unpkg.com/@iconify-json/academicons@1/icons.json").then(
+              (res) => res.json(),
+            ),
+        },
       ],
     }),
     mdx(),
@@ -48,3 +55,5 @@ export default defineConfig({
     react(),
   ],
 });
+
+
