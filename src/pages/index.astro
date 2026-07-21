@@ -30,10 +30,7 @@ const projects = (await getCollection("portfolio", ({ data }) => {
 // Mix the contents and sort by newest first
 const content: ContentItem[] = posts
   .concat(projects)
-  .sort(
-    (a, b) =>
-      getContentDateValue(b.data) - getContentDateValue(a.data),
-  );
+  .sort((a, b) => getContentDateValue(b.data) - getContentDateValue(a.data));
 
 // Get the last 6 contents
 const latestContent = content.slice(0, 6);
