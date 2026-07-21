@@ -1,5 +1,5 @@
 ---
-title: AutoShepherd 
+title: AutoShepherd
 description: Automatic Robotic Dog Sheepherding
 fromDate: 2025-06-01
 active: true
@@ -16,23 +16,33 @@ headerImage: /images/autoshep/header.webp
 import { Icon } from "astro-icon/components";
 import OrcidLink from "@/components/OrcidLink.astro";
 
-
 AutoShepherd is an open-source research project being developed by myself and a bunch of other researchers at the <a href="https://lcas.lincoln.ac.uk/" target="_blank" rel="noopener noreferrer">Lincoln Centre for Autonomous Systems (L-CAS) at the University of Lincoln</a>. It is an initiative focused on using multi-agent autonomous robotics (combining unmanned aerial vehicles and ground quadrupeds (e.g. Boston Dynamics Spot or Unitree Go2)) to automate livestock monitoring, tracking, and herding for precision agriculture.
 
 ### The Team
+
 <ul>
-  <li><OrcidLink orcidId="0000-0001-6494-4981">James R. Heselden</OrcidLink></li> 
-  <li><OrcidLink orcidId="0009-0000-0558-4410">Rob Lloyd</OrcidLink></li>
-  <li><OrcidLink orcidId="0000-0001-9279-7771">Jonathan Cox</OrcidLink></li>
-  <li><OrcidLink orcidId="0009-0006-1013-7598">Josh Cooper</OrcidLink></li>
-  <li><OrcidLink orcidId="0000-0001-8318-7269">Riccardo Polvara</OrcidLink></li>
+  <li>
+    <OrcidLink orcidId="0000-0001-6494-4981">James R. Heselden</OrcidLink>
+  </li>
+  <li>
+    <OrcidLink orcidId="0009-0000-0558-4410">Rob Lloyd</OrcidLink>
+  </li>
+  <li>
+    <OrcidLink orcidId="0000-0001-9279-7771">Jonathan Cox</OrcidLink>
+  </li>
+  <li>
+    <OrcidLink orcidId="0009-0006-1013-7598">Josh Cooper</OrcidLink>
+  </li>
+  <li>
+    <OrcidLink orcidId="0000-0001-8318-7269">Riccardo Polvara</OrcidLink>
+  </li>
 </ul>
 
 ### Wider Project Architecture
 
-The project is built around ROS 2 (Humble) to coordinate distributed nodes across the different hardware platforms. 
+The project is built around ROS 2 (Humble) to coordinate distributed nodes across the different hardware platforms.
 
-Its core computer vision pipeline processes real-time aerial video streams to detect, track, and cluster individual sheep within the field. By fusing raw image feeds with drone telemetry including GPS coordinates, attitude vectors, and camera gimbal angles—the system performs real-time geo-referencing to project 2D pixel coordinates into global geographical coordinates (`nav_msgs/Path`). These spatial estimates are published to live web dashboards and fed into Model Predictive Control (MPC) algorithms that dictate autonomous herding behaviors. 
+Its core computer vision pipeline processes real-time aerial video streams to detect, track, and cluster individual sheep within the field. By fusing raw image feeds with drone telemetry including GPS coordinates, attitude vectors, and camera gimbal angles—the system performs real-time geo-referencing to project 2D pixel coordinates into global geographical coordinates (`nav_msgs/Path`). These spatial estimates are published to live web dashboards and fed into Model Predictive Control (MPC) algorithms that dictate autonomous herding behaviors.
 
 This project is currently being ran without funding and being used as a research testbed for multi-agent autonomous robotics in precision agriculture. This also involves us exploring different communication technologies to allow for long-range communication between the coordinator, the drone and the robot dogs on the ground.
 
@@ -41,9 +51,11 @@ This project is currently being ran without funding and being used as a research
 I have been working on the project to look at how we can realistically deploy the system in a real-world environment. One of the challenges we have faced is the lack of real-world data for training and testing. This has involved developing a simulation environment in Unity to test the herding algorithms and behaviors. So we can develop the computer vision pipeline to detect and track sheep in real-time from aerial video streams. And use that to validate the herding algorithms and behaviors in a simulated environment before deploying them in the real world.
 
 <div class="flex items-center justify-center">
-  <a href="https://github.com/LCAS/auto_shepherd" class="button" target="_blank">
+  <a
+    href="https://github.com/LCAS/auto_shepherd"
+    class="button"
+    target="_blank"
+  >
     <span>View repository</span>
   </a>
 </div>
-
-
