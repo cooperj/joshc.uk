@@ -4,17 +4,18 @@ import FormattedDate from "@/components/FormattedDate.astro";
 interface Props {
   fromDate?: Date | string;
   pubDate?: Date | string;
+  active?: boolean;
 }
 
-const { fromDate, pubDate } = Astro.props;
+const { fromDate, pubDate, active = false } = Astro.props;
 ---
 
 {
-  fromDate && pubDate ? (
+  fromDate && (pubDate || active) ? (
     <>
       <FormattedDate date={fromDate} />
       {" to "}
-      <FormattedDate date={pubDate} />
+      {active ? "now" : <FormattedDate date={pubDate} />}
     </>
   ) : fromDate ? (
     <FormattedDate date={fromDate} />

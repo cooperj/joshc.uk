@@ -13,6 +13,7 @@ const {
   icon,
   headerImage,
   tags,
+  active,
 } = Astro.props;
 
 const pageTitle = frontmatter?.title ?? title ?? undefined;
@@ -22,6 +23,7 @@ const pageHeaderImage = frontmatter?.headerImage ?? headerImage ?? undefined;
 const pageFromDate = frontmatter?.fromDate ?? fromDate ?? undefined;
 const pagePubDate = frontmatter?.pubDate ?? pubDate ?? undefined;
 const pageUpdate = frontmatter?.update ?? update ?? undefined;
+const pageActive = frontmatter?.active ?? active ?? undefined;
 const pageTags = frontmatter?.tags ?? tags ?? [];
 ---
 
@@ -58,7 +60,11 @@ const pageTags = frontmatter?.tags ?? tags ?? [];
         <div class="date text-center">
           {
             (pageFromDate || pagePubDate) && (
-              <ProjectDate fromDate={pageFromDate} pubDate={pagePubDate} />
+              <ProjectDate
+                fromDate={pageFromDate}
+                pubDate={pagePubDate}
+                active={pageActive}
+              />
             )
           }
 

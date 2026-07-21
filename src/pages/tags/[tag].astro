@@ -13,6 +13,7 @@ type ContentItem = {
     fromDate?: Date;
     pubDate?: Date;
     update?: Date;
+    active?: boolean;
     description: string;
     title: string;
   };
@@ -94,6 +95,7 @@ const filteredPosts = content.filter((item) =>
                     <ProjectDate
                       fromDate={item.data.fromDate}
                       pubDate={item.data.pubDate}
+                      active={item.data.active}
                     />
                   </p>
                   <div class="mt-2 hidden tablet:block max-w-xl laptop:max-w-4xl">
