@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import FormattedDate from "@/components/FormattedDate.astro";
-import ProjectDate from "@/components/ProjectDate.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getContentDateValue } from "@/utils/contentDates";
 
@@ -35,46 +34,7 @@ const inactiveProjects = allProjects
           </span>
         </div>
         {activeProjects.map((project) => (
-          <a href={`/portfolio/${project.id}/`}>
-            <div class="flex flex-col m-2 border-2 border-black-200 p-2 rounded-xl hover:bg-black-200">
-              <div class="flex flex-row">
-                {project.data.icon ? (
-                  <img
-                    aria-hidden="true"
-                    src={project.data.icon}
-                    class="rounded-xl h-20 w-20 tablet:h-32 tablet:w-32"
-                  />
-                ) : (
-                  <img
-                    aria-hidden="true"
-                    src="/images/no-image.webp"
-                    class="rounded-xl h-20 tablet:h-32"
-                  />
-                )}
-                <div class="flex flex-col ml-5">
-                  <h4 class="title mt-0 font-semibold">{project.data.title}</h4>
-                  <p class="date">
-                    <ProjectDate
-                      fromDate={project.data.fromDate}
-                      pubDate={project.data.pubDate}
-                      active={project.data.active}
-                    />
-                    {project.data.update && (
-                      <span class="italic ml-2">
-                        (Updated <FormattedDate date={project.data.update} />)
-                      </span>
-                    )}
-                  </p>
-                  <div class="mt-2 hidden tablet:block max-w-xl laptop:max-w-4xl">
-                    <p>{project.data.description}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="mt-2 tablet:hidden">
-                <p>{project.data.description}</p>
-              </div>
-            </div>
-          </a>
+          <ProjectCard project={project} showUpdate />
         ))}
       </section>
     )
@@ -94,44 +54,6 @@ const inactiveProjects = allProjects
         </div>
       )
     }
-    {
-      inactiveProjects.map((project) => (
-        <a href={`/portfolio/${project.id}/`}>
-          <div class="flex flex-col m-2 border-2 border-black-200 p-2 rounded-xl hover:bg-black-200">
-            <div class="flex flex-row">
-              {project.data.icon ? (
-                <img
-                  aria-hidden="true"
-                  src={project.data.icon}
-                  class="rounded-xl h-20 w-20 tablet:h-32 tablet:w-32"
-                />
-              ) : (
-                <img
-                  aria-hidden="true"
-                  src="/images/no-image.webp"
-                  class="rounded-xl h-20 tablet:h-32"
-                />
-              )}
-              <div class="flex flex-col ml-5">
-                <h4 class="title mt-0 font-semibold">{project.data.title}</h4>
-                <p class="date">
-                  <ProjectDate
-                    fromDate={project.data.fromDate}
-                    pubDate={project.data.pubDate}
-                    active={project.data.active}
-                  />
-                </p>
-                <div class="mt-2 hidden tablet:block max-w-xl laptop:max-w-4xl">
-                  <p>{project.data.description}</p>
-                </div>
-              </div>
-            </div>
-            <div class="mt-2 tablet:hidden">
-              <p>{project.data.description}</p>
-            </div>
-          </div>
-        </a>
-      ))
-    }
+    {inactiveProjects.map((project) => <ProjectCard project={project} />)}
   </section>
 </BaseLayout>
