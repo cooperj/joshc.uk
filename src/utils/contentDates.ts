@@ -25,8 +25,8 @@ export function getContentDate(data: ContentDateSource): Date | undefined {
     return undefined;
   }
 
-  return dates.reduce((oldest, current) =>
-    current.valueOf() < oldest.valueOf() ? current : oldest,
+  return dates.reduce((latest, current) =>
+    current.valueOf() > latest.valueOf() ? current : latest,
   );
 }
 

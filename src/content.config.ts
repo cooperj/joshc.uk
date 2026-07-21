@@ -13,12 +13,12 @@ const baseSchema = z.object({
   tags: z.array(z.string()).default([]),
 });
 
-// Blog posts always have a publication date (toDate / pubDate).
+// Blog posts always have a publication date (pubDate).
 const contentSchema = baseSchema.extend({
   pubDate: z.coerce.date(),
 });
 
-// Portfolio items may be ongoing (active), so pubDate (toDate) is optional.
+// Portfolio items may be ongoing (active), so pubDate is optional.
 const portfolioSchema = baseSchema.extend({
   pubDate: z.coerce.date().optional(),
   active: z.boolean().default(false),
