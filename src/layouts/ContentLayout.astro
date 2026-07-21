@@ -56,9 +56,11 @@ const pageTags = frontmatter?.tags ?? tags ?? [];
       <div class="title mb-8">
         <h1 class="text-4xl text-center font-extrabold mb-2">{pageTitle}</h1>
         <div class="date text-center">
-          {(pageFromDate || pagePubDate) && (
-            <ProjectDate fromDate={pageFromDate} pubDate={pagePubDate} />
-          )}
+          {
+            (pageFromDate || pagePubDate) && (
+              <ProjectDate fromDate={pageFromDate} pubDate={pagePubDate} />
+            )
+          }
 
           {
             pageUpdate && (
