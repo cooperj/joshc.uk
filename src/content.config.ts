@@ -8,6 +8,7 @@ const baseSchema = z.object({
   fromDate: z.coerce.date().optional(),
   update: z.coerce.date().optional(),
   icon: z.string().optional(),
+  emoji: z.string().optional(),
   headerImage: z.string().optional(),
   draft: z.boolean().default(false),
   tags: z.array(z.string()).default([]),

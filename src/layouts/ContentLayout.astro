@@ -1,6 +1,7 @@
 ---
 import FormattedDate from "../components/FormattedDate.astro";
 import ProjectDate from "../components/ProjectDate.astro";
+import ContentVisual from "../components/ContentVisual.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const {
@@ -31,23 +32,11 @@ const pageTags = frontmatter?.tags ?? tags ?? [];
   <article id="content" class="tablet:m-5">
     <div class="hero-image m-5 tablet:m-2 laptop:m-0">
       {
-        pageHeaderImage && (
+        (pageHeaderImage || pageIcon) && (
           <header class="relative drop-shadow-md select-none">
-            <img
-              src={pageHeaderImage}
-              aria-hidden="true"
-              class="w-full h-32 tablet:h-64 rounded-3xl mb-10 object-cover select-none"
-            />
-          </header>
-        )
-      }
-
-      {
-        !pageHeaderImage && pageIcon && (
-          <header class="relative drop-shadow-md select-none">
-            <img
-              src={pageIcon}
-              aria-hidden="true"
+            <ContentVisual
+              src={pageHeaderImage || pageIcon}
+              emoji={undefined}
               class="w-full h-32 tablet:h-64 rounded-3xl mb-10 object-cover select-none"
             />
           </header>

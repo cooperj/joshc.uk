@@ -7,6 +7,7 @@ tags:
   - homelab
   - networking
 description: A candid look at my 2025 homelab – UniFi networking, Proxmox cluster, Synology NAS, Home Assistant, and the lessons learned along the way.
+emoji: "💾"
 ---
 
 I have been running a homelab for years, starting with a single Raspberry Pi and my old Mac Mini running Windows Server 2012R2 with HyperV tucked away in a cupboard. Over time, I’ve built and torn down many setups: Minecraft servers, Plex, home automation, and numerous other services. Along the way, I’ve learned what works, and what definitely doesn’t (including opening too many ports in my firewall).
