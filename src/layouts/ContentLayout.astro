@@ -36,7 +36,7 @@ const pageTags = frontmatter?.tags ?? tags ?? [];
           <header class="relative drop-shadow-md select-none">
             <ContentVisual
               src={pageHeaderImage || pageIcon}
-              emoji={undefined}
+              emoji={frontmatter?.emoji ?? Astro.props.emoji ?? pageIcon}
               class="w-full h-32 tablet:h-64 rounded-3xl mb-10 object-cover select-none"
             />
           </header>

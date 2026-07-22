@@ -16,9 +16,9 @@ There's two distinct components; specifically Asgard & Yggdrasil. Both tools are
 
 The system powers a network of displays (which run the display software we refer to as Yggdrasil) throughout the building, helping students quickly find available spaces, check timetables, and stay informed about important announcements.
 
-Since 2024, I have been managing the system and have substantially rewrote and redesigned the backend system (Asgard). My improvements have made it so the players are significantly more secure (by adding authentication via role-based-access-control), and generalizing the system to allow for more rooms and displays to be added providing a more personal experience to each display.
+Since 2024, I have been managing the system and have substantially rewritten and redesigned the backend system (Asgard). My improvements have made it so the players are significantly more secure (by adding authentication via role-based-access-control), and generalizing the system to allow for more rooms and displays to be added providing a more personal experience to each display.
 
-This was a keen point where a rewrite was beneficial so this was done using Typescript, Drizzle ORM, MySQL and Express.
+This was a keen point where a rewrite was beneficial so this was done using TypeScript, Drizzle ORM, MySQL and Express.
 
 I have also worked inside and maintained Yggdrasil which is a ReactJS application.
 
