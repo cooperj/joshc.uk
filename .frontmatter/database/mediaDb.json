@@ -1,1 +1,6 @@
-{"public":{"images":{"autoshep":{},"asgard-yggdrasil":{}},"favicons":{}}}
+{
+  "public": {
+    "images": { "autoshep": {}, "asgard-yggdrasil": {} },
+    "favicons": {}
+  }
+}

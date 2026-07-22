@@ -26,12 +26,17 @@ function looksLikeImage(value?: string) {
     return true;
   }
 
-  return /\.(avif|gif|heic|heif|ico|jpg|jpeg|jpe|jfif|png|svg|webp|bmp)$/i.test(value);
+  return /\.(avif|gif|heic|heif|ico|jpg|jpeg|jpe|jfif|png|svg|webp|bmp)$/i.test(
+    value,
+  );
 }
 
 const isImage = looksLikeImage(src);
 const normalizedEmoji = emoji?.trim();
-const isAstroIcon = !!normalizedEmoji && normalizedEmoji.includes(":") && !normalizedEmoji.includes(" ");
+const isAstroIcon =
+  !!normalizedEmoji &&
+  normalizedEmoji.includes(":") &&
+  !normalizedEmoji.includes(" ");
 const displayText = normalizedEmoji || fallbackEmoji;
 ---
 
