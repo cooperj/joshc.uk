@@ -1,0 +1,58 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  src?: string;
+  emoji?: string;
+  fallbackEmoji?: string;
+  class?: string;
+  alt?: string;
+}
+
+const {
+  src,
+  emoji,
+  fallbackEmoji = "📝",
+  class: className,
+  alt = "",
+} = Astro.props;
+
+function looksLikeImage(value?: string) {
+  if (!value) {
+    return false;
+  }
+
+  if (/^(\/|https?:\/\/|data:)/.test(value)) {
+    return true;
+  }
+
+  return /\.(avif|gif|heic|heif|ico|jpg|jpeg|jpe|jfif|png|svg|webp|bmp)$/i.test(
+    value,
+  );
+}
+
+const isImage = looksLikeImage(src);
+const normalizedEmoji = emoji?.trim();
+const isAstroIcon =
+  !!normalizedEmoji &&
+  normalizedEmoji.includes(":") &&
+  !normalizedEmoji.includes(" ");
+const displayText = normalizedEmoji || fallbackEmoji;
+---
+
+{
+  isImage ? (
+    <img aria-hidden="true" src={src} alt={alt} class={className} />
+  ) : (
+    <div
+      aria-hidden="true"
+      class={`flex items-center justify-center rounded-xl bg-black-100/70 dark:bg-black-600/70 ${className ?? ""}`}
+    >
+      {isAstroIcon ? (
+        <Icon name={displayText} class="w-[4rem] h-[4rem] leading-none" />
+      ) : (
+        <span class="text-[4rem] leading-none">{displayText}</span>
+      )}
+    </div>
+  )
+}
